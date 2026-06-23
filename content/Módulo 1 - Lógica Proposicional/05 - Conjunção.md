@@ -32,7 +32,7 @@ A negação de $P \land Q$ é $\neg P \lor \neg Q$ — "P é falso **ou** Q é f
 
 A conjunção de uma proposição com a sua própria negação, $P \land \neg P$, **nunca** pode ser verdadeira. Esse é o caso clássico de [[11 - Tautologia e Contradição|contradição]].
 
-> [!note] 🔗 Conjunção é a interseção dos conjuntos
+> [!note] Conjunção é a interseção dos conjuntos
 > O "**e**" da lógica corresponde à **interseção** $\cap$ na [[Conjuntos - 04 Operações com Conjuntos|teoria dos conjuntos]]: "x cumpre P **e** Q" é o mesmo que "x está em $A \cap B$" (o que pertence aos dois ao mesmo tempo).
 
 ---

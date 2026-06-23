@@ -13,7 +13,7 @@ Bem-vindo(a). Esta é uma **apostila interativa de Raciocínio Lógico-Matemáti
 > - Cada módulo tem **teoria** + **banco de questões**. Nos bancos, o **gabarito vem recolhido** — tente responder e clique para revelar.
 > - As palavras coloridas e sublinhadas são **links**: clicáveis para pular entre assuntos.
 
-## 📚 Sumário por módulos
+## Sumário por módulos
 
 - **Módulo 0 — [[Apostila de Introdução ao Raciocínio Lógico|Introdução]]** · o que é RL, lógica × matemática, por que a linguagem atrapalha, abstração.
 - **Módulo 1 — [[Apostila de Lógica Proposicional|Lógica Proposicional]]** · proposições, conectivos, equivalência, implicação, argumentos.
@@ -23,12 +23,12 @@ Bem-vindo(a). Esta é uma **apostila interativa de Raciocínio Lógico-Matemáti
 - **Módulo 5 — [[Apostila de Análise Combinatória e Probabilidade|Combinatória & Probabilidade]]** · contagem, permutação/arranjo/combinação, probabilidade.
 - **Módulo 6 — [[Apostila de Verdades e Mentiras|Verdades e Mentiras]]** · resolução de problemas.
 
-## 🧭 Atalhos
+## Atalhos
 
-- 🗺️ **Mapa geral e conexões** → [[Raciocínio Lógico]] (como os assuntos se ligam).
-- 📝 **Atividades / provas resolvidas** → [[PROVA 1]] · [[Prova 2]] · [[PROVA 3]]
-- 🔁 **Revisão / treino** → cada módulo termina com um **Banco de Questões** (gabarito recolhido).
-- 📎 **Referências** → [[referencias]]
+- **Mapa geral e conexões** → [[Raciocínio Lógico]] (como os assuntos se ligam).
+- **Atividades / provas resolvidas** → [[PROVA 1]] · [[Prova 2]] · [[PROVA 3]]
+- **Revisão / treino** → cada módulo termina com um **Banco de Questões** (gabarito recolhido).
+- **Referências** → [[referencias]]
 
 ---
 

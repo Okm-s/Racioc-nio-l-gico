@@ -13,7 +13,7 @@ Dados naturais $a$ e $b$ ($b \neq 0$): se a divisão $a \div b$ é **exata** (re
 > Exemplo: $12 \div 3 = 4$ exato → $12$ é múltiplo de $3$; $3$ é divisor de $12$.
 
 > [!warning] Não inverta (pegadinha da Q1 da Prova 2)
-> "$a$ é múltiplo de $b$" significa que **$a$ é divisível por $b$** (b cabe em a). Trocar a ordem é erro clássico. 📎 [[Q1P2]]
+> "$a$ é múltiplo de $b$" significa que **$a$ é divisível por $b$** (b cabe em a). Trocar a ordem é erro clássico. [[Q1P2]]
 
 - Os **múltiplos** de um número são infinitos: $M(3) = \{0, 3, 6, 9, 12, \dots\}$.
 - Os **divisores** são finitos: $D(12) = \{1, 2, 3, 4, 6, 12\}$.

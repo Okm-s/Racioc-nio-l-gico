@@ -18,7 +18,7 @@ a) 11  b) 12  c) 13  d) 10  e) 16
 **4.** Termo ausente em $5, 7, 11, 17, ?, 35$:
 a) 20  b) 22  c) 25  d) 27  e) 29
 > [!success]- Gabarito
-> **Letra c.** Diferenças $2,4,6,8,10$ → $17+8 = 25$. 📎 [[Q4P1]]
+> **Letra c.** Diferenças $2,4,6,8,10$ → $17+8 = 25$. [[Q4P1]]
 
 **5.** Continue: $A, C, E, G, \dots$
 a) H  b) I  c) J  d) F  e) K

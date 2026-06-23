@@ -98,3 +98,10 @@ article img { border-radius: 10px; margin: 0.4rem 0; }
 
 // ── Footer leve ────────────────────────────────────────────
 footer { opacity: 0.65; font-size: 0.8rem; }
+
+// ── Checklist sem tachado (mantém o check, tira o risco) ───
+li:has(> input[type="checkbox"]:checked) {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+li > input[type="checkbox"] { accent-color: var(--secondary); }

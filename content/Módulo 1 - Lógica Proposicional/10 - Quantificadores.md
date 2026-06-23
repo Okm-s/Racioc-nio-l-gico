@@ -32,8 +32,8 @@ Negar um quantificador **inverte o "quanto"** e nega a propriedade:
 > [!tip] Atenção ao negar "todo"
 > A negação de "**todo** aluno passou" **não** é "nenhum aluno passou", e sim "**algum** aluno não passou". Basta um contraexemplo para derrubar uma afirmação universal.
 
-> [!note] 🔗 Quantificadores e conjuntos (diagramas de Venn)
-> "**Todo** A é B" é a [[Conjuntos - 03 Inclusão, Igualdade e Partes|inclusão]] $A \subset B$; "**algum** A é B" é a [[Conjuntos - 04 Operações com Conjuntos|interseção]] $A \cap B \neq \varnothing$; "**nenhum** A é B" são conjuntos disjuntos. Por isso silogismos com "todo/algum" se resolvem desenhando [[Conjuntos - 05 Problemas com Diagramas de Venn|diagramas de Venn]]. 📎 [[Q5P3]]
+> [!note] Quantificadores e conjuntos (diagramas de Venn)
+> "**Todo** A é B" é a [[Conjuntos - 03 Inclusão, Igualdade e Partes|inclusão]] $A \subset B$; "**algum** A é B" é a [[Conjuntos - 04 Operações com Conjuntos|interseção]] $A \cap B \neq \varnothing$; "**nenhum** A é B" são conjuntos disjuntos. Por isso silogismos com "todo/algum" se resolvem desenhando [[Conjuntos - 05 Problemas com Diagramas de Venn|diagramas de Venn]]. [[Q5P3]]
 
 ---
 

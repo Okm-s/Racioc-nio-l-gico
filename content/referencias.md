@@ -17,5 +17,5 @@ Materiais e bases usados para montar esta apostila.
 Ver discussão em [[Introdução - 02 Lógica, Filosofia e o Formalismo]].
 
 ## Navegação
-- 🏠 [[index|Início]]
-- 🗺️ [[Raciocínio Lógico|Mapa geral]]
+- [[index|Início]]
+- [[Raciocínio Lógico|Mapa geral]]

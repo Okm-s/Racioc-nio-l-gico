@@ -33,7 +33,7 @@ A negação de $P \lor Q$ é $\neg P \land \neg Q$ — "P é falso **e** Q é fa
 
 A disjunção de uma proposição com a sua própria negação, $P \lor \neg P$, é **sempre verdadeira**. Esse é o exemplo clássico de [[11 - Tautologia e Contradição|tautologia]].
 
-> [!note] 🔗 Disjunção é a união dos conjuntos
+> [!note] Disjunção é a união dos conjuntos
 > O "**ou**" inclusivo da lógica corresponde à **união** $\cup$ na [[Conjuntos - 04 Operações com Conjuntos|teoria dos conjuntos]]: "x cumpre P **ou** Q" é o mesmo que "x está em $A \cup B$". E a [[04 - Negação|negação]] corresponde ao **complementar** $\overline{A}$ — por isso as [[12 - Negação de Proposições Compostas|leis de De Morgan]] valem nos dois mundos.
 
 ---

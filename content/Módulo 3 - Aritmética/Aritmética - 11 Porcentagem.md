@@ -27,7 +27,7 @@ $$x\% = \frac{x}{100}$$
 - **Aumento de $x\%$:** multiplica por $(1 + \frac{x}{100})$. Ex.: +10% → $\times 1{,}10$.
 - **Desconto de $x\%$:** multiplica por $(1 - \frac{x}{100})$. Ex.: −10% → $\times 0{,}90$.
 
-## 🔗 Conexão com Probabilidade
+## Conexão com Probabilidade
 
 A [[probabilidade]] é uma razão entre $0$ e $1$ — e **vira porcentagem multiplicando por 100**. "Chance de $\frac{1}{4}$" é o mesmo que "**25%** de chance". Toda probabilidade é, no fundo, uma porcentagem.
 

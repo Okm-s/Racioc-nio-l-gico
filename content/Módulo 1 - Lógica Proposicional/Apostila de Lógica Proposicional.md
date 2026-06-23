@@ -4,7 +4,7 @@ A ideia central de toda a lógica proposicional é uma só: **transformar frases
 
 ---
 
-## 🗺️ Roteiro de estudo
+## Roteiro de estudo
 
 ### Parte 1 — Fundamentos
 1. [[01 - Sentença e Proposição]] — o que pode (e o que não pode) ser analisado pela lógica.
@@ -31,7 +31,7 @@ Treino com progressão de dificuldade, 50 questões por nível, no estilo das pr
 15. [[15 - Banco de Questões — Nível 3 (Avançado)]] — expressões com 2-3 proposições, equivalências, problemas
 
 ### Parte 5 — Tópicos do edital
-> ⚠️ As notas abaixo foram acrescentadas para cobrir o edital ("equivalência e implicação lógica; argumentos válidos") com conteúdo padrão da lógica matemática, usando a mesma ferramenta já ensinada: a tabela-verdade.
+> As notas abaixo foram acrescentadas para cobrir o edital ("equivalência e implicação lógica; argumentos válidos") com conteúdo padrão da lógica matemática, usando a mesma ferramenta já ensinada: a tabela-verdade.
 
 16. [[16 - Equivalência Lógica]] — $P \equiv Q$ (mesma coluna; De Morgan, contrapositiva)
 17. [[17 - Implicação Lógica]] — $P \Rightarrow Q$ (condicional que é tautologia)
@@ -39,7 +39,7 @@ Treino com progressão de dificuldade, 50 questões por nível, no estilo das pr
 
 ---
 
-## 📊 Tabela-resumo dos conectivos
+## Tabela-resumo dos conectivos
 
 | Conectivo            | Símbolo               | Leitura                | Verdadeiro quando…                  |
 | -------------------- | --------------------- | ---------------------- | ----------------------------------- |
@@ -52,7 +52,7 @@ Treino com progressão de dificuldade, 50 questões por nível, no estilo das pr
 
 ---
 
-## 🔢 Quantos cenários existem?
+## Quantos cenários existem?
 
 O número de linhas de uma [[02 - Tabela-verdade]] depende da quantidade de proposições: multiplica-se **2 para cada proposição** ($2^n$).
 

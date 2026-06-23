@@ -17,7 +17,7 @@ Cada termo = anterior **× razão** ($q$ fixo).
 
 Termo geral: $a_n = a_1 \cdot q^{\,n-1}$.
 
-> [!note] 🔗 PG é potenciação em ação
+> [!note] PG é potenciação em ação
 > O termo geral da PG usa uma **potência** ($q^{n-1}$): avançar na sequência é multiplicar pela razão repetidamente — exatamente o que a [[Aritmética - 04 Potenciação e Radiciação|potenciação]] faz. Por isso PGs crescem (ou somem) tão rápido.
 
 ## Padrões que não se veem "batendo o olho"
@@ -34,7 +34,7 @@ Termo geral: $a_n = a_1 \cdot q^{\,n-1}$.
 Escreva as diferenças entre termos consecutivos. Se elas formarem um padrão, você achou a regra.
 
 > Exemplo (modelo da Q4 da Prova 1): $5,\ 7,\ 11,\ 17,\ ?,\ 35$.
-> Diferenças: $2, 4, 6, \mathbf{8}, 10$. Então $? = 17 + 8 = 25$. 📎 [[Q4P1]]
+> Diferenças: $2, 4, 6, \mathbf{8}, 10$. Então $? = 17 + 8 = 25$. [[Q4P1]]
 
 > [!warning] Cuidado com o "padrão fácil"
 > Um primeiro padrão pode funcionar nos primeiros termos e **falhar** depois. Sempre teste a regra até o último termo dado.

@@ -22,14 +22,14 @@ Moeda lançada 3 vezes; chance de **cara no 1º e no 3º** lançamento.
 - Favoráveis: 1º fixo cara, 3º fixo cara, 2º livre → $1 \times 2 \times 1 = 2$.
 - $P = \dfrac{2}{8} = \dfrac{1}{4} = 25\%$.
 
-> 📎 [[Q3P2]] (resposta: 25%).
+> [[Q3P2]] (resposta: 25%).
 
 ## Regrinhas úteis
 
 - **Evento complementar:** $P(\text{não A}) = 1 - P(A)$.
 - **Eventos independentes** (um não afeta o outro): multiplica → $P(A \text{ e } B) = P(A)\times P(B)$.
 
-> [!note] 🔗 Probabilidade é porcentagem
+> [!note] Probabilidade é porcentagem
 > A probabilidade sai entre $0$ e $1$ e vira **porcentagem** multiplicando por 100 ($\frac{1}{4} = 25\%$). É o mesmo número escrito de outro jeito — veja [[Aritmética - 11 Porcentagem]]. O complementar $1 - P(A)$ é o "os outros 100% − P(A)".
 
 ---

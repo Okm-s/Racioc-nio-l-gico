@@ -1,6 +1,6 @@
 > Porta de entrada de toda a matéria. Cada item do edital abaixo aponta para a nota que o explica. Organizado em **apostilas** (pastas), no mesmo padrão da [[Apostila de Lógica Proposicional]].
 
-##  Apostilas
+## Apostilas
 
 0. [[Apostila de Introdução ao Raciocínio Lógico]] — **comece aqui**: o que é RL, lógica × matemática, por que a linguagem atrapalha, abstração.
 1. [[Apostila de Lógica Proposicional]] — proposições, conectivos, equivalência, implicação, argumentos.
@@ -10,11 +10,11 @@
 5. [[Apostila de Análise Combinatória e Probabilidade]] — contagem, permutação/arranjo/combinação, probabilidade.
 6. [[Apostila de Verdades e Mentiras]] — problemas de quem fala verdade/mentira.
 
-As **provas resolvidas** ([[PROVA 1]], [[Prova 2]], [[PROVA 3]]) puxam o conteúdo de cada apostila pelos rodapés "📎 Conteúdo usado".
+As **provas resolvidas** ([[PROVA 1]], [[Prova 2]], [[PROVA 3]]) puxam o conteúdo de cada apostila pelos rodapés "Conteúdo usado".
 
 ---
 
-## 🔗 Pontes entre os blocos
+## Pontes entre os blocos
 
 A matéria não é compartimentada: os mesmos conceitos reaparecem com outra roupa. Estes são os elos que mais ajudam a entender (e a resolver questões):
 
@@ -33,7 +33,7 @@ A matéria não é compartimentada: os mesmos conceitos reaparecem com outra rou
 
 ---
 
-## ✅ Checklist do edital
+## Checklist do edital
 
 ### Lógica matemática
 - [x] Proposições → [[01 - Sentença e Proposição]]

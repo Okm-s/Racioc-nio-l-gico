@@ -33,7 +33,7 @@ Placa $L_1L_2L_3N_1L_4N_2N_3$ (L = letra, 26 opções; N = algarismo, 10 opçõe
 
 $$1 \times 26 \times 26 \times 10 \times 1 \times 1 \times 1 = 6\,760$$
 
-> 📎 [[Q2P2]] (resposta: 6.760). Cuidado: a palavra "combinação" no enunciado **não** é o cálculo de combinação — aqui é só PFC.
+> [[Q2P2]] (resposta: 6.760). Cuidado: a palavra "combinação" no enunciado **não** é o cálculo de combinação — aqui é só PFC.
 
 ## O PFC sozinho resolve permutação, arranjo e combinação
 

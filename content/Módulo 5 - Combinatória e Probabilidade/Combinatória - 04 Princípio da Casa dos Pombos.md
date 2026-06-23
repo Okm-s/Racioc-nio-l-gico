@@ -22,7 +22,7 @@ Aparece quando a questão pergunta "**no mínimo** quantos…", "**garantir** qu
 - Se cada um fizesse no máximo 2 → total máximo $7 \times 2 = 14 < 20$. Impossível.
 - Logo, alguém fez **3 ou mais** (de fato $\lceil 20/7 \rceil = 3$).
 
-> 📎 [[Q8P3]] (resposta: no mínimo três).
+> [[Q8P3]] (resposta: no mínimo três).
 
 ---
 

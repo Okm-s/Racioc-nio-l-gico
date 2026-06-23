@@ -24,12 +24,12 @@ $34{,}029 \times 1{,}2$:
 2. Casas decimais: $3$ (no $34{,}029$) $+\ 1$ (no $1{,}2$) $= 4$ casas.
 3. Resultado: $40{,}8348$.
 
-> 📎 Resolve a [[Q4P2]] (resposta: $40{,}8348$).
+> Resolve a [[Q4P2]] (resposta: $40{,}8348$).
 
 > [!tip] Multiplicar/dividir por 10, 100, 1000
 > Só **anda com a vírgula**: ×10 move 1 casa à direita; ÷100 move 2 casas à esquerda.
 
-> [!note] 🔗 Centésimos são porcentagem
+> [!note] Centésimos são porcentagem
 > "Centésimo" é literalmente "por cem". Por isso decimais e **porcentagem** são a mesma ideia: $0{,}25 = \frac{25}{100} = 25\%$. Veja [[Aritmética - 11 Porcentagem]].
 
 ---

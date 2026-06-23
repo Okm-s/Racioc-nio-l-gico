@@ -68,8 +68,8 @@ Cuidado com estes — parecem certos, mas são **inválidos**:
 
 Quando o argumento usa [[10 - Quantificadores|quantificadores]] ("todo A é B", "algum A é B", "nenhum A é B"), a tabela-verdade não basta — desenha-se a relação entre os conjuntos.
 
-> [!note] 🔗 Validar silogismo desenhando
-> "Todo A é B" vira a [[Conjuntos - 03 Inclusão, Igualdade e Partes|inclusão]] $A \subset B$; "nenhum A é B" vira conjuntos disjuntos; "algum A é B" vira [[Conjuntos - 04 Operações com Conjuntos|interseção]] não vazia. O argumento é **válido** se a conclusão for **forçada** em **todo** desenho possível das premissas; se existir um desenho que respeite as premissas mas negue a conclusão, é **inválido** (esse desenho é o contraexemplo). Ferramenta: [[Conjuntos - 05 Problemas com Diagramas de Venn|diagramas de Venn]]. 📎 [[Q5P3]]
+> [!note] Validar silogismo desenhando
+> "Todo A é B" vira a [[Conjuntos - 03 Inclusão, Igualdade e Partes|inclusão]] $A \subset B$; "nenhum A é B" vira conjuntos disjuntos; "algum A é B" vira [[Conjuntos - 04 Operações com Conjuntos|interseção]] não vazia. O argumento é **válido** se a conclusão for **forçada** em **todo** desenho possível das premissas; se existir um desenho que respeite as premissas mas negue a conclusão, é **inválido** (esse desenho é o contraexemplo). Ferramenta: [[Conjuntos - 05 Problemas com Diagramas de Venn|diagramas de Venn]]. [[Q5P3]]
 
 ---
 

@@ -33,7 +33,7 @@ $$n! = n \times (n-1) \times (n-2) \times \cdots \times 1$$
 - **Combinação:** comissão de 3 entre 5 pessoas? $C_{5,3} = \frac{5!}{3!\,2!} = 10$.
 
 > [!warning] Pegadinha do enunciado
-> A palavra "combinação" no dia a dia nem sempre é o $C_{n,p}$. Numa placa/senha **a ordem importa e há repetição** → usa-se o [[Princípio fundamental da contagem]], não a fórmula de combinação. 📎 [[Q2P2]]
+> A palavra "combinação" no dia a dia nem sempre é o $C_{n,p}$. Numa placa/senha **a ordem importa e há repetição** → usa-se o [[Princípio fundamental da contagem]], não a fórmula de combinação. [[Q2P2]]
 
 ---
 

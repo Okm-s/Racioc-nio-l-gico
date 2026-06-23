@@ -10,7 +10,7 @@ O **maior** número que divide dois (ou mais) números ao mesmo tempo.
 > $D(12) = \{1,2,3,4,6,12\}$, $D(18) = \{1,2,3,6,9,18\}$. Comuns: $\{1,2,3,6\}$ → **mdc$(12,18) = 6$**.
 
 > [!warning] É o MAIOR, não o menor (pegadinha da Q1 da Prova 2)
-> O mdc é o **maior** divisor comum. Dizer "menor" está errado. 📎 [[Q1P2]]
+> O mdc é o **maior** divisor comum. Dizer "menor" está errado. [[Q1P2]]
 
 **Uso típico:** repartir em grupos iguais "o maior possível" (cortar barras no maior pedaço comum, etc.).
 
@@ -43,7 +43,7 @@ $$
 
 $$a \times b = \text{mdc}(a,b) \times \text{mmc}(a,b)$$
 
-> Confere: $12 \times 18 = 216$ e $6 \times 36 = 216$. ✅ 📎 [[Q1P2]] (assertiva II).
+> Confere: $12 \times 18 = 216$ e $6 \times 36 = 216$. [[Q1P2]] (assertiva II).
 
 ---
 

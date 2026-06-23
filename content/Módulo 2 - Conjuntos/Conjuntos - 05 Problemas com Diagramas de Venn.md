@@ -26,7 +26,7 @@ $$n(A \cup B \cup C) = n(A)+n(B)+n(C) - n(A\cap B) - n(A\cap C) - n(B\cap C) + n
 3. **Ensino (12)** $=$ (só ensino) $+ (E\cap P = 5) + (E\cap X = k)$ → **só ensino $= 7 - k$**.
 4. Restrições: $k \ge 1$ e $7 - k \ge 0$ → $1 \le k \le 7$ → **só ensino varia de 0 a 6**.
 
-> 📎 Resolve a [[Q10P3]] (resposta: intervalo $[0, 6]$).
+> Resolve a [[Q10P3]] (resposta: intervalo $[0, 6]$).
 
 ---
 
