@@ -1,3 +1,100 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// ════════════════════════════════════════════════════════════
+// Raciocínio Lógico — polimento de design
+// Foco: alinhamento, aproveitamento de tela, limpeza visual.
+// ════════════════════════════════════════════════════════════
+
+// Título duplicado: o ArticleTitle já exibe o título da nota;
+// escondemos o H1 do corpo (primeira linha "# ...") para não repetir.
+article > h1:first-child {
+  display: none;
+}
+
+// ── Tipografia e ritmo de leitura ──────────────────────────
+article {
+  line-height: 1.7;
+
+  h1, h2, h3, h4 {
+    font-family: var(--headerFont);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  h3 { margin-top: 1.7rem; margin-bottom: 0.4rem; }
+
+  p { margin: 0.8rem 0; }
+  ul, ol { margin: 0.6rem 0; padding-left: 1.35rem; }
+  li { margin: 0.28rem 0; }
+  li > ul, li > ol { margin: 0.2rem 0; }
+
+  // blockquote de navegação (Anterior · Próximo · Índice): discreto
+  blockquote {
+    border-left: 3px solid var(--lightgray);
+    color: var(--gray);
+    font-size: 0.92em;
+    margin: 1rem 0;
+  }
+}
+
+// Título da página (ArticleTitle)
+.article-title {
+  font-family: var(--headerFont);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0.4rem 0 0.3rem;
+}
+
+// ── Breadcrumb: orientação clara, sem peso ─────────────────
+.breadcrumb-container {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+// ── Menu lateral (Explorer): módulos claros e alinhados ────
+.explorer {
+  .folder-title {
+    font-family: var(--headerFont);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .file > a {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.92;
+  }
+  a.active {
+    color: var(--secondary);
+    font-weight: 700;
+    opacity: 1;
+  }
+}
+
+.page-title { font-family: var(--headerFont); }
+
+// ── Tabelas (tabelas-verdade): alinhadas, mono, limpas ─────
+article table {
+  font-family: var(--codeFont);
+  font-size: 0.85rem;
+}
+article th,
+article td { text-align: center; }
+article td:first-child,
+article th:first-child { text-align: left; }
+
+// ── Sumário (TOC) discreto ─────────────────────────────────
+.toc { font-size: 0.85rem; }
+.toc-content a { opacity: 0.85; }
+.toc-content a:hover { opacity: 1; }
+
+// ── Imagens com respiro ────────────────────────────────────
+article img { border-radius: 10px; margin: 0.4rem 0; }
+
+// ── Footer leve ────────────────────────────────────────────
+footer { opacity: 0.65; font-size: 0.8rem; }
