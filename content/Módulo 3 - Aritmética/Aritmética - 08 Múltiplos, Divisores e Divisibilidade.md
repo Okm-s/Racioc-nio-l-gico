@@ -1,8 +1,6 @@
 ---
 aliases: [múltiplo, múltiplos, divisor, divisores]
 ---
-# Aritmética - 08 Múltiplos, Divisores e Divisibilidade
-
 > Anterior: [[Aritmética - 07 Números Primos e Fatoração]] · Próximo: [[Aritmética - 09 MDC e MMC]] · Índice: [[Apostila de Aritmética]]
 
 ## Múltiplo e divisor — duas faces da mesma moeda

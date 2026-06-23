@@ -1,5 +1,3 @@
-# Verdades e Mentiras - 01 Métodos de Resolução
-
 > Próximo: [[Verdades e Mentiras - 02 Banco de Questões]] · Índice: [[Apostila de Verdades e Mentiras]]
 
 A ideia central: cada afirmação é uma [[01 - Sentença e Proposição|proposição]] **V** ou **F**. Quem fala a verdade tem afirmação **V**; quem mente tem afirmação **F** (a [[04 - Negação|negação]] do que é real).

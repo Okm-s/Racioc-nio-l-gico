@@ -1,5 +1,3 @@
-# Combinatória - 05 Banco de Questões
-
 > Índice: [[Apostila de Análise Combinatória e Probabilidade]]
 
 **1.** Com 4 camisas e 3 calças, quantos conjuntos diferentes?

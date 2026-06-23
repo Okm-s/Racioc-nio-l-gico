@@ -1,5 +1,3 @@
-# 14 - Banco de Questões — Nível 2 (Intermediário)
-
 > Banco de questões · Níveis: [[13 - Banco de Questões — Nível 1 (Fundamentos)|Nível 1]] · **[Nível 2]** · [[15 - Banco de Questões — Nível 3 (Avançado)|Nível 3]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

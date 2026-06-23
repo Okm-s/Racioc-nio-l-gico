@@ -1,5 +1,3 @@
-# Conjuntos - 06 Banco de Questões
-
 > Índice: [[Apostila de Conjuntos]]
 
 Gabarito recolhido abaixo de cada questão — tente antes de abrir.

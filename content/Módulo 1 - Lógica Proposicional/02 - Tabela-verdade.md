@@ -1,5 +1,3 @@
-# 02 - Tabela-verdade
-
 > Pré-requisito: [[01 - Sentença e Proposição]]. Próximo: [[03 - Relações Lógicas e Conectivos]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

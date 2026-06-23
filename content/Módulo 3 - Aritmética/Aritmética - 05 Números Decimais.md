@@ -1,5 +1,3 @@
-# Aritmética - 05 Números Decimais
-
 > Anterior: [[Aritmética - 04 Potenciação e Radiciação]] · Próximo: [[Aritmética - 06 Valor Absoluto]] · Índice: [[Apostila de Aritmética]]
 > Veja também a nota de origem: [[Sistema de numeração decimal]]
 

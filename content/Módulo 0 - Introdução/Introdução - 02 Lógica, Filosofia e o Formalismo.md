@@ -1,5 +1,3 @@
-# Introdução - 02 Lógica, Filosofia e o Formalismo
-
 > Anterior: [[Introdução - 01 Raciocínio Lógico × Lógico-Matemático]] · Próximo: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]] · Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 ## A lógica nasceu na filosofia

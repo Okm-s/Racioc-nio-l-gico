@@ -12,6 +12,9 @@ robocopy $vault $content /MIR `
   /XD ".obsidian" ".claude" ".git" `
   /XF "index.html" "build_site.py" "app_template.html" | Out-Null
 
+Write-Host "Removendo títulos H1 duplicados ..." -ForegroundColor Cyan
+python (Join-Path $PSScriptRoot "strip-titles.py")
+
 Write-Host "Commit + push ..." -ForegroundColor Cyan
 git add .
 git commit -m ("conteúdo atualizado " + (Get-Date -Format "yyyy-MM-dd HH:mm"))

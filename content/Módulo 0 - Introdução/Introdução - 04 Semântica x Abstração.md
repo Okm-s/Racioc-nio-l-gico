@@ -1,5 +1,3 @@
-# Introdução - 04 Semântica x Abstração
-
 > Anterior: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]] · Próximo: [[Introdução - 05 Banco de Questões]] · Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 ## Os dois inimigos da aprendizagem

@@ -1,5 +1,3 @@
-# Aritmética - 10 Banco de Questões
-
 > Índice: [[Apostila de Aritmética]]
 
 **1.** O resto da divisão de $17$ por $5$ é:

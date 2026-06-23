@@ -1,5 +1,3 @@
-# Aritmética - 07 Números Primos e Fatoração
-
 > Anterior: [[Aritmética - 06 Valor Absoluto]] · Próximo: [[Aritmética - 08 Múltiplos, Divisores e Divisibilidade]] · Índice: [[Apostila de Aritmética]]
 
 ## Primo × composto

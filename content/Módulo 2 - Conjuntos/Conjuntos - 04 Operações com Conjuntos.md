@@ -1,5 +1,3 @@
-# Conjuntos - 04 Operações com Conjuntos
-
 > Anterior: [[Conjuntos - 03 Inclusão, Igualdade e Partes]] · Próximo: [[Conjuntos - 05 Problemas com Diagramas de Venn]] · Índice: [[Apostila de Conjuntos]]
 
 Quatro operações combinam conjuntos. Repare o paralelo com os [[03 - Relações Lógicas e Conectivos|conectivos lógicos]]: **união ↔ "ou"**, **interseção ↔ "e"**, **complementar ↔ "não"**.

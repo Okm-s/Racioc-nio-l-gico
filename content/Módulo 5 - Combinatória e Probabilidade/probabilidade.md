@@ -1,5 +1,3 @@
-# Probabilidade
-
 > Parte da [[Apostila de Análise Combinatória e Probabilidade]] · Anterior: [[Combinatória - 02 Permutação, Arranjo e Combinação]] · Próximo: [[Combinatória - 04 Princípio da Casa dos Pombos]]
 
 ## A fórmula

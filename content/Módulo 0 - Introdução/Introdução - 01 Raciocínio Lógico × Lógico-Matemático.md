@@ -1,5 +1,3 @@
-# Introdução - 01 Raciocínio Lógico × Lógico-Matemático
-
 > Próximo: [[Introdução - 02 Lógica, Filosofia e o Formalismo]] · Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 ## Dois nomes, duas coisas

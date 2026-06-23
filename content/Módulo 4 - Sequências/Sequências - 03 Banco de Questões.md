@@ -1,5 +1,3 @@
-# Sequências - 03 Banco de Questões
-
 > Índice: [[Apostila de Sequências]]
 
 **1.** Próximo termo de $4, 8, 12, 16, \dots$:

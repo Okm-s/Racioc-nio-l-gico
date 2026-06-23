@@ -1,5 +1,3 @@
-# Aritmética - 02 Adição e Subtração
-
 > Anterior: [[Aritmética - 01 Conjuntos Numéricos e os Naturais]] · Próximo: [[Aritmética - 03 Multiplicação e Divisão]] · Índice: [[Apostila de Aritmética]]
 
 ## Adição

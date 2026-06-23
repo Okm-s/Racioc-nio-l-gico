@@ -1,5 +1,3 @@
-# Apostila de Conjuntos
-
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 A **teoria dos conjuntos** é a linguagem que descreve agrupamentos de objetos. Serve de base para contagem, probabilidade e para os problemas de Venn que caem em prova.

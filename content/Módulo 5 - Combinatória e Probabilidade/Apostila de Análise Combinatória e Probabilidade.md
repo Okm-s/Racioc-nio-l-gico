@@ -1,5 +1,3 @@
-# Apostila de Análise Combinatória e Probabilidade
-
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 Contagem (de quantos jeitos algo acontece) e probabilidade (qual a chance de acontecer).

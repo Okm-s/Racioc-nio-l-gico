@@ -1,8 +1,6 @@
 ---
 aliases: [números naturais, naturais]
 ---
-# Aritmética - 01 Conjuntos Numéricos e os Naturais
-
 > Próximo: [[Aritmética - 02 Adição e Subtração]] · Índice: [[Apostila de Aritmética]]
 
 ## Os conjuntos numéricos

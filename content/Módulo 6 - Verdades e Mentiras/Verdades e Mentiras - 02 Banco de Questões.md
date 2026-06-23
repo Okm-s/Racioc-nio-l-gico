@@ -1,5 +1,3 @@
-# Verdades e Mentiras - 02 Banco de Questões
-
 > Índice: [[Apostila de Verdades e Mentiras]]
 
 **1.** Quem **mente** afirma sempre:

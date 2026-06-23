@@ -1,5 +1,3 @@
-# 03 - Relações Lógicas e Conectivos
-
 > Pré-requisito: [[02 - Tabela-verdade]]. Próximo: [[04 - Negação]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

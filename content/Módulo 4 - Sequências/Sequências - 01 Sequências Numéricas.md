@@ -1,5 +1,3 @@
-# Sequências - 01 Sequências Numéricas
-
 > Próximo: [[Sequências - 02 Sequências com Figuras e Palavras]] · Índice: [[Apostila de Sequências]]
 > Origem: [[Sequência lógica]]
 

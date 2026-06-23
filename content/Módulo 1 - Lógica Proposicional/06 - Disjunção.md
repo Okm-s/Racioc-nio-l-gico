@@ -1,5 +1,3 @@
-# 06 - Disjunção
-
 > Conectivo. Anterior: [[05 - Conjunção]] · Próximo: [[07 - Disjunção Exclusiva]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

@@ -1,5 +1,3 @@
-# Apostila de Sequências
-
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 Sequências cobram **achar o padrão** que gera os termos. O edital pede com números, figuras e palavras.

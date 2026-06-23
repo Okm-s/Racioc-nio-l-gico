@@ -1,5 +1,3 @@
-# Apostila de Introdução ao Raciocínio Lógico
-
 > Índice (MOC) · **Comece por aqui.** Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 Antes de fórmulas e tabelas, é preciso entender **o que** é raciocínio lógico, **por que** ele é difícil e **qual postura mental** a prova exige. Esta apostila é o alicerce — ela explica a "mentalidade" que todas as outras apostilas pedem.

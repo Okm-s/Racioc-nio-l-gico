@@ -1,5 +1,3 @@
-# Aritmética - 03 Multiplicação e Divisão
-
 > Anterior: [[Aritmética - 02 Adição e Subtração]] · Próximo: [[Aritmética - 04 Potenciação e Radiciação]] · Índice: [[Apostila de Aritmética]]
 
 ## Multiplicação

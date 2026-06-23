@@ -1,5 +1,3 @@
-# Apostila de Verdades e Mentiras
-
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 Problemas em que algumas pessoas **falam a verdade** e outras **mentem**. O objetivo é descobrir quem é quem, ou qual afirmação é verdadeira.

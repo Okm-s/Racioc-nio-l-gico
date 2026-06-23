@@ -1,5 +1,3 @@
-# Aritmética - 06 Valor Absoluto
-
 > Anterior: [[Aritmética - 05 Números Decimais]] · Próximo: [[Aritmética - 07 Números Primos e Fatoração]] · Índice: [[Apostila de Aritmética]]
 
 ## Definição

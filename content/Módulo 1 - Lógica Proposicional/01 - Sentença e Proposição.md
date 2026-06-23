@@ -1,5 +1,3 @@
-# 01 - Sentença e Proposição
-
 > Pré-requisito: nenhum. Próximo: [[02 - Tabela-verdade]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

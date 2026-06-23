@@ -1,5 +1,3 @@
-# 16 - Equivalência Lógica
-
 > Tópico do edital · Próximo: [[17 - Implicação Lógica]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

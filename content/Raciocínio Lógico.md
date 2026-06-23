@@ -1,5 +1,3 @@
-# Raciocínio Lógico — Mapa Geral (MOC)
-
 > Porta de entrada de toda a matéria. Cada item do edital abaixo aponta para a nota que o explica. Organizado em **apostilas** (pastas), no mesmo padrão da [[Apostila de Lógica Proposicional]].
 
 ##  Apostilas

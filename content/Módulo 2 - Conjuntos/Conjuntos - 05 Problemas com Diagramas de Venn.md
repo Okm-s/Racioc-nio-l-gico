@@ -1,5 +1,3 @@
-# Conjuntos - 05 Problemas com Diagramas de Venn
-
 > Anterior: [[Conjuntos - 04 Operações com Conjuntos]] · Próximo: [[Conjuntos - 06 Banco de Questões]] · Índice: [[Apostila de Conjuntos]]
 
 São os problemas de "quantas pessoas fazem X, Y, Z". A ferramenta é o **diagrama de Venn**: desenhar os conjuntos sobrepostos e **preencher de dentro para fora**.

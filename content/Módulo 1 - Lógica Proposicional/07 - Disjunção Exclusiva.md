@@ -1,5 +1,3 @@
-# 07 - Disjunção Exclusiva
-
 > Conectivo. Anterior: [[06 - Disjunção]] · Próximo: [[08 - Condicional]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

@@ -1,5 +1,3 @@
-# Apostila de Aritmética
-
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
 Cobre o bloco numérico do edital: naturais, as quatro operações, potências e raízes, decimais, valor absoluto, primos, múltiplos/divisores e mdc/mmc.

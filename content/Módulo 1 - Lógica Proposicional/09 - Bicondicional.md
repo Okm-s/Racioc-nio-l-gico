@@ -1,5 +1,3 @@
-# 09 - Bicondicional
-
 > Conectivo. Anterior: [[08 - Condicional]] · Próximo: [[10 - Quantificadores]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

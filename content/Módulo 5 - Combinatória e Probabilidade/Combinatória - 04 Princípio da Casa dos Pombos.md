@@ -1,5 +1,3 @@
-# Combinatória - 04 Princípio da Casa dos Pombos
-
 > Anterior: [[probabilidade]] · Próximo: [[Combinatória - 05 Banco de Questões]] · Índice: [[Apostila de Análise Combinatória e Probabilidade]]
 
 ## A ideia

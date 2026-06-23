@@ -1,5 +1,3 @@
-# Aritmética - 11 Porcentagem
-
 > Par da nota [[Aritmética - 05 Números Decimais]] · Índice: [[Apostila de Aritmética]]
 
 ## O que é

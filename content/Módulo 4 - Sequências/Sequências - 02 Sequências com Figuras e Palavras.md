@@ -1,5 +1,3 @@
-# Sequências - 02 Sequências com Figuras e Palavras
-
 > Anterior: [[Sequências - 01 Sequências Numéricas]] · Próximo: [[Sequências - 03 Banco de Questões]] · Índice: [[Apostila de Sequências]]
 
 O mesmo raciocínio das [[Sequências - 01 Sequências Numéricas|numéricas]], mas o padrão aparece em **forma** ou em **letras**.

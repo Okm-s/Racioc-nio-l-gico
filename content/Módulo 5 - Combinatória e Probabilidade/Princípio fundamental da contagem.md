@@ -1,5 +1,3 @@
-# Princípio Fundamental da Contagem
-
 > Parte da [[Apostila de Análise Combinatória e Probabilidade]] · Próximo: [[Combinatória - 02 Permutação, Arranjo e Combinação]]
 
 > [!important] O princípio que resolve TUDO

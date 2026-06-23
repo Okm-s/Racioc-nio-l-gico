@@ -1,5 +1,3 @@
-# Sequência Lógica
-
 > Nota de origem da [[Apostila de Sequências]] · Versão organizada: [[Sequências - 01 Sequências Numéricas]]
 
 Essa aqui, na minha humilde e sincera opinião é a pior parte. Aqui nada te salva, além de treino e uma percepção aguçada. Algumas questões parecem e são adivinhação. Mas, não se preocupe, existem algumas técnicas que podem te ajudar.

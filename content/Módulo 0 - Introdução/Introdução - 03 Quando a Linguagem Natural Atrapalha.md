@@ -1,5 +1,3 @@
-# Introdução - 03 Quando a Linguagem Natural Atrapalha
-
 > Anterior: [[Introdução - 02 Lógica, Filosofia e o Formalismo]] · Próximo: [[Introdução - 04 Semântica x Abstração]] · Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 A lógica usa **palavras do português** — mas com **sentido técnico**, muitas vezes **diferente** do uso cotidiano. São "falsos cognatos internos": a mesma palavra, outro significado. Confundir os dois é a causa nº 1 de erro.

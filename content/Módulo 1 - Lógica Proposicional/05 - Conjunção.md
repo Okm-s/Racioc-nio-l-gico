@@ -1,5 +1,3 @@
-# 05 - Conjunção
-
 > Conectivo. Anterior: [[04 - Negação]] · Próximo: [[06 - Disjunção]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

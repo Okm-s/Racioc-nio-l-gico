@@ -1,5 +1,3 @@
-# Introdução - 05 Banco de Questões
-
 > Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 Este banco **não** testa decoreba — testa **abstração**. As etapas sobem de nível: você vai sentir, na pele, o ponto em que a intuição falha e só a **forma** salva. Gabarito recolhido; tente antes de abrir e repare na **Lição** de cada questão.

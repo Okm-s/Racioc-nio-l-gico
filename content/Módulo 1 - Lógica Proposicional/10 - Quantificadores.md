@@ -1,5 +1,3 @@
-# 10 - Quantificadores
-
 > Anterior: [[09 - Bicondicional]] · Próximo: [[11 - Tautologia e Contradição]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

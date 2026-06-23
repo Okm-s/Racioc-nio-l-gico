@@ -1,5 +1,3 @@
-# Conjuntos - 01 Notação, Pertinência e Representação
-
 > Próximo: [[Conjuntos - 02 Tipos de Conjuntos]] · Índice: [[Apostila de Conjuntos]]
 
 ## O que é um conjunto

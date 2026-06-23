@@ -1,5 +1,3 @@
-# Aritmética - 04 Potenciação e Radiciação
-
 > Anterior: [[Aritmética - 03 Multiplicação e Divisão]] · Próximo: [[Aritmética - 05 Números Decimais]] · Índice: [[Apostila de Aritmética]]
 
 ## Potenciação

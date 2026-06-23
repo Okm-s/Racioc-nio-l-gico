@@ -4,8 +4,6 @@ aliases:
   - Permutação
   - Arranjo
 ---
-# Combinatória - 02 Permutação, Arranjo e Combinação
-
 > Anterior: [[Princípio fundamental da contagem]] · Próximo: [[probabilidade]] · Índice: [[Apostila de Análise Combinatória e Probabilidade]]
 
 > [!important] São atalhos do PFC

@@ -1,5 +1,3 @@
-# Conjuntos - 03 Inclusão, Igualdade e Partes
-
 > Anterior: [[Conjuntos - 02 Tipos de Conjuntos]] · Próximo: [[Conjuntos - 04 Operações com Conjuntos]] · Índice: [[Apostila de Conjuntos]]
 
 ## Inclusão e subconjuntos: $\subset$

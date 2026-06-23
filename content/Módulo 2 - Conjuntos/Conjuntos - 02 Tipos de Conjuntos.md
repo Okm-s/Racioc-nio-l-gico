@@ -1,5 +1,3 @@
-# Conjuntos - 02 Tipos de Conjuntos
-
 > Anterior: [[Conjuntos - 01 Notação, Pertinência e Representação]] · Próximo: [[Conjuntos - 03 Inclusão, Igualdade e Partes]] · Índice: [[Apostila de Conjuntos]]
 
 Classificamos os conjuntos pela **quantidade de elementos** e pelo **papel** que cumprem.

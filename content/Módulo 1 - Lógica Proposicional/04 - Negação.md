@@ -1,5 +1,3 @@
-# 04 - Negação
-
 > Conectivo. Anterior: [[03 - Relações Lógicas e Conectivos]] · Próximo: [[05 - Conjunção]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

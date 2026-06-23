@@ -1,5 +1,3 @@
-# 12 - Negação de Proposições Compostas
-
 > Anterior: [[11 - Tautologia e Contradição]] · Fim da apostila.
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

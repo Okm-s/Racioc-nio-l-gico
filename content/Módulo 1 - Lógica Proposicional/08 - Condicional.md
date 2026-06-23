@@ -1,5 +1,3 @@
-# 08 - Condicional
-
 > Conectivo. Anterior: [[07 - Disjunção Exclusiva]] · Próximo: [[09 - Bicondicional]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

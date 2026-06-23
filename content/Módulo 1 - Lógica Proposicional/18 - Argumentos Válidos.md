@@ -1,5 +1,3 @@
-# 18 - Argumentos Válidos
-
 > Tópico do edital · Anterior: [[17 - Implicação Lógica]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

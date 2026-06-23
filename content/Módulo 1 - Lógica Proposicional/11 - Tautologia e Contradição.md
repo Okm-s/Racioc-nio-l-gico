@@ -1,5 +1,3 @@
-# 11 - Tautologia e Contradição
-
 > Anterior: [[10 - Quantificadores]] · Próximo: [[12 - Negação de Proposições Compostas]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

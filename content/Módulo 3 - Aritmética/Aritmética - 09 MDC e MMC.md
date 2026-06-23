@@ -1,8 +1,6 @@
 ---
 aliases: [mdc, mmc, máximo divisor comum, mínimo múltiplo comum]
 ---
-# Aritmética - 09 MDC e MMC
-
 > Anterior: [[Aritmética - 08 Múltiplos, Divisores e Divisibilidade]] · Próximo: [[Aritmética - 10 Banco de Questões]] · Índice: [[Apostila de Aritmética]]
 
 ## MDC — Máximo Divisor Comum

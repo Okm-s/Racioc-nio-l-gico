@@ -1,5 +1,3 @@
-# 17 - Implicação Lógica
-
 > Tópico do edital · Anterior: [[16 - Equivalência Lógica]] · Próximo: [[18 - Argumentos Válidos]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 

@@ -1,5 +1,3 @@
-# Apostila de Lógica Proposicional
-
 > Mapa de conteúdo (MOC) da apostila. Esta é a porta de entrada: cada item abaixo leva a uma nota que cobre um pedaço do assunto. A ordem é pedagógica — se for estudar do zero, siga de cima para baixo.
 
 A ideia central de toda a lógica proposicional é uma só: **transformar frases da linguagem natural em símbolos que possam ser classificados como verdadeiros ou falsos**, para tirar a subjetividade da análise.
