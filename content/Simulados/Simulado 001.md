@@ -39,13 +39,13 @@ e) 45
 
 ## Questão 3
 
-Um produto que custava R$ 80,00 recebeu um desconto de 15%. O novo preço é:
+Um produto que custava R\$ 80,00 recebeu um desconto de 15%. O novo preço é:
 
-a) R$ 65,00  
-b) R$ 68,00  
-c) R$ 72,00  
-d) R$ 76,00  
-e) R$ 12,00
+a) R\$ 65,00  
+b) R\$ 68,00  
+c) R\$ 72,00  
+d) R\$ 76,00  
+e) R\$ 12,00
 
 > [!success]- Gabarito e resolução
 > **Letra b.** Desconto de 15% → multiplica por $(1 - 0{,}15) = 0{,}85$. Logo $80 \times 0{,}85 = 68$.

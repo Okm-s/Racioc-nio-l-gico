@@ -39,13 +39,13 @@ e) 2 é par.
 
 ## Questão 3
 
-Um produto custa R$ 120,00 e recebe 25% de desconto. O novo preço é:
+Um produto custa R\$ 120,00 e recebe 25% de desconto. O novo preço é:
 
-a) R$ 30,00  
-b) R$ 90,00  
-c) R$ 95,00  
-d) R$ 96,00  
-e) R$ 100,00
+a) R\$ 30,00  
+b) R\$ 90,00  
+c) R\$ 95,00  
+d) R\$ 96,00  
+e) R\$ 100,00
 
 > [!success]- Gabarito e resolução
 > **Letra b.** Desconto de 25% → multiplica por $0{,}75$: $120 \times 0{,}75 = 90$.

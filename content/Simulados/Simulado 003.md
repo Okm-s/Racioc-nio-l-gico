@@ -56,13 +56,13 @@ e) 32
 
 ## Questão 4
 
-Um salário de R$ 2.000,00 teve um aumento de 8%. O novo valor é:
+Um salário de R\$ 2.000,00 teve um aumento de 8%. O novo valor é:
 
-a) R$ 2.016,00  
-b) R$ 2.080,00  
-c) R$ 2.160,00  
-d) R$ 2.200,00  
-e) R$ 2.800,00
+a) R\$ 2.016,00  
+b) R\$ 2.080,00  
+c) R\$ 2.160,00  
+d) R\$ 2.200,00  
+e) R\$ 2.800,00
 
 > [!success]- Gabarito e resolução
 > **Letra c.** Aumento de 8% → multiplica por $1{,}08$. $2000 \times 1{,}08 = 2160$.
