@@ -22,16 +22,16 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Fraunces",
-        body: "Spectral",
+        header: "Hanken Grotesk",
+        body: "Hanken Grotesk",
         code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#FAF6EC", lightgray: "#E4DAC4", gray: "#9b9078",
-          darkgray: "#4a4436", dark: "#241F18",
-          secondary: "#B0641B", tertiary: "#2E6E63",
-          highlight: "rgba(176,100,27,0.12)", textHighlight: "#fff3b8",
+          light: "#F6F1E9", lightgray: "#EFE9DF", gray: "#A89E91",
+          darkgray: "#6B6258", dark: "#2C2722",
+          secondary: "#C8721F", tertiary: "#E8964C",
+          highlight: "rgba(232,150,76,0.12)", textHighlight: "#F2E2CD",
         },
         darkMode: {
           light: "#15130E", lightgray: "#322C21", gray: "#6b6452",

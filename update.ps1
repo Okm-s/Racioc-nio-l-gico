@@ -2,7 +2,8 @@
 # Rode DENTRO da pasta do Quartz:  .\update.ps1
 # Edite o caminho do vault se necessário.
 
-$vault   = "C:\Users\ookam\Documents\Raciocínio lógico"
+# Path do vault por wildcard — evita acento no literal (PS 5.1 lê .ps1 como ANSI e quebrava o caminho).
+$vault   = (Resolve-Path (Join-Path $env:USERPROFILE "Documents\Racioc*")).Path
 $content = Join-Path $PSScriptRoot "content"
 
 Write-Host "Sincronizando vault -> content ..." -ForegroundColor Cyan
@@ -11,6 +12,7 @@ Write-Host "Sincronizando vault -> content ..." -ForegroundColor Cyan
 robocopy $vault $content /MIR `
   /XD ".obsidian" ".claude" ".git" `
   /XF "index.html" "build_site.py" "app_template.html" | Out-Null
+if ($LASTEXITCODE -ge 8) { Write-Host "ERRO: robocopy falhou ($LASTEXITCODE). Nada foi sincronizado — abortando." -ForegroundColor Red; exit 1 }
 
 Write-Host "Removendo títulos H1 duplicados ..." -ForegroundColor Cyan
 python (Join-Path $PSScriptRoot "strip-titles.py")
