@@ -1,40 +1,57 @@
-> Conectivo. Anterior: [[04 - Negação]] · Próximo: [[06 - Disjunção]]
+> Anterior: [[04 - Negação]]  
+> Próximo: [[06 - Disjunção]]  
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 
 ## Definição
 
-A conjunção liga duas proposições com o **"e"**. Ela só é **verdadeira quando as duas proposições são verdadeiras** ao mesmo tempo.
+A conjunção liga duas proposições pelo conectivo **e**.
 
-## Símbolo e leitura
+Para que uma conjunção seja verdadeira, as duas partes devem ser verdadeiras.
 
-$P \land Q$ — lê-se **"P e Q"** ("P e Q são verdadeiros").
+## Símbolo
+
+$P \land Q$
+
+Lê-se:
+
+**P e Q**
 
 ## Tabela-verdade
 
-|  P  |  Q  | P ∧ Q |
-| :-: | :-: | :---: |
-|  V  |  V  |   V   |
-|  V  |  F  |   F   |
-|  F  |  V  |   F   |
-|  F  |  F  |   F   |
+|$P$|$Q$|$P \land Q$|
+|:-:|:-:|:-:|
+|V|V|V|
+|V|F|F|
+|F|V|F|
+|F|F|F|
 
-Basta **uma** das proposições ser falsa para a conjunção inteira ser falsa.
+> [!tip] Regra  
+> A conjunção só é verdadeira na primeira linha.
+> 
+> Basta uma parte falsa para o resultado ser falso.
 
 ## Exemplo
 
-"Está chovendo **e** ventando" só é verdadeiro se estiver chovendo **e** ventando simultaneamente.
+$P$ = Estou aprovado.  
+$Q$ = Tomei posse.
 
-## Negação
+$P \land Q$ = Estou aprovado **e** tomei posse.
 
-A negação de $P \land Q$ é $\neg P \lor \neg Q$ — "P é falso **ou** Q é falso". Veja [[12 - Negação de Proposições Compostas]].
+A frase só é verdadeira quando as duas afirmações são verdadeiras.
 
-## Caso especial: a contradição
+## Caso-limite
 
-A conjunção de uma proposição com a sua própria negação, $P \land \neg P$, **nunca** pode ser verdadeira. Esse é o caso clássico de [[11 - Tautologia e Contradição|contradição]].
+$P \land \neg P$
 
-> [!note] Conjunção é a interseção dos conjuntos
-> O "**e**" da lógica corresponde à **interseção** $\cap$ na [[Conjuntos - 04 Operações com Conjuntos|teoria dos conjuntos]]: "x cumpre P **e** Q" é o mesmo que "x está em $A \cap B$" (o que pertence aos dois ao mesmo tempo).
+Exemplo:
 
----
+**Estou vivo e não estou vivo.**
 
-Próximo conectivo: [[06 - Disjunção]].
+Essa forma é sempre falsa.
+
+É uma [[11 - Tautologia e Contradição|contradição]].
+
+## Ideia central
+Duas condições. Uma falha derruba tudo.
+
+Próximo: [[06 - Disjunção]]

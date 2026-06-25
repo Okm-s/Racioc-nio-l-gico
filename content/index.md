@@ -1,7 +1,6 @@
 ---
 title: Raciocínio Lógico — Apostila Interativa
 ---
-
 *por* **Prof. Alberdan Vasconcelos**
 
 Bem-vindo(a). Esta é uma **apostila interativa de Raciocínio Lógico-Matemático** para concursos — teoria enxuta, exemplos resolvidos e bancos de questões com gabarito, tudo interligado.

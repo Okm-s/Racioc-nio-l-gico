@@ -54,6 +54,7 @@ e) É um paradoxo
 > **Letra c.** O valor lógico depende de x; sem fixar x não há V/F.
 
 **5.** A frase "Esta frase é falsa." classifica-se como:
+
 a) Tautologia  
 b) Proposição verdadeira  
 c) Paradoxo  
@@ -64,6 +65,7 @@ e) Pergunta
 > **Letra c.** Gera contradição ao tentar atribuir verdade ou falsidade.
 
 **6.** "Tomara que chova." não é proposição porque:
+
 a) é pergunta 
 b) é ordem  
 c) expressa vontade, não afirmação verificável  
@@ -166,6 +168,7 @@ e) $P \lor Q$
 > **Letra b.** Bicondicional. Veja [[09 - Bicondicional]].
 
 **15.** O conectivo $\oplus$ chama-se:
+
 a) disjunção inclusiva  
 b) conjunção  
 c) disjunção exclusiva  
@@ -547,52 +550,112 @@ e) Negação
 > Vocabulário dos tópicos do edital: [[16 - Equivalência Lógica]], [[17 - Implicação Lógica]], [[18 - Argumentos Válidos]].
 
 **51.** Duas proposições que têm a **mesma coluna** na tabela-verdade em todos os cenários são:
-a) contraditórias  b) logicamente equivalentes  c) opostas  d) negações  e) implicações
+
+a) contraditórias  
+b) logicamente equivalentes  
+c) opostas  
+d) negações  
+e) implicações
+
 > [!success]- Gabarito
 > **Letra b.** Mesma coluna = equivalência. Veja [[16 - Equivalência Lógica]].
 
 **52.** O símbolo da equivalência lógica é:
-a) $\to$  b) $\equiv$  c) $\oplus$  d) $\land$  e) $\nexists$
+
+a) $\to$  
+b) $\equiv$  
+c) $\oplus$  
+d) $\land$  
+e) $\nexists$
+
 > [!success]- Gabarito
 > **Letra b.**
 
 **53.** Diz-se que $P$ **implica logicamente** $Q$ ($P \Rightarrow Q$) quando $P \to Q$ é:
-a) uma contradição  b) uma tautologia  c) uma contingência  d) sempre falso  e) uma disjunção
+
+a) uma contradição  
+b) uma tautologia  
+c) uma contingência  
+d) sempre falso  
+e) uma disjunção
+
 > [!success]- Gabarito
 > **Letra b.** O condicional vira "garantido". Veja [[17 - Implicação Lógica]].
 
 **54.** Num argumento, as proposições dadas como verdadeiras chamam-se:
-a) conclusões  b) premissas  c) negações  d) tautologias  e) falácias
+
+a) conclusões  
+b) premissas  
+c) negações  
+d) tautologias  
+e) falácias
+
 > [!success]- Gabarito
 > **Letra b.** Veja [[18 - Argumentos Válidos]].
 
 **55.** A proposição final, que se quer justificar a partir das premissas, é a:
-a) premissa  b) conclusão  c) hipótese  d) negação  e) tabela
+
+a) premissa  
+b) conclusão  
+c) hipótese  
+d) negação  
+e) tabela
+
 > [!success]- Gabarito
 > **Letra b.**
 
 **56.** Um argumento é **válido** quando:
-a) as premissas são verdadeiras na vida real  b) é impossível ter todas as premissas V e a conclusão F  c) a conclusão é convincente  d) tem muitas premissas  e) usa símbolos
+
+a) as premissas são verdadeiras na vida real  
+b) é impossível ter todas as premissas V e a conclusão F  
+c) a conclusão é convincente  
+d) tem muitas premissas  
+e) usa símbolos
+
 > [!success]- Gabarito
 > **Letra b.** Validade é sobre a forma do raciocínio.
 
 **57.** A validade de um argumento depende:
-a) dos fatos do mundo  b) da forma do raciocínio  c) do número de premissas  d) da opinião de quem lê  e) do tamanho do texto
+
+a) dos fatos do mundo  
+b) da forma do raciocínio  
+c) do número de premissas  
+d) da opinião de quem lê  
+e) do tamanho do texto
+
 > [!success]- Gabarito
 > **Letra b.** Validade ≠ verdade dos fatos.
 
 **58.** A regra "$P \to Q$; $P$; logo $Q$" chama-se:
-a) Modus Tollens  b) Modus Ponens  c) falácia  d) De Morgan  e) contrapositiva
+
+a) Modus Tollens  
+b) Modus Ponens  
+c) falácia  
+d) De Morgan  
+e) contrapositiva
+
 > [!success]- Gabarito
 > **Letra b.**
 
 **59.** A regra de equivalência que diz $\neg(P \land Q) \equiv \neg P \lor \neg Q$ chama-se:
-a) contrapositiva  b) De Morgan  c) Modus Ponens  d) dupla negação  e) silogismo
+
+a) contrapositiva  
+b) De Morgan  
+c) Modus Ponens  
+d) dupla negação  
+e) silogismo
+
 > [!success]- Gabarito
 > **Letra b.** É a "troca" e ⇄ ou já vista na [[04 - Negação]].
 
 **60.** A ferramenta usada para verificar equivalência, implicação e validade de argumento é:
-a) a régua  b) a tabela-verdade  c) o dicionário  d) a calculadora  e) o gráfico de barras
+
+a) a régua  
+b) a tabela-verdade  
+c) o dicionário  
+d) a calculadora  
+e) o gráfico de barras
+
 > [!success]- Gabarito
 > **Letra b.** Veja [[02 - Tabela-verdade]].
 

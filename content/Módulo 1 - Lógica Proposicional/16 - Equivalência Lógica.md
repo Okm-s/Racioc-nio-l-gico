@@ -1,8 +1,7 @@
 > Tópico do edital · Próximo: [[17 - Implicação Lógica]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 
-> [!warning] Conteúdo além da fonte
-> Esta nota **não** vem das suas notas originais da pasta *Lógica Proposicional*. Ela foi acrescentada para cobrir o item **"equivalência e implicação lógica"** do edital, com o conteúdo padrão da lógica matemática. O método de verificação, porém, é o mesmo já ensinado: a [[02 - Tabela-verdade]].
+> Item *equivalência e implicação lógica* do edital. Ferramenta: a [[02 - Tabela-verdade]] já ensinada.
 
 ## Definição
 

@@ -1,6 +1,6 @@
 > Índice (MOC). Voltar ao mapa geral: [[Raciocínio Lógico]]
 
-A **teoria dos conjuntos** é a linguagem que descreve agrupamentos de objetos. Serve de base para contagem, probabilidade e para os problemas de Venn que caem em prova.
+**Conjuntos** é a linguagem dos agrupamentos. É a base da contagem, da probabilidade e dos problemas de Venn que caem em prova.
 
 ## Roteiro
 1. [[Conjuntos - 01 Notação, Pertinência e Representação]] — como escrever conjuntos; $\in$ e $\notin$.

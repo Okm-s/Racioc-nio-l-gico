@@ -1,33 +1,25 @@
-> Anterior: [[Introdução - 01 Raciocínio Lógico × Lógico-Matemático]] · Próximo: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]] · Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
+> Anterior: [[Introdução - 01 Raciocínio Lógico × Lógico-Matemático]]  
+> Próximo: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]]  
+> Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
 
 ## A lógica nasceu na filosofia
 
-A **Lógica** é, historicamente, um **ramo da filosofia**. Foi sistematizada por **Aristóteles** (séc. IV a.C.) no conjunto de textos chamado *Organon*. Seu objeto não são números: é a **forma do raciocínio válido** — o que faz uma conclusão **decorrer** de premissas, **independentemente do conteúdo**.
+Aristóteles foi o primeiro a tratar o raciocínio como objeto de estudo, no _Organon_. Ele percebeu que um argumento pode estar certo ou errado pela **forma**, antes de olhar o conteúdo. Daí a única pergunta da lógica: **a conclusão decorre das premissas?**
 
-## A matemática não depende da lógica (formal)
+A matemática seguiu outro caminho. Nasceu da contagem e da medida, da observação do mundo. Só muito depois foi reconstruída sobre **axiomas e demonstrações**.
 
-A **matemática** floresceu por **milênios sem ser "fundada" na lógica formal**. Os *Elementos* de Euclides (séc. III a.C.) já eram dedutivos e axiomáticos, mas apoiados em **intuição geométrica**, não em lógica simbólica. Ou seja: **fazer matemática nunca exigiu, antes, uma lógica formal por baixo**.
+## O encontro
 
-## Então por que hoje parecem "uma coisa só"?
+No fim do século XIX e início do XX, matemáticos tentaram apoiar toda a matemática em bases seguras. Nesse esforço, lógica e matemática se encontraram. Para o **logicismo**, a matemática deriva da lógica; para o **formalismo**, é a manipulação de símbolos por regras; para o **intuicionismo**, nasce da construção mental. Desse debate ficou a expressão **lógica matemática**.
 
-A **"lógica matemática"** — a fusão das duas — é **recente**: fim do séc. XIX e início do XX. Ela é fruto dos **programas de fundamentação da matemática**:
+O concurso herdou esse encontro e reúne lógica, aritmética, conjuntos, sequências, contagem e probabilidade sob o nome **Raciocínio Lógico-Matemático**.
 
-| Corrente | Tese central | Quem |
-| --- | --- | --- |
-| **Logicismo** | a matemática **se reduz** à lógica (dependeria dela) | Frege, Russell |
-| **Formalismo** | a matemática é **manipulação de símbolos** segundo regras formais explícitas | Hilbert |
-| **Intuicionismo** | a matemática vem da **intuição**; a lógica é **secundária** a ela | Brouwer |
+> [!important] Ideia central  
+> A lógica examina a **validade da forma**.  
+> A matemática trabalha com quantidade, relação e propriedade, sobre **axiomas e demonstrações**.
 
-> [!important] A relação é consequência do formalismo
-> Foi sobretudo o **formalismo** de **Hilbert** — tratar a matemática como um sistema de símbolos governado por **regras lógicas explícitas** — que **casou** a apresentação da matemática com a lógica formal. A associação que os editais tratam como natural ("Raciocínio Lógico-**Matemático**") é, em boa parte, **herança desse programa**, e não uma necessidade: a matemática **não precisa** da lógica formal para existir, e a lógica é uma disciplina **à parte**.
+## Por que isso importa
 
-> [!note] Honestidade intelectual
-> Nem todos concordam. O **logicismo** sustenta o oposto — que a matemática **deriva** da lógica. E o próprio sonho formalista de "fechar" a matemática num sistema completo e consistente foi **abalado por Gödel** (Teoremas da Incompletude, 1931). A visão desta apostila — *matemática independente da lógica* — alinha-se ao **formalismo/intuicionismo**; é uma **posição**, não um dogma.
+Lógica e matemática compartilham um galho — o **pensamento abstrato** —, mas não são a mesma coisa. Não leve para a lógica o medo que você sente da matemática.
 
-## Por que isso importa para a prova
-
-Entender que **lógica e matemática são mundos distintos** evita o erro de tentar resolver tudo do mesmo jeito. E mostra que a habilidade-chave da lógica — **raciocinar pela forma, sem depender do conteúdo** — é justamente o que a [[Introdução - 03 Quando a Linguagem Natural Atrapalha|linguagem do dia a dia]] atrapalha.
-
----
-
-Próxima: por que as **palavras** nos traem → [[Introdução - 03 Quando a Linguagem Natural Atrapalha]].
+Próximo: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]]

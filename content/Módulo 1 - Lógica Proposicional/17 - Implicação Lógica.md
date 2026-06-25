@@ -1,8 +1,7 @@
 > Tópico do edital · Anterior: [[16 - Equivalência Lógica]] · Próximo: [[18 - Argumentos Válidos]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 
-> [!warning] Conteúdo além da fonte
-> Esta nota **não** vem das suas notas originais. Foi acrescentada para cobrir o item **"equivalência e implicação lógica"** do edital. A verificação usa a [[02 - Tabela-verdade]] e o [[08 - Condicional]], já ensinados.
+> Item *implicação lógica* do edital. Ferramentas: a [[02 - Tabela-verdade]] e o [[08 - Condicional]].
 
 ## Definição
 

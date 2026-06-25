@@ -16,10 +16,10 @@ A **distributiva** é a mais cobrada: serve para abrir e fatorar expressões.
 
 ## Regra de sinais
 
-| × | + | − |
-| :-: | :-: | :-: |
-| **+** | + | − |
-| **−** | − | + |
+|   ×   |  +  |  −  |
+| :---: | :-: | :-: |
+| **+** |  +  |  −  |
+| **−** |  −  |  +  |
 
 > "Sinais iguais → positivo; sinais diferentes → negativo." Vale igual para a divisão.
 

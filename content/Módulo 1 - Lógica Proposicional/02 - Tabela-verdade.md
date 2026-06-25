@@ -1,56 +1,77 @@
-> Pré-requisito: [[01 - Sentença e Proposição]]. Próximo: [[03 - Relações Lógicas e Conectivos]]
+> Pré-requisito: [[01 - Sentença e Proposição]]  
+> Próximo: [[03 - Relações Lógicas e Conectivos]]  
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 
 ## Para que serve
 
-A tabela-verdade nos ajuda a avaliar o **valor lógico** de uma proposição **sem subjetividade**.
+A tabela-verdade organiza os valores possíveis de uma proposição.
 
-Pegue a sentença **"Deus existe."** Ela pode assumir valor lógico Verdadeiro (V) ou Falso (F). Nessa hora, é preciso deixar o emocional de lado.
+Exemplo:
 
-Chamamos de $P$ a [[01 - Sentença e Proposição|proposição]] "Deus existe". A partir daí só há duas opções:
+**Deus existe.**
 
-- $P$ é verdadeiro
-- $P$ não é verdadeiro (ou seja, $P$ é falso)
+Na lógica, isso vira:
 
-Para economizar escrita e processamento cerebral, organizamos isso numa tabela:
+$P$
 
-| Deus existe.    |  P  |
-| :-------------: | :-: |
-| Deus existe.    |  V  |
-| Deus não existe.|  F  |
+E $P$ só pode assumir dois valores:
 
-Que resumimos para:
+|$P$|
+|:-:|
+|V|
+|F|
 
-|  P  |
-| :-: |
-|  V  |
-|  F  |
+## Número de linhas
 
-## Quantas linhas a tabela tem?
+Cada proposição tem duas possibilidades:
 
-Cada proposição tem apenas **duas opções** (V ou F). Logo, descobrimos o número de linhas multiplicando **2 para cada proposição** adicionada — isto é, $2^n$:
+**V** ou **F**.
 
-| Nº de proposições | Conta              | Linhas |
-| :---------------: | :----------------: | :----: |
-| 1                 | $2$                | 2      |
-| 2                 | $2 \times 2$       | 4      |
-| 3                 | $2 \times 2 \times 2$ | 8   |
+Com $n$ proposições, a tabela tem:
 
-## Como preencher sem se confundir
+$2^n$ linhas.
 
-Analise **uma proposição de cada vez**. A veracidade de uma não depende da outra.
+|Proposições|Linhas|
+|:-:|:-:|
+|1|2|
+|2|4|
+|3|8|
+|4|16|
 
-> Exemplo: se $P$ é verdadeira, então $Q$ ainda pode ser V **ou** F. O mesmo vale se $P$ for falsa.
+## Tabela-base
 
-Com duas proposições, a tabela-base de todos os cenários é:
+Com uma proposição:
 
-|  P  |  Q  |
-| :-: | :-: |
-|  V  |  V  |
-|  V  |  F  |
-|  F  |  V  |
-|  F  |  F  |
+|$P$|
+|:-:|
+|V|
+|F|
 
----
+Com duas proposições:
 
-É a partir daqui que começamos a estudar as [[03 - Relações Lógicas e Conectivos|relações lógicas]] por meio dos conectivos.
+|$P$|$Q$|
+|:-:|:-:|
+|V|V|
+|V|F|
+|F|V|
+|F|F|
+
+Com três proposições:
+
+|$P$|$Q$|$R$|
+|:-:|:-:|:-:|
+|V|V|V|
+|V|V|F|
+|V|F|V|
+|V|F|F|
+|F|V|V|
+|F|V|F|
+|F|F|V|
+|F|F|F|
+
+> [!tip] Regra prática  
+> Mude uma proposição por vez.
+> 
+> Cada linha representa um cenário possível.
+
+A partir dessa base, analisamos as relações lógicas com [[03 - Relações Lógicas e Conectivos]].

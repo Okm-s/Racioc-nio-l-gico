@@ -1,7 +1,6 @@
 ---
 title: Referências
 ---
-
 Materiais e bases usados para montar esta apostila.
 
 ## Base do conteúdo

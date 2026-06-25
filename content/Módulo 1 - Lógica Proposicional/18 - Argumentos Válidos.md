@@ -1,8 +1,7 @@
 > Tópico do edital · Anterior: [[17 - Implicação Lógica]]
 > Voltar ao índice: [[Apostila de Lógica Proposicional]]
 
-> [!warning] Conteúdo além da fonte
-> Esta nota **não** vem das suas notas originais. Foi acrescentada para cobrir os itens **"argumentos válidos"** e **"problemas com tabelas e argumentação"** do edital. A ferramenta de verificação é a [[02 - Tabela-verdade]], já ensinada.
+> Itens *argumentos válidos* e *problemas com tabelas* do edital. Ferramenta: a [[02 - Tabela-verdade]].
 
 ## O que é um argumento
 

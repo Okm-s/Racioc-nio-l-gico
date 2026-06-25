@@ -1,103 +1,278 @@
-> Índice: [[Apostila de Introdução ao Raciocínio Lógico]]
+### Questão 1
 
-Este banco **não** testa decoreba — testa **abstração**. As etapas sobem de nível: você vai sentir, na pele, o ponto em que a intuição falha e só a **forma** salva. Gabarito recolhido; tente antes de abrir e repare na **Lição** de cada questão.
+Raciocínio lógico, em sentido estrito, trabalha principalmente com:
 
----
+a) cálculo  
+b) validade da forma  
+c) porcentagem  
+d) medidas  
+e) probabilidade
 
-## Etapa 1 — Lógica não é a verdade do mundo
-
-**1.** Seja $P$ = "A Lua é feita de queijo". A proposição $P \lor \neg P$ é:
-a) falsa, porque a Lua não é de queijo  b) verdadeira, independentemente do conteúdo  c) depende da astronomia  d) sem sentido  e) é uma pergunta
-> [!success]- Gabarito
-> **Letra b.** $P \lor \neg P$ é [[11 - Tautologia e Contradição|tautologia]]: sempre V, não importa o que $P$ diga.
-> **Lição:** o valor lógico vem da **forma**, não do conteúdo real.
-
-**2.** "Todo dragão cospe fogo. Falkor é um dragão. Logo, Falkor cospe fogo." Esse argumento é:
-a) inválido, porque dragões não existem  b) válido, a conclusão decorre das premissas  c) verdadeiro de fato  d) sem sentido  e) uma falácia
-> [!success]- Gabarito
-> **Letra b.** A conclusão **decorre** das premissas. Validade independe de o conteúdo ser real. Veja [[18 - Argumentos Válidos]].
-> **Lição:** não confunda **válido** (forma) com **verdadeiro** (fato).
-
-**3.** A validade de um argumento depende de:
-a) as premissas serem fatos reais  b) a forma garantir a conclusão  c) a conclusão ser agradável  d) o número de premissas  e) a opinião de quem lê
-> [!success]- Gabarito
-> **Letra b.**
-> **Lição:** olhe a **estrutura**, não os fatos.
+> [!success]- Gabarito  
+> **Resposta:** b) validade da forma
 
 ---
+### Questão 2
 
-## Etapa 2 — As palavras enganam
+Em uma questão de lógica, a pergunta principal é:
 
-**4.** "Quer café ou chá?" No sentido **lógico** de "ou", responder "quero os dois" é:
-a) contraditório  b) coerente — o "ou" lógico é inclusivo  c) impossível  d) uma negação  e) um paradoxo
-> [!success]- Gabarito
-> **Letra b.** O "ou" lógico ([[06 - Disjunção]]) **admite ambos**. O "ou" que exclui é a [[07 - Disjunção Exclusiva]].
-> **Lição:** a palavra do dia a dia ≠ a palavra técnica.
+a) qual é o resultado numérico?  
+b) qual fórmula devo usar?  
+c) a conclusão decorre?  
+d) qual operação aparece?  
+e) qual número falta?
 
-**5.** "Se você passar, eu te dou um presente." Logicamente, isso **obriga** a não dar o presente caso você **não** passe?
-a) sim  b) não — negar o antecedente não conclui nada  c) sim, é bicondicional  d) é contradição  e) é tautologia
-> [!success]- Gabarito
-> **Letra b.** Tratar "se… então" como "só se" é leitura **cotidiana**. O [[08 - Condicional|condicional]] nada diz quando você não passa (negação do antecedente é [[18 - Argumentos Válidos|falácia]]).
-> **Lição:** condicional **não** é bicondicional.
-
-**6.** Em lógica, a palavra **"argumento"** significa:
-a) uma discussão acalorada  b) um conjunto de premissas e conclusão  c) um número  d) uma opinião forte  e) um insulto
-> [!success]- Gabarito
-> **Letra b.** Veja [[18 - Argumentos Válidos]].
-> **Lição:** o sentido **técnico** manda na prova.
-
-**7.** Um argumento **válido** pode ter premissas **falsas**?
-a) não, válido = verdadeiro  b) sim, validade é só a forma  c) nunca  d) só em matemática  e) é um paradoxo
-> [!success]- Gabarito
-> **Letra b.**
-> **Lição:** "válido" fala da **forma**, não da verdade das premissas.
+> [!success]- Gabarito  
+> **Resposta:** c) a conclusão decorre?
 
 ---
+### Questão 3
 
-## Etapa 3 — Ignore o conteúdo, use a forma
+Em uma questão de matemática, a pergunta mais comum é:
 
-**8.** "Todo *blerg* é *fluzz*. Alguns *fluzz* são *quux*. Logo, alguns *blerg* são *quux*." O argumento é:
-a) válido  b) inválido  c) verdadeiro  d) impossível avaliar sem saber o que é *blerg*  e) tautologia
-> [!success]- Gabarito
-> **Letra b — inválido.** Os *fluzz* que são *quux* podem estar **fora** dos *blerg*. Desenhe os [[Conjuntos - 05 Problemas com Diagramas de Venn|diagramas de Venn]] e veja que a conclusão **não é forçada**.
-> **Lição:** você **não precisa** saber o significado — e a intuição que "soa certo" engana. Use a forma.
+a) a conclusão decorre?  
+b) qual valor, regra ou propriedade devo aplicar?  
+c) a frase é bonita?  
+d) o argumento é válido?  
+e) a premissa convence?
 
-**9.** "Nenhum $A$ é $B$. Todo $C$ é $B$. Logo, nenhum $C$ é $A$." Esse argumento é:
-a) válido  b) inválido  c) depende do conteúdo  d) só se $A$ existir  e) uma falácia
-> [!success]- Gabarito
-> **Letra a — válido.** $C$ está dentro de $B$; $A$ está fora de $B$; então $C$ e $A$ não se tocam. Veja [[18 - Argumentos Válidos]].
-> **Lição:** a forma (e o desenho) resolve, sem conteúdo nenhum.
-
-**10.** Se $p \to q$ é verdadeiro e $q$ é falso, então $p$ é:
-a) verdadeiro  b) falso  c) indefinido  d) também depende de $q$  e) um paradoxo
-> [!success]- Gabarito
-> **Letra b.** Modus Tollens: se fosse $p$ verdadeiro, $q$ teria de ser verdadeiro. Veja [[18 - Argumentos Válidos]].
-> **Lição:** puro mecanismo — sem história, sem significado.
+> [!success]- Gabarito  
+> **Resposta:** b) qual valor, regra ou propriedade devo aplicar?
 
 ---
+### Questão 4
 
-## Etapa 4 — Abstração pura
+O nome “Raciocínio Lógico-Matemático”, nos concursos, costuma reunir:
 
-**11.** A coluna de $(p \land q) \to p$ (ordem VV, VF, FV, FF) é:
-a) VFFF  b) VVVV  c) VFVV  d) FFFV  e) VVVF
-> [!success]- Gabarito
-> **Letra b.** É sempre verdadeira — **tautologia**. Monte a [[02 - Tabela-verdade]].
-> **Lição:** só símbolos, e a verdade aparece sozinha.
+a) apenas lógica proposicional  
+b) apenas matemática básica  
+c) lógica e conteúdos matemáticos  
+d) apenas filosofia  
+e) apenas interpretação de texto
 
-**12.** A negação de "todo $x$ tem a propriedade $P$" é:
-a) nenhum $x$ tem $P$  b) algum $x$ não tem $P$  c) todo $x$ não tem $P$  d) existe $x$ com $P$  e) $x$ não existe
-> [!success]- Gabarito
-> **Letra b.** Veja [[10 - Quantificadores]].
-> **Lição:** um contraexemplo derruba o "todo".
+> [!success]- Gabarito  
+> **Resposta:** c) lógica e conteúdos matemáticos
 
-**13.** Se $p \oplus q$ é verdadeiro e $p$ é verdadeiro, então $q$ é:
-a) verdadeiro  b) falso  c) indefinido  d) igual a $p$  e) um paradoxo
-> [!success]- Gabarito
-> **Letra b.** A [[07 - Disjunção Exclusiva|exclusiva]] exige valores **diferentes**.
-> **Lição:** a estrutura decide; nem precisa saber o que são $p$ e $q$.
+---
+### Questão 5
 
-**14.** Olhando para trás: a habilidade que mais pesou para acertar estas questões foi:
-a) decorar fatos  b) saber se a frase é real  c) **abstrair** — trocar conteúdo por estrutura  d) opinar  e) calcular rápido
-> [!success]- Gabarito
-> **Letra c.**
-> **Lição final:** abstração é **músculo**. Quanto mais você resolve pela forma, mais forte ela fica — e mais fácil fica **toda** a matéria. Volte aos fundamentos em [[Apostila de Lógica Proposicional]].
+A lógica foi sistematizada, historicamente, por:
+
+a) Euclides  
+b) Aristóteles  
+c) Hilbert  
+d) Gödel  
+e) Brouwer
+
+> [!success]- Gabarito  
+> **Resposta:** b) Aristóteles
+
+---
+### Questão 6
+
+A pergunta central da lógica é:
+
+a) quanto vale?  
+b) como calcular?  
+c) a conclusão decorre das premissas?  
+d) qual é a unidade?  
+e) qual é a fórmula?
+
+> [!success]- Gabarito  
+> **Resposta:** c) a conclusão decorre das premissas?
+
+---
+### Questão 7
+
+A matemática se desenvolve por:
+
+a) opinião e crença  
+b) axiomas, demonstrações, relações e propriedades  
+c) ironia e subentendido  
+d) validade verbal  
+e) interpretação social
+
+> [!success]- Gabarito  
+> **Resposta:** b) axiomas, demonstrações, relações e propriedades
+
+---
+### Questão 8
+
+A aproximação moderna entre lógica e matemática ficou forte:
+
+a) na Antiguidade  
+b) na Idade Média  
+c) no fim do século XIX e início do XX  
+d) no século XVI  
+e) apenas nos concursos atuais
+
+> [!success]- Gabarito  
+> **Resposta:** c) no fim do século XIX e início do XX
+
+---
+### Questão 9
+
+O formalismo entende a matemática como:
+
+a) discussão verbal  
+b) manipulação de símbolos por regras  
+c) crença pessoal  
+d) interpretação emocional  
+e) linguagem cotidiana
+
+> [!success]- Gabarito  
+> **Resposta:** b) manipulação de símbolos por regras
+
+---
+### Questão 10
+
+O “ou”, na lógica, significa:
+
+a) apenas uma opção  
+b) uma, outra ou ambas  
+c) nenhuma das opções  
+d) escolha obrigatória  
+e) oposição entre frases
+
+> [!success]- Gabarito  
+> **Resposta:** b) uma, outra ou ambas
+
+---
+### Questão 11
+
+A frase “café ou chá?”, no uso comum, geralmente sugere:
+
+a) inclusão dos dois  
+b) escolha entre opções  
+c) conclusão lógica  
+d) contradição  
+e) validade formal
+
+> [!success]- Gabarito  
+> **Resposta:** b) escolha entre opções
+
+---
+### Questão 12
+
+Em lógica, “se... então” indica:
+
+a) promessa  
+b) ameaça  
+c) condicional  
+d) conselho  
+e) causa real
+
+> [!success]- Gabarito  
+> **Resposta:** c) condicional
+
+---
+### Questão 13
+
+A frase “casou e teve filho” carrega, no uso comum, ideia de:
+
+a) sequência  
+b) negação  
+c) disjunção  
+d) contradição  
+e) equivalência
+
+> [!success]- Gabarito  
+> **Resposta:** a) sequência
+
+---
+### Questão 14
+
+Em lógica, o conectivo “e” apenas:
+
+a) cria uma ordem no tempo  
+b) junta proposições  
+c) promete resultado  
+d) exclui alternativas  
+e) muda o sentido social
+
+> [!success]- Gabarito  
+> **Resposta:** b) junta proposições
+
+---
+### Questão 15
+
+Na lógica, argumento é:
+
+a) briga  
+b) opinião forte  
+c) conjunto de premissas levando a uma conclusão  
+d) frase bonita  
+e) cálculo com letras
+
+> [!success]- Gabarito  
+> **Resposta:** c) conjunto de premissas levando a uma conclusão
+
+---
+### Questão 16
+
+Um argumento válido é aquele em que:
+
+a) todas as frases são verdadeiras  
+b) a conclusão decorre da forma  
+c) o tema é real  
+d) a premissa agrada  
+e) a frase parece correta
+
+> [!success]- Gabarito  
+> **Resposta:** b) a conclusão decorre da forma
+
+---
+### Questão 17
+
+A frase “Deus existe”, em lógica proposicional, pode ser tratada como:
+
+a) uma discussão teológica  
+b) uma opinião sem valor lógico  
+c) uma proposição simples, como $P$  
+d) uma contradição obrigatória  
+e) uma conta incompleta
+
+> [!success]- Gabarito  
+> **Resposta:** c) uma proposição simples, como $P$
+
+---
+### Questão 18
+
+Abstrair, em raciocínio lógico, é:
+
+a) decorar frases  
+b) apagar o conteúdo e guardar a estrutura  
+c) procurar o sentido emocional  
+d) corrigir o enunciado  
+e) escolher a resposta mais provável
+
+> [!success]- Gabarito  
+> **Resposta:** b) apagar o conteúdo e guardar a estrutura
+
+---
+### Questão 19
+
+A frase “Se Deus existe, a alma é imortal” pode ser representada por:
+
+a) $P \land Q$  
+b) $P \lor Q$  
+c) $P \to Q$  
+d) $P \leftrightarrow Q$  
+e) $\neg P$
+
+> [!success]- Gabarito  
+> **Resposta:** c) $P \to Q$
+
+---
+### Questão 20
+
+Em “Todo blerg é fluzz”, o aluno deve observar:
+
+a) o significado de blerg  
+b) o significado de fluzz  
+c) a relação entre os termos  
+d) se a frase existe no mundo real  
+e) se as palavras são conhecidas
+
+> [!success]- Gabarito  
+> **Resposta:** c) a relação entre os termos

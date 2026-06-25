@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plataforma de Estudo — Raciocínio Lógico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;}
+  ::-webkit-scrollbar{width:8px;height:8px;}
+  ::-webkit-scrollbar-thumb{background:#E6DED2;border-radius:999px;}
+  .lc{width:20px;height:20px;stroke-width:1.9;}
+
+  .app{height:100vh;display:flex;background:#F6F1E9;color:#2C2722;overflow:hidden;}
+
+  /* sidebar */
+  .sidebar{width:250px;flex:0 0 auto;background:#fff;border-right:1px solid #EFE9DF;display:flex;flex-direction:column;padding:22px 16px;transition:width .22s cubic-bezier(.4,0,.2,1);}
+  .app.collapsed .sidebar{width:78px;}
+  .app.collapsed .hidecol{display:none !important;}
+  .brand{display:flex;align-items:center;gap:12px;padding:4px 6px 22px 6px;}
+  .brand-box{width:38px;height:38px;flex:0 0 auto;border-radius:11px;background:#E8964C;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;}
+  .brand-name{font-weight:700;font-size:18px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;}
+  .brand-name span{color:#E8964C;}
+  .nav{display:flex;flex-direction:column;gap:4px;}
+  .nav-item{display:flex;align-items:center;gap:14px;padding:11px 14px;border-radius:12px;cursor:pointer;font-weight:500;font-size:15px;line-height:1;transition:background .15s,color .15s;white-space:nowrap;overflow:hidden;background:transparent;color:#857B6F;}
+  .nav-item:hover{background:#F7F2EA;}
+  .nav-item.active{background:#FBEFE1;color:#C8721F;font-weight:600;}
+  .sb-bottom{margin-top:auto;display:flex;flex-direction:column;gap:4px;}
+  .user{display:flex;align-items:center;gap:12px;padding:10px 8px;margin-top:6px;border-top:1px solid #F1ECE3;}
+  .user-av{width:34px;height:34px;flex:0 0 auto;border-radius:50%;background:#F0E3D4;display:flex;align-items:center;justify-content:center;color:#C8721F;font-weight:700;font-size:13px;}
+  .user-name{font-weight:600;font-size:13px;white-space:nowrap;}
+  .user-sub{font-size:12px;color:#A89E91;white-space:nowrap;}
+
+  /* main */
+  .main{flex:1;min-width:0;overflow-y:auto;padding:30px 40px 36px;}
+  .screen{display:none;}
+  .screen.active{display:block;}
+  .eyebrow{font-size:13px;color:#A89E91;font-weight:500;margin-bottom:6px;}
+  h1.title{margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;}
+  .card{background:#fff;border:1px solid #EFE9DF;border-radius:20px;box-shadow:0 1px 2px rgba(44,39,34,.03);}
+  .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;}
+  .stat{padding:22px 24px;}
+  .stat-label{display:flex;align-items:center;gap:9px;color:#A89E91;font-size:13px;font-weight:500;margin-bottom:14px;}
+  .stat-num{font-size:34px;font-weight:700;letter-spacing:-.02em;}
+  .stat-num small{font-size:18px;color:#C4BBAD;font-weight:600;}
+  .pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #EFE9DF;border-radius:999px;padding:9px 16px 9px 13px;box-shadow:0 1px 2px rgba(44,39,34,.03);}
+  .bar-track{height:9px;border-radius:999px;background:#F1ECE3;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:999px;}
+  .btn-primary{display:flex;align-items:center;justify-content:center;gap:10px;background:#E8964C;color:#fff;font-weight:700;font-size:15px;padding:15px;border-radius:14px;cursor:pointer;transition:background .15s;text-decoration:none;}
+  .btn-primary:hover{background:#D9842F;}
+  .task{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;}
+  a.bare{text-decoration:none;color:inherit;}
+  .modcard{padding:22px 22px;display:flex;flex-direction:column;gap:14px;transition:transform .15s,box-shadow .15s;}
+  a.bare:hover .modcard{transform:translateY(-2px);box-shadow:0 6px 16px rgba(44,39,34,.07);}
+  .mod-ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-box">λ</div>
+      <div class="brand-name hidecol">lógica<span>.</span></div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-item active" data-screen="inicio"><i data-lucide="house" class="lc"></i><span class="hidecol">Início</span></div>
+      <div class="nav-item" data-screen="estudar"><i data-lucide="book-open" class="lc"></i><span class="hidecol">Estudar</span></div>
+      <div class="nav-item" data-screen="questoes"><i data-lucide="list-todo" class="lc"></i><span class="hidecol">Questões</span></div>
+      <div class="nav-item" data-screen="desempenho"><i data-lucide="chart-column" class="lc"></i><span class="hidecol">Desempenho</span></div>
+      <div class="nav-item" data-screen="revisoes"><i data-lucide="rotate-ccw" class="lc"></i><span class="hidecol">Revisões</span></div>
+    </nav>
+
+    <div class="sb-bottom">
+      <div class="nav-item" id="toggleSidebar"><i data-lucide="chevrons-left" class="lc" id="collapseIcon"></i><span class="hidecol">Recolher menu</span></div>
+      <div class="user">
+        <div class="user-av">AV</div>
+        <div class="hidecol" style="line-height:1.25;overflow:hidden;">
+          <div class="user-name">Alberdan V.</div>
+          <div class="user-sub">Raciocínio Lógico</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <!-- ====== INÍCIO ====== -->
+    <section class="screen active" id="screen-inicio">
+      <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px;">
+        <div>
+          <div class="eyebrow" id="todayDate">Terça-feira, 24 de junho</div>
+          <h1 class="title" id="greeting">Bom dia, Alberdan</h1>
+        </div>
+        <div class="pill">
+          <i data-lucide="flame" style="width:18px;height:18px;stroke-width:2;color:#E8964C;"></i>
+          <span style="font-weight:700;font-size:14px;">12 dias</span>
+          <span style="font-size:13px;color:#A89E91;">de sequência</span>
+        </div>
+      </header>
+
+      <div class="statgrid">
+        <div class="card stat">
+          <div class="stat-label"><i data-lucide="circle-check-big" style="width:16px;height:16px;stroke-width:2;color:#7FAE8B;"></i> Questões hoje</div>
+          <div class="stat-num">34<small> / 50</small></div>
+        </div>
+        <div class="card stat">
+          <div class="stat-label"><i data-lucide="target" style="width:16px;height:16px;stroke-width:2;color:#E8964C;"></i> Taxa de acerto</div>
+          <div class="stat-num">78<small>%</small></div>
+        </div>
+        <div class="card stat">
+          <div class="stat-label"><i data-lucide="clock" style="width:16px;height:16px;stroke-width:2;color:#8AA0C4;"></i> Tempo de estudo</div>
+          <div class="stat-num">1<small>h</small>48</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:18px;align-items:start;">
+
+        <section class="card" style="padding:28px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;">
+            <h2 style="margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;">Plano de hoje</h2>
+            <span style="font-size:13px;color:#A89E91;">1 de 3 concluídas</span>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:26px;margin-bottom:24px;">
+            <div style="position:relative;width:108px;height:108px;flex:0 0 auto;">
+              <svg width="108" height="108" viewBox="0 0 108 108" style="transform:rotate(-90deg);">
+                <circle cx="54" cy="54" r="47" fill="none" stroke="#F1ECE3" stroke-width="11"></circle>
+                <circle cx="54" cy="54" r="47" fill="none" stroke="#E8964C" stroke-width="11" stroke-linecap="round" stroke-dasharray="295.3" stroke-dashoffset="115"></circle>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="font-size:24px;font-weight:700;letter-spacing:-.02em;">61%</div>
+                <div style="font-size:11px;color:#A89E91;">da meta</div>
+              </div>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:15px;color:#6B6258;line-height:1.5;">Você está indo bem. Faltam <strong style="color:#2C2722;">2 blocos</strong> para fechar o ciclo de estudos de hoje.</div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <div class="task" style="background:#FBF6EF;border:1px solid #F1E7D8;">
+              <div style="width:22px;height:22px;flex:0 0 auto;border-radius:50%;background:#7FAE8B;display:flex;align-items:center;justify-content:center;"><i data-lucide="check" style="width:14px;height:14px;stroke-width:3;color:#fff;"></i></div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;color:#9A9082;text-decoration:line-through;">Lógica — Tabela-verdade</div></div>
+              <div style="font-size:13px;color:#A89E91;">40 min</div>
+            </div>
+            <div class="task" style="background:#fff;border:1px solid #EFE9DF;">
+              <div style="width:22px;height:22px;flex:0 0 auto;border-radius:50%;border:2px solid #E8964C;"></div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;">Conjuntos — Diagramas de Venn</div><div style="font-size:12px;color:#A89E91;margin-top:2px;">Em andamento</div></div>
+              <div style="font-size:13px;color:#A89E91;">50 min</div>
+            </div>
+            <div class="task" style="background:#fff;border:1px solid #EFE9DF;">
+              <div style="width:22px;height:22px;flex:0 0 auto;border-radius:50%;border:2px solid #DDD5C8;"></div>
+              <div style="flex:1;"><div style="font-weight:600;font-size:15px;">Combinatória — Princípio da contagem</div></div>
+              <div style="font-size:13px;color:#A89E91;">30 min</div>
+            </div>
+          </div>
+
+          <a class="btn-primary" href="Módulo-2---Conjuntos/Conjuntos---05-Problemas-com-Diagramas-de-Venn.html">
+            <i data-lucide="play" style="width:18px;height:18px;stroke-width:2.4;fill:#fff;"></i>
+            Continuar — Conjuntos
+          </a>
+        </section>
+
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <section class="card" style="padding:24px;">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
+              <i data-lucide="rotate-ccw" style="width:17px;height:17px;stroke-width:2;color:#8AA0C4;"></i>
+              <h2 style="margin:0;font-size:16px;font-weight:700;">Próxima revisão</h2>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:15px;border-radius:14px;background:#F4F6FA;border:1px solid #E9EDF4;">
+              <div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#8AA0C4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div>
+              <div style="flex:1;">
+                <div style="font-weight:600;font-size:14px;">Negação de proposições</div>
+                <div style="font-size:12px;color:#8B91A0;margin-top:2px;">18 cartões · agendado para hoje</div>
+              </div>
+            </div>
+            <div style="font-size:13px;color:#A89E91;margin-top:14px;line-height:1.5;">A repetição espaçada fixa o que você revisou há 3 dias.</div>
+          </section>
+
+          <section style="background:#FBF1E6;border:1px solid #F2E2CD;border-radius:24px;padding:24px;">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
+              <i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:#C8721F;"></i>
+              <h2 style="margin:0;font-size:16px;font-weight:700;color:#7A4A14;">Foco da semana</h2>
+            </div>
+            <div style="font-size:15px;color:#8A5A22;line-height:1.55;">Combinatória é onde você mais erra. Reservamos <strong>+1 bloco</strong> por dia nessa matéria.</div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ESTUDAR ====== -->
+    <section class="screen" id="screen-estudar">
+      <header style="margin-bottom:26px;">
+        <div class="eyebrow">7 módulos · do zero ao avançado</div>
+        <h1 class="title">Estudar</h1>
+      </header>
+      <div id="modgrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;"></div>
+    </section>
+
+    <!-- ====== QUESTÕES ====== -->
+    <section class="screen" id="screen-questoes">
+      <header style="margin-bottom:26px;">
+        <div class="eyebrow">Simulados · 5 questões cada · gabarito recolhido</div>
+        <h1 class="title">Questões</h1>
+      </header>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;">
+        <div class="card stat"><div class="stat-label"><i data-lucide="files" style="width:16px;height:16px;stroke-width:2;color:#E8964C;"></i> Simulados prontos</div><div class="stat-num">21<small> / 100</small></div></div>
+        <div class="card stat"><div class="stat-label"><i data-lucide="layers" style="width:16px;height:16px;stroke-width:2;color:#7FAE8B;"></i> Bancos por módulo</div><div class="stat-num">9</div></div>
+        <div class="card stat"><div class="stat-label"><i data-lucide="circle-help" style="width:16px;height:16px;stroke-width:2;color:#8AA0C4;"></i> Questões no total</div><div class="stat-num">+700</div></div>
+      </div>
+      <section class="card" style="padding:24px 28px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+          <h2 style="margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;">Simulados</h2>
+          <a class="bare" href="Simulados/Índice-de-Simulados.html" style="font-size:13px;color:#C8721F;font-weight:600;">ver índice →</a>
+        </div>
+        <div id="simlist" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;"></div>
+      </section>
+    </section>
+
+    <!-- ====== DESEMPENHO ====== -->
+    <section class="screen" id="screen-desempenho">
+      <header style="margin-bottom:26px;">
+        <div class="eyebrow">Últimos 30 dias</div>
+        <h1 class="title">Seu desempenho</h1>
+      </header>
+
+      <div class="statgrid">
+        <div class="card stat">
+          <div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Questões resolvidas</div>
+          <div class="stat-num">2.480</div>
+          <div style="font-size:13px;color:#7FAE8B;font-weight:600;margin-top:6px;">+312 este mês</div>
+        </div>
+        <div class="card stat">
+          <div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Taxa de acerto geral</div>
+          <div class="stat-num">74<small>%</small></div>
+          <div style="font-size:13px;color:#7FAE8B;font-weight:600;margin-top:6px;">+4 pts vs. mês passado</div>
+        </div>
+        <div class="card stat">
+          <div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Horas esta semana</div>
+          <div class="stat-num">12<small>h</small>30</div>
+          <div style="font-size:13px;color:#A89E91;font-weight:500;margin-top:6px;">meta: 14h</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:start;">
+        <section class="card" style="padding:28px;">
+          <h2 style="margin:0 0 22px;font-size:18px;font-weight:700;letter-spacing:-.01em;">Acerto por tema</h2>
+          <div style="display:flex;flex-direction:column;gap:18px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">Lógica Proposicional</span><span style="color:#6B6258;font-weight:600;">82%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:82%;background:#7FAE8B;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">Conjuntos</span><span style="color:#6B6258;font-weight:600;">76%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:76%;background:#7FAE8B;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">Aritmética</span><span style="color:#6B6258;font-weight:600;">69%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:69%;background:#E8964C;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">Sequências</span><span style="color:#6B6258;font-weight:600;">64%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:64%;background:#E8964C;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">Combinatória e Probabilidade</span><span style="color:#6B6258;font-weight:600;">58%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:58%;background:#D98C6A;"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="padding:28px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <h2 style="margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;">Estudo na semana</h2>
+            <span style="font-size:13px;color:#A89E91;">horas / dia</span>
+          </div>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;height:160px;padding-top:18px;">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:50%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">S</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:66%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">T</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:82%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">Q</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:38%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">Q</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:100%;border-radius:8px;background:#E8964C;"></div><span style="font-size:12px;color:#C8721F;font-weight:700;">S</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:72%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">S</span></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;justify-content:flex-end;"><div style="width:100%;max-width:30px;height:20%;border-radius:8px;background:#F0E0CB;"></div><span style="font-size:12px;color:#A89E91;font-weight:600;">D</span></div>
+          </div>
+          <div style="margin-top:18px;padding-top:18px;border-top:1px solid #F1ECE3;font-size:14px;color:#6B6258;line-height:1.55;">Sexta foi seu melhor dia: <strong style="color:#2C2722;">3h12</strong> de estudo focado.</div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ====== REVISÕES ====== -->
+    <section class="screen" id="screen-revisoes">
+      <header style="margin-bottom:26px;">
+        <div class="eyebrow">Repetição espaçada</div>
+        <h1 class="title">Revisões</h1>
+      </header>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;">
+        <section class="card" style="padding:28px;">
+          <h2 style="margin:0 0 18px;font-size:18px;font-weight:700;letter-spacing:-.01em;">Para hoje</h2>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="task" style="background:#F4F6FA;border:1px solid #E9EDF4;"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#8AA0C4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;">Negação de proposições</div><div style="font-size:12px;color:#8B91A0;margin-top:2px;">18 cartões</div></div><i data-lucide="chevron-right" style="width:18px;height:18px;color:#B9C0CE;"></i></div>
+            <div class="task" style="background:#FBF6EF;border:1px solid #F1E7D8;"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#E8964C;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;">∪</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;">Operações com conjuntos</div><div style="font-size:12px;color:#A89E91;margin-top:2px;">9 cartões</div></div><i data-lucide="chevron-right" style="width:18px;height:18px;color:#D8CDBC;"></i></div>
+          </div>
+        </section>
+        <section style="background:#FBF1E6;border:1px solid #F2E2CD;border-radius:24px;padding:28px;">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;"><i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:#C8721F;"></i><h2 style="margin:0;font-size:16px;font-weight:700;color:#7A4A14;">Como funciona</h2></div>
+          <div style="font-size:15px;color:#8A5A22;line-height:1.55;">A repetição espaçada reapresenta cada conceito pouco antes de você esquecê-lo. Revise os cartões do dia e a plataforma reagenda os intervalos automaticamente.</div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // ---- dados reais (Raciocínio Lógico) ----
+  var modulos = [
+    {n:'0', nome:'Introdução', desc:'Lógica × matemática, abstração', cor:'#8AA0C4', ico:'compass', prog:100, href:'Módulo-0---Introdução/Apostila-de-Introdução-ao-Raciocínio-Lógico.html'},
+    {n:'1', nome:'Lógica Proposicional', desc:'Proposições, conectivos, argumentos', cor:'#E8964C', ico:'binary', prog:72, href:'Módulo-1---Lógica-Proposicional/Apostila-de-Lógica-Proposicional.html'},
+    {n:'2', nome:'Conjuntos', desc:'Operações e diagramas de Venn', cor:'#7FAE8B', ico:'circle-dot', prog:55, href:'Módulo-2---Conjuntos/Apostila-de-Conjuntos.html'},
+    {n:'3', nome:'Aritmética', desc:'Operações, primos, mdc/mmc', cor:'#D98C6A', ico:'calculator', prog:40, href:'Módulo-3---Aritmética/Apostila-de-Aritmética.html'},
+    {n:'4', nome:'Sequências', desc:'Padrões com números e figuras', cor:'#8AA0C4', ico:'trending-up', prog:25, href:'Módulo-4---Sequências/Apostila-de-Sequências.html'},
+    {n:'5', nome:'Combinatória e Probabilidade', desc:'Contagem, arranjos, chance', cor:'#E8964C', ico:'dice-5', prog:10, href:'Módulo-5---Combinatória-e-Probabilidade/Apostila-de-Análise-Combinatória-e-Probabilidade.html'},
+    {n:'6', nome:'Verdades e Mentiras', desc:'Quem fala a verdade, quem mente', cor:'#7FAE8B', ico:'venetian-mask', prog:0, href:'Módulo-6---Verdades-e-Mentiras/Apostila-de-Verdades-e-Mentiras.html'}
+  ];
+
+  function modCard(m){
+    return '<a class="bare" href="'+encodeURI(m.href)+'"><div class="card modcard">'+
+      '<div style="display:flex;align-items:center;justify-content:space-between;">'+
+        '<div class="mod-ico" style="background:'+m.cor+';"><i data-lucide="'+m.ico+'" class="lc" style="stroke:#fff;"></i></div>'+
+        '<span style="font-size:12px;color:#C4BBAD;font-weight:700;">MÓD '+m.n+'</span>'+
+      '</div>'+
+      '<div><div style="font-weight:700;font-size:16px;letter-spacing:-.01em;">'+m.nome+'</div>'+
+      '<div style="font-size:13px;color:#A89E91;margin-top:3px;line-height:1.4;">'+m.desc+'</div></div>'+
+      '<div><div style="display:flex;justify-content:space-between;font-size:12px;color:#A89E91;margin-bottom:6px;"><span>progresso</span><span style="font-weight:600;color:#6B6258;">'+m.prog+'%</span></div>'+
+      '<div class="bar-track"><div class="bar-fill" style="width:'+m.prog+'%;background:'+m.cor+';"></div></div></div>'+
+    '</div></a>';
+  }
+  document.getElementById('modgrid').innerHTML = modulos.map(modCard).join('');
+
+  // simulados existentes
+  var simCount = 21;
+  var simHtml = '';
+  for(var i=1;i<=simCount;i++){
+    var id = String(i).padStart(3,'0');
+    simHtml += '<a class="bare" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
+      '<div style="display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;border:1px solid #EFE9DF;background:#fff;transition:background .12s;" onmouseover="this.style.background=\'#FBF6EF\'" onmouseout="this.style.background=\'#fff\'">'+
+        '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:#FBEFE1;color:#C8721F;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+id+'</div>'+
+        '<div style="flex:1;"><div style="font-weight:600;font-size:14px;">Simulado '+id+'</div><div style="font-size:12px;color:#A89E91;">5 questões · misto</div></div>'+
+        '<i data-lucide="chevron-right" style="width:18px;height:18px;color:#CFC6B8;"></i>'+
+      '</div></a>';
+  }
+  simHtml += '<div style="display:flex;align-items:center;justify-content:center;padding:13px;border-radius:13px;border:1px dashed #DDD5C8;color:#A89E91;font-size:13px;">+79 em construção</div>';
+  document.getElementById('simlist').innerHTML = simHtml;
+
+  // ---- data + saudação dinâmicas ----
+  (function(){
+    var dias=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+    var meses=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+    var d=new Date();
+    document.getElementById('todayDate').textContent = dias[d.getDay()]+', '+d.getDate()+' de '+meses[d.getMonth()];
+    var h=d.getHours(); var saud = h<12?'Bom dia':(h<18?'Boa tarde':'Boa noite');
+    document.getElementById('greeting').textContent = saud+', Alberdan';
+  })();
+
+  // ---- navegação ----
+  var items=document.querySelectorAll('.nav-item[data-screen]');
+  items.forEach(function(it){
+    it.addEventListener('click',function(){
+      items.forEach(function(x){x.classList.remove('active');});
+      it.classList.add('active');
+      document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
+      document.getElementById('screen-'+it.dataset.screen).classList.add('active');
+      document.querySelector('.main').scrollTop=0;
+    });
+  });
+
+  // ---- recolher sidebar ----
+  document.getElementById('toggleSidebar').addEventListener('click',function(){
+    var app=document.getElementById('app');
+    app.classList.toggle('collapsed');
+    document.getElementById('collapseIcon').setAttribute('data-lucide', app.classList.contains('collapsed')?'chevrons-right':'chevrons-left');
+    if(window.lucide) lucide.createIcons();
+  });
+
+  // ---- ícones ----
+  function drawIcons(){ if(window.lucide&&window.lucide.createIcons){lucide.createIcons();} else {setTimeout(drawIcons,120);} }
+  drawIcons();
+</script>
+</body>
+</html>
