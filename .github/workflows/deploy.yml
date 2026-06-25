@@ -29,6 +29,8 @@ jobs:
         run: npm ci
       - name: Build Quartz
         run: npx quartz build
+      - name: Landing = Plataforma de Estudo
+        run: cp "content/Plataforma de Estudo.html" public/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

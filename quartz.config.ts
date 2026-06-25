@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     // ⚠️ EDITE: domínio público (GitHub Pages = usuario.github.io/REPO).
     baseUrl: "okm-s.github.io/Racioc-nio-l-gico",
     // Privado: nada dentro destes padrões vai pro site publicado.
-    ignorePatterns: ["private", "templates", ".obsidian", ".claude", "**/*.canvas", "index.html", "build_site.py", "app_template.html"],
+    ignorePatterns: ["private", "templates", ".obsidian", ".claude", "**/*.canvas", "index.html", "build_site.py", "app_template.html", "Plataforma de Estudo.html"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
