@@ -251,7 +251,7 @@
       <section class="card" style="padding:24px 28px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
           <h2 class="h2">Simulados</h2>
-          <a class="bare" target="_blank" rel="noopener" href="Simulados/Índice-de-Simulados.html" style="font-size:13px;color:var(--terra);font-weight:600;">ver índice →</a>
+          <a class="bare" href="Simulados/Índice-de-Simulados.html" style="font-size:13px;color:var(--terra);font-weight:600;">ver índice →</a>
         </div>
         <div id="simlist" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;"></div>
       </section>
@@ -381,7 +381,7 @@
       return '<div class="task">'+
         '<div style="width:30px;height:30px;flex:0 0 auto;border-radius:9px;background:'+m.cor+'2b;color:'+m.cor+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+m.n+'</div>'+
         '<div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text);">'+m.nome+'</div></div>'+
-        '<a class="open-link" target="_blank" rel="noopener" href="'+encodeURI(m.href)+'">Abrir <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
+        '<a class="open-link" href="'+encodeURI(m.href)+'">Abrir <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
       '</div>';
     }).join('');
     document.getElementById('modgrid').innerHTML = MOD.map(function(m){
@@ -395,13 +395,13 @@
         '<div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px;"><span>progresso</span><span style="font-weight:600;color:var(--text2);">'+prog+'%</span></div>'+
         '<div class="bar-track"><div class="bar-fill" style="width:'+prog+'%;background:'+m.cor+';"></div></div></div>'+
         '<div style="display:flex;align-items:center;gap:10px;margin-top:2px;">'+
-          '<a class="open-link" target="_blank" rel="noopener" href="'+encodeURI(m.href)+'">Abrir apostila <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
+          '<a class="open-link" href="'+encodeURI(m.href)+'">Abrir apostila <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
           '<button class="chip '+(done?'done':'')+'" data-action="toggle-mod" data-mod="'+m.n+'" style="margin-left:auto;">'+(done?'<i data-lucide="check" style="width:14px;height:14px;"></i> Concluído':'Marcar concluído')+'</button>'+
         '</div></div>';
     }).join('');
     var sh='';
     for(var i=1;i<=SIM_TOTAL;i++){ var id=String(i).padStart(3,'0'); var feito=!!p.simulados[id];
-      sh += '<a class="bare" target="_blank" rel="noopener" data-sim="'+id+'" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
+      sh += '<a class="bare" data-sim="'+id+'" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
         '<div style="display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;border:1px solid '+(feito?'var(--okB)':'var(--border)')+';background:'+(feito?'var(--okBg)':'var(--surface)')+';">'+
           '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:'+(feito?'var(--green)':'var(--activeBg)')+';color:'+(feito?'#fff':'var(--terra)')+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+(feito?'<i data-lucide="check" style="width:16px;height:16px;stroke-width:3;"></i>':id)+'</div>'+
           '<div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Simulado '+id+'</div><div style="font-size:12px;color:var(--muted);">'+(feito?'feito':'5 questões · misto')+'</div></div>'+

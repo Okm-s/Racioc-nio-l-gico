@@ -9,7 +9,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "Raciocínio Lógico",
     pageTitleSuffix: " · Apostila",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: true,        // pré-visualização ao passar o mouse no link
     analytics: null,             // sem rastreamento
     locale: "pt-BR",
