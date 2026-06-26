@@ -18,31 +18,13 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
   ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        { Component: Component.Search(), grow: true },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-  ],
+  left: [Component.AppSidebar()],
   right: [],
 }
 
 // Páginas de lista (pastas/módulos)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        { Component: Component.Search(), grow: true },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-  ],
+  left: [Component.AppSidebar()],
   right: [],
 }

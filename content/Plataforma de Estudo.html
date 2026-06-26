@@ -422,6 +422,9 @@
     document.getElementById('app').style.display='flex';
     var p=cur(); recordAccess(p); saveCur(p);
     renderAll();
+    applyCollapse();
+    applyHash();
+    icons();
   }
   function doLogin(){
     var nome=document.getElementById('in-nome').value.trim();
@@ -444,7 +447,7 @@
     var act=e.target.closest('[data-action]');
     if(act){
       var a=act.dataset.action;
-      if(a==='toggle-sidebar'){ var app=document.getElementById('app'); app.classList.toggle('collapsed'); document.getElementById('collapseIcon').setAttribute('data-lucide', app.classList.contains('collapsed')?'chevrons-right':'chevrons-left'); icons(); }
+      if(a==='toggle-sidebar'){ var app=document.getElementById('app'); app.classList.toggle('collapsed'); localStorage.setItem('rl_collapsed', app.classList.contains('collapsed')?'1':'0'); document.getElementById('collapseIcon').setAttribute('data-lucide', app.classList.contains('collapsed')?'chevrons-right':'chevrons-left'); icons(); }
       else if(a==='theme'){ toggleTheme(); }
       else if(a==='logout'){ localStorage.removeItem(CK); document.getElementById('app').style.display='none'; document.getElementById('login').style.display='flex'; document.getElementById('in-nome').value=''; document.getElementById('in-zap').value=''; }
       else if(a==='toggle-mod'){ var p=cur(); var n=act.dataset.mod; p.modulos[n]=!p.modulos[n]; saveCur(p); renderAll(); }
@@ -458,10 +461,14 @@
     document.querySelectorAll('.nav-item[data-screen]').forEach(function(x){ x.classList.toggle('active', x.dataset.screen===s); });
     document.querySelectorAll('.screen').forEach(function(sec){ sec.classList.toggle('active', sec.id==='screen-'+s); });
     document.querySelector('.main').scrollTop=0;
+    try{ history.replaceState(null,'','#'+s); }catch(e){}
   }
+  function applyHash(){ var hs=(location.hash||'').replace('#',''); if(hs && document.getElementById('screen-'+hs)) setScreen(hs); }
+  function applyCollapse(){ if(localStorage.getItem('rl_collapsed')==='1'){ document.getElementById('app').classList.add('collapsed'); document.getElementById('collapseIcon').setAttribute('data-lucide','chevrons-right'); } }
 
   window.addEventListener('pageshow', function(){ applyTheme(currentTheme()); if(cur()){ if(document.getElementById('login').style.display!=='none') startApp(); else renderAll(); } });
   window.addEventListener('storage', function(e){ if(e.key==='theme') applyTheme(currentTheme()); });
+  window.addEventListener('hashchange', applyHash);
 
   if(cur()){ startApp(); } else { document.getElementById('app').style.display='none'; document.getElementById('login').style.display='flex'; }
   icons();
