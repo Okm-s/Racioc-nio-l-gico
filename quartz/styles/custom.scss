@@ -57,26 +57,19 @@ article {
   margin-top: 0.2rem;
 }
 
-// ── Menu lateral (Explorer): módulos claros e alinhados ────
-.explorer {
-  .folder-title {
-    font-family: var(--headerFont);
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-  .file > a {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    opacity: 0.92;
-  }
-  a.active {
-    color: var(--secondary);
-    font-weight: 700;
-    opacity: 1;
-  }
-}
-
 .page-title { font-family: var(--headerFont); }
+
+// ── Layout das apostilas: sem coluna direita; leitura larga e centrada ──
+.sidebar.right { display: none !important; }
+.page { max-width: 1340px !important; }
+@media (min-width: 1200px) {
+  #quartz-body { grid-template-columns: 250px minmax(0, 1fr) 0 !important; }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  #quartz-body { grid-template-columns: 250px minmax(0, 1fr) !important; }
+}
+.center, .center > article { max-width: none !important; }
+.center > article { max-width: 880px !important; margin-left: auto; margin-right: auto; }
 
 // ── Tabelas (tabelas-verdade): alinhadas, mono, limpas ─────
 article table {
@@ -87,11 +80,6 @@ article th,
 article td { text-align: center; }
 article td:first-child,
 article th:first-child { text-align: left; }
-
-// ── Sumário (TOC) discreto ─────────────────────────────────
-.toc { font-size: 0.85rem; }
-.toc-content a { opacity: 0.85; }
-.toc-content a:hover { opacity: 1; }
 
 // ── Imagens com respiro ────────────────────────────────────
 article img { border-radius: 10px; margin: 0.4rem 0; }

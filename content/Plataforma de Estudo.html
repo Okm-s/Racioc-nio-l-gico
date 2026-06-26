@@ -9,104 +9,125 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
+  /* ===== TOKENS ===== */
+  :root{
+    --bg:#F6F1E9; --surface:#ffffff; --surface2:#FBF6EF; --border:#EFE9DF; --border2:#F1ECE3;
+    --text:#2C2722; --text2:#6B6258; --muted:#A89E91; --muted2:#C4BBAD;
+    --hover:#F7F2EA; --activeBg:#FBEFE1; --activeFg:#C8721F; --track:#F1ECE3; --avatar:#F0E3D4;
+    --panel:#FBF1E6; --panelB:#F2E2CD; --panelH:#7A4A14; --panelT:#8A5A22;
+    --review:#F4F6FA; --reviewB:#E9EDF4; --reviewT:#8B91A0;
+    --inputBg:#FCFAF6; --inputB:#E4DDD0; --scroll:#E6DED2;
+    --orange:#E8964C; --orangeD:#D9842F; --terra:#C8721F; --green:#7FAE8B; --blue:#8AA0C4; --terra2:#D98C6A;
+    --shadow:0 1px 2px rgba(44,39,34,.03); --shadowUp:0 6px 16px rgba(44,39,34,.07);
+    --okBg:#EAF3EC; --okB:#D6E7DA; --okT:#5E8E6B;
+  }
+  html[data-theme="dark"]{
+    --bg:#14120D; --surface:#201C15; --surface2:#262119; --border:#322C22; --border2:#2A251D;
+    --text:#ECE3D1; --text2:#C5BAA4; --muted:#988D79; --muted2:#6E664F;
+    --hover:#2A251C; --activeBg:#3A2B1A; --activeFg:#F0A85C; --track:#322C22; --avatar:#3A2B1A;
+    --panel:#2A2013; --panelB:#46371F; --panelH:#EBB67E; --panelT:#D9B58C;
+    --review:#1B2130; --reviewB:#2A3447; --reviewT:#9FB0CC;
+    --inputBg:#262119; --inputB:#3A3327; --scroll:#3A3327;
+    --terra:#F0A85C; --terra2:#D98C6A;
+    --shadow:0 1px 2px rgba(0,0,0,.25); --shadowUp:0 6px 16px rgba(0,0,0,.4);
+    --okBg:#1E2A20; --okB:#334A38; --okT:#86B894;
+  }
+
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{font-family:'Hanken Grotesk',system-ui,sans-serif;}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);}
   ::-webkit-scrollbar{width:8px;height:8px;}
-  ::-webkit-scrollbar-thumb{background:#E6DED2;border-radius:999px;}
+  ::-webkit-scrollbar-thumb{background:var(--scroll);border-radius:999px;}
   .lc{width:20px;height:20px;stroke-width:1.9;}
 
-  .app{height:100vh;display:flex;background:#F6F1E9;color:#2C2722;overflow:hidden;}
+  .app{height:100vh;display:flex;background:var(--bg);color:var(--text);overflow:hidden;}
 
-  /* sidebar */
-  .sidebar{width:250px;flex:0 0 auto;background:#fff;border-right:1px solid #EFE9DF;display:flex;flex-direction:column;padding:22px 16px;transition:width .22s cubic-bezier(.4,0,.2,1);}
+  .sidebar{width:250px;flex:0 0 auto;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:22px 16px;transition:width .22s cubic-bezier(.4,0,.2,1);}
   .app.collapsed .sidebar{width:78px;}
   .app.collapsed .hidecol{display:none !important;}
   .brand{display:flex;align-items:center;gap:12px;padding:4px 6px 22px 6px;}
-  .brand-box{width:38px;height:38px;flex:0 0 auto;border-radius:11px;background:#E8964C;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;}
-  .brand-name{font-weight:700;font-size:18px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;}
-  .brand-name span{color:#E8964C;}
+  .brand-box{width:38px;height:38px;flex:0 0 auto;border-radius:11px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;}
+  .brand-name{font-weight:700;font-size:18px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;color:var(--text);}
+  .brand-name span{color:var(--orange);}
   .nav{display:flex;flex-direction:column;gap:4px;}
-  .nav-item{display:flex;align-items:center;gap:14px;padding:11px 14px;border-radius:12px;cursor:pointer;font-weight:500;font-size:15px;line-height:1;transition:background .15s,color .15s;white-space:nowrap;overflow:hidden;background:transparent;color:#857B6F;}
-  .nav-item:hover{background:#F7F2EA;}
-  .nav-item.active{background:#FBEFE1;color:#C8721F;font-weight:600;}
+  .nav-item{display:flex;align-items:center;gap:14px;padding:11px 14px;border-radius:12px;cursor:pointer;font-weight:500;font-size:15px;line-height:1;transition:background .15s,color .15s;white-space:nowrap;overflow:hidden;background:transparent;color:var(--muted);}
+  .nav-item:hover{background:var(--hover);}
+  .nav-item.active{background:var(--activeBg);color:var(--activeFg);font-weight:600;}
   .sb-bottom{margin-top:auto;display:flex;flex-direction:column;gap:4px;}
-  .user{display:flex;align-items:center;gap:12px;padding:10px 8px;margin-top:6px;border-top:1px solid #F1ECE3;}
-  .user-av{width:34px;height:34px;flex:0 0 auto;border-radius:50%;background:#F0E3D4;display:flex;align-items:center;justify-content:center;color:#C8721F;font-weight:700;font-size:13px;}
-  .user-name{font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px;}
-  .user-sub{font-size:12px;color:#A89E91;white-space:nowrap;}
+  .user{display:flex;align-items:center;gap:12px;padding:10px 8px;margin-top:6px;border-top:1px solid var(--border2);}
+  .user-av{width:34px;height:34px;flex:0 0 auto;border-radius:50%;background:var(--avatar);display:flex;align-items:center;justify-content:center;color:var(--terra);font-weight:700;font-size:13px;}
+  .user-name{font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px;color:var(--text);}
+  .user-sub{font-size:12px;color:var(--muted);white-space:nowrap;}
 
-  /* main */
   .main{flex:1;min-width:0;overflow-y:auto;padding:30px 40px 36px;}
+  .wrap{max-width:1180px;margin:0 auto;}
   .screen{display:none;}
   .screen.active{display:block;}
-  .eyebrow{font-size:13px;color:#A89E91;font-weight:500;margin-bottom:6px;}
-  h1.title{margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;}
-  .card{background:#fff;border:1px solid #EFE9DF;border-radius:20px;box-shadow:0 1px 2px rgba(44,39,34,.03);}
+  .eyebrow{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:6px;}
+  h1.title{margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;color:var(--text);}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);}
   .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;}
   .stat{padding:22px 24px;}
-  .stat-label{display:flex;align-items:center;gap:9px;color:#A89E91;font-size:13px;font-weight:500;margin-bottom:14px;}
-  .stat-num{font-size:34px;font-weight:700;letter-spacing:-.02em;}
-  .stat-num small{font-size:18px;color:#C4BBAD;font-weight:600;}
-  .pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #EFE9DF;border-radius:999px;padding:9px 16px 9px 13px;box-shadow:0 1px 2px rgba(44,39,34,.03);}
-  .bar-track{height:9px;border-radius:999px;background:#F1ECE3;overflow:hidden;}
+  .stat-label{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:13px;font-weight:500;margin-bottom:14px;}
+  .stat-num{font-size:34px;font-weight:700;letter-spacing:-.02em;color:var(--text);}
+  .stat-num small{font-size:18px;color:var(--muted2);font-weight:600;}
+  .pill{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:9px 16px 9px 13px;box-shadow:var(--shadow);}
+  .bar-track{height:9px;border-radius:999px;background:var(--track);overflow:hidden;}
   .bar-fill{height:100%;border-radius:999px;transition:width .3s;}
-  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#E8964C;color:#fff;font-weight:700;font-size:15px;padding:15px;border-radius:14px;cursor:pointer;transition:background .15s;text-decoration:none;border:none;width:100%;font-family:inherit;}
-  .btn-primary:hover{background:#D9842F;}
-  .task{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;font-weight:700;font-size:15px;padding:15px;border-radius:14px;cursor:pointer;transition:background .15s;text-decoration:none;border:none;width:100%;font-family:inherit;}
+  .btn-primary:hover{background:var(--orangeD);}
+  .task{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);}
+  .h2{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;color:var(--text);}
   a.bare{text-decoration:none;color:inherit;}
   .modcard{padding:22px 22px;display:flex;flex-direction:column;gap:14px;}
   .mod-ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;}
-  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:7px 12px;border-radius:10px;cursor:pointer;border:1px solid #EFE9DF;background:#fff;color:#857B6F;font-family:inherit;transition:.15s;}
-  .chip:hover{background:#F7F2EA;}
-  .chip.done{background:#EAF3EC;border-color:#D6E7DA;color:#5E8E6B;}
-  .open-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#C8721F;text-decoration:none;}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:7px 12px;border-radius:10px;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-family:inherit;transition:.15s;}
+  .chip:hover{background:var(--hover);}
+  .chip.done{background:var(--okBg);border-color:var(--okB);color:var(--okT);}
+  .open-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--terra);text-decoration:none;}
+  .softpanel{background:var(--panel);border:1px solid var(--panelB);border-radius:24px;padding:24px;}
 
   /* login */
-  .login{position:fixed;inset:0;z-index:50;background:#F6F1E9;display:flex;align-items:center;justify-content:center;padding:24px;}
-  .login-card{width:100%;max-width:400px;background:#fff;border:1px solid #EFE9DF;border-radius:24px;box-shadow:0 8px 30px rgba(44,39,34,.08);padding:34px 30px;}
-  .login-card label{display:block;font-size:13px;font-weight:600;color:#6B6258;margin:16px 0 7px;}
-  .login-card input{width:100%;padding:13px 14px;border:1px solid #E4DDD0;border-radius:12px;font-size:15px;font-family:inherit;background:#FCFAF6;color:#2C2722;outline:none;transition:border .15s;}
-  .login-card input:focus{border-color:#E8964C;}
+  .login{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px;}
+  .login-card{width:100%;max-width:400px;background:var(--surface);border:1px solid var(--border);border-radius:24px;box-shadow:0 8px 30px rgba(0,0,0,.12);padding:34px 30px;}
+  .login-card label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin:16px 0 7px;}
+  .login-card input{width:100%;padding:13px 14px;border:1px solid var(--inputB);border-radius:12px;font-size:15px;font-family:inherit;background:var(--inputBg);color:var(--text);outline:none;transition:border .15s;}
+  .login-card input:focus{border-color:var(--orange);}
   .login-err{color:#C0563B;font-size:13px;margin-top:10px;min-height:16px;}
-  .hint{font-size:12px;color:#A89E91;line-height:1.5;margin-top:18px;display:flex;gap:8px;}
+  .hint{font-size:12px;color:var(--muted);line-height:1.5;margin-top:18px;display:flex;gap:8px;}
 </style>
 </head>
 <body>
 
-<!-- ============ LOGIN ============ -->
+<!-- LOGIN -->
 <div class="login" id="login">
   <div class="login-card">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
       <div class="brand-box">λ</div>
       <div class="brand-name" style="font-size:20px;">lógica<span>.</span></div>
     </div>
-    <div style="font-size:22px;font-weight:700;letter-spacing:-.02em;margin-top:14px;">Entre para acompanhar seu progresso</div>
-    <div style="font-size:14px;color:#A89E91;margin-top:6px;line-height:1.5;">Seu perfil guarda sequência de estudo, módulos concluídos e simulados feitos.</div>
-
+    <div style="font-size:22px;font-weight:700;letter-spacing:-.02em;margin-top:14px;color:var(--text);">Entre para acompanhar seu progresso</div>
+    <div style="font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5;">Seu perfil guarda sequência de estudo, módulos concluídos e simulados feitos.</div>
     <label for="in-nome">Seu nome</label>
     <input id="in-nome" type="text" placeholder="Ex.: Marina Ribeiro" autocomplete="name">
     <label for="in-zap">WhatsApp</label>
     <input id="in-zap" type="tel" inputmode="numeric" placeholder="Ex.: (83) 99999-0000" autocomplete="tel">
     <div class="login-err" id="login-err"></div>
     <button class="btn-primary" id="btn-entrar" style="margin-top:8px;">Entrar</button>
-
     <div class="hint">
-      <i data-lucide="lock" style="width:15px;height:15px;flex:0 0 auto;stroke-width:2;color:#B7AEA0;"></i>
+      <i data-lucide="lock" style="width:15px;height:15px;flex:0 0 auto;stroke-width:2;color:var(--muted);"></i>
       <span>Seus dados ficam <strong>só neste aparelho</strong> (não são enviados a ninguém).</span>
     </div>
   </div>
 </div>
 
-<!-- ============ APP ============ -->
+<!-- APP -->
 <div class="app" id="app" style="display:none;">
-
   <aside class="sidebar">
     <div class="brand">
       <div class="brand-box">λ</div>
       <div class="brand-name hidecol">lógica<span>.</span></div>
     </div>
-
     <nav class="nav">
       <div class="nav-item active" data-screen="inicio"><i data-lucide="house" class="lc"></i><span class="hidecol">Início</span></div>
       <div class="nav-item" data-screen="estudar"><i data-lucide="book-open" class="lc"></i><span class="hidecol">Estudar</span></div>
@@ -114,8 +135,8 @@
       <div class="nav-item" data-screen="desempenho"><i data-lucide="chart-column" class="lc"></i><span class="hidecol">Desempenho</span></div>
       <div class="nav-item" data-screen="revisoes"><i data-lucide="rotate-ccw" class="lc"></i><span class="hidecol">Revisões</span></div>
     </nav>
-
     <div class="sb-bottom">
+      <div class="nav-item" data-action="theme"><i data-lucide="moon" class="lc" id="themeIcon"></i><span class="hidecol" id="themeLabel">Modo escuro</span></div>
       <div class="nav-item" data-action="toggle-sidebar"><i data-lucide="chevrons-left" class="lc" id="collapseIcon"></i><span class="hidecol">Recolher menu</span></div>
       <div class="nav-item" data-action="logout"><i data-lucide="log-out" class="lc"></i><span class="hidecol">Sair</span></div>
       <div class="user">
@@ -128,7 +149,7 @@
     </div>
   </aside>
 
-  <main class="main">
+  <main class="main"><div class="wrap">
 
     <!-- INÍCIO -->
     <section class="screen active" id="screen-inicio">
@@ -138,23 +159,23 @@
           <h1 class="title" id="greeting">Olá</h1>
         </div>
         <div class="pill">
-          <i data-lucide="flame" style="width:18px;height:18px;stroke-width:2;color:#E8964C;"></i>
-          <span style="font-weight:700;font-size:14px;" id="pillStreak">0 dias</span>
-          <span style="font-size:13px;color:#A89E91;">de sequência</span>
+          <i data-lucide="flame" style="width:18px;height:18px;stroke-width:2;color:var(--orange);"></i>
+          <span style="font-weight:700;font-size:14px;color:var(--text);" id="pillStreak">0 dias</span>
+          <span style="font-size:13px;color:var(--muted);">de sequência</span>
         </div>
       </header>
 
       <div class="statgrid">
         <div class="card stat">
-          <div class="stat-label"><i data-lucide="flame" style="width:16px;height:16px;stroke-width:2;color:#E8964C;"></i> Sequência</div>
+          <div class="stat-label"><i data-lucide="flame" style="width:16px;height:16px;stroke-width:2;color:var(--orange);"></i> Sequência</div>
           <div class="stat-num"><span id="stStreak">0</span><small> dias</small></div>
         </div>
         <div class="card stat">
-          <div class="stat-label"><i data-lucide="circle-check-big" style="width:16px;height:16px;stroke-width:2;color:#7FAE8B;"></i> Módulos concluídos</div>
+          <div class="stat-label"><i data-lucide="circle-check-big" style="width:16px;height:16px;stroke-width:2;color:var(--green);"></i> Módulos concluídos</div>
           <div class="stat-num"><span id="stMod">0</span><small> / 7</small></div>
         </div>
         <div class="card stat">
-          <div class="stat-label"><i data-lucide="file-check" style="width:16px;height:16px;stroke-width:2;color:#8AA0C4;"></i> Simulados feitos</div>
+          <div class="stat-label"><i data-lucide="file-check" style="width:16px;height:16px;stroke-width:2;color:var(--blue);"></i> Simulados feitos</div>
           <div class="stat-num" id="stSim">0</div>
         </div>
       </div>
@@ -162,21 +183,21 @@
       <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:18px;align-items:start;">
         <section class="card" style="padding:28px;">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;">
-            <h2 style="margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;">Plano de estudo</h2>
-            <span style="font-size:13px;color:#A89E91;" id="planoLabel">0 de 7 concluídos</span>
+            <h2 class="h2">Plano de estudo</h2>
+            <span style="font-size:13px;color:var(--muted);" id="planoLabel">0 de 7 concluídos</span>
           </div>
           <div style="display:flex;align-items:center;gap:26px;margin-bottom:24px;">
             <div style="position:relative;width:108px;height:108px;flex:0 0 auto;">
               <svg width="108" height="108" viewBox="0 0 108 108" style="transform:rotate(-90deg);">
-                <circle cx="54" cy="54" r="47" fill="none" stroke="#F1ECE3" stroke-width="11"></circle>
-                <circle id="ring" cx="54" cy="54" r="47" fill="none" stroke="#E8964C" stroke-width="11" stroke-linecap="round" stroke-dasharray="295.3" stroke-dashoffset="295.3"></circle>
+                <circle cx="54" cy="54" r="47" fill="none" stroke="var(--track)" stroke-width="11"></circle>
+                <circle id="ring" cx="54" cy="54" r="47" fill="none" stroke="var(--orange)" stroke-width="11" stroke-linecap="round" stroke-dasharray="295.3" stroke-dashoffset="295.3"></circle>
               </svg>
               <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                <div style="font-size:24px;font-weight:700;letter-spacing:-.02em;" id="ringPct">0%</div>
-                <div style="font-size:11px;color:#A89E91;">do curso</div>
+                <div style="font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--text);" id="ringPct">0%</div>
+                <div style="font-size:11px;color:var(--muted);">do curso</div>
               </div>
             </div>
-            <div style="flex:1;font-size:15px;color:#6B6258;line-height:1.5;" id="planoMsg">Comece pelo Módulo 0. A cada módulo concluído, sua barra avança.</div>
+            <div style="flex:1;font-size:15px;color:var(--text2);line-height:1.5;" id="planoMsg">Comece pelo Módulo 0. A cada módulo concluído, sua barra avança.</div>
           </div>
           <div id="planoLista" style="display:flex;flex-direction:column;gap:10px;"></div>
         </section>
@@ -184,24 +205,24 @@
         <div style="display:flex;flex-direction:column;gap:18px;">
           <section class="card" style="padding:24px;">
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
-              <i data-lucide="rotate-ccw" style="width:17px;height:17px;stroke-width:2;color:#8AA0C4;"></i>
-              <h2 style="margin:0;font-size:16px;font-weight:700;">Próxima revisão</h2>
+              <i data-lucide="rotate-ccw" style="width:17px;height:17px;stroke-width:2;color:var(--blue);"></i>
+              <h2 class="h2" style="font-size:16px;">Próxima revisão</h2>
             </div>
-            <div style="display:flex;align-items:center;gap:14px;padding:15px;border-radius:14px;background:#F4F6FA;border:1px solid #E9EDF4;">
-              <div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#8AA0C4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div>
+            <div style="display:flex;align-items:center;gap:14px;padding:15px;border-radius:14px;background:var(--review);border:1px solid var(--reviewB);">
+              <div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div>
               <div style="flex:1;">
-                <div style="font-weight:600;font-size:14px;">Negação de proposições</div>
-                <div style="font-size:12px;color:#8B91A0;margin-top:2px;">repetição espaçada</div>
+                <div style="font-weight:600;font-size:14px;color:var(--text);">Negação de proposições</div>
+                <div style="font-size:12px;color:var(--reviewT);margin-top:2px;">repetição espaçada</div>
               </div>
             </div>
-            <div style="font-size:13px;color:#A89E91;margin-top:14px;line-height:1.5;">Revisar logo após estudar fixa o conteúdo por mais tempo.</div>
+            <div style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5;">Revisar logo após estudar fixa o conteúdo por mais tempo.</div>
           </section>
-          <section style="background:#FBF1E6;border:1px solid #F2E2CD;border-radius:24px;padding:24px;">
+          <section class="softpanel">
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;">
-              <i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:#C8721F;"></i>
-              <h2 style="margin:0;font-size:16px;font-weight:700;color:#7A4A14;">Dica</h2>
+              <i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:var(--terra);"></i>
+              <h2 class="h2" style="font-size:16px;color:var(--panelH);">Dica</h2>
             </div>
-            <div style="font-size:15px;color:#8A5A22;line-height:1.55;">Faça um simulado por dia. Em <strong>Questões</strong> você marca o que já resolveu.</div>
+            <div style="font-size:15px;color:var(--panelT);line-height:1.55;">Faça um simulado por dia. Em <strong>Questões</strong> você marca o que já resolveu.</div>
           </section>
         </div>
       </div>
@@ -223,14 +244,14 @@
         <h1 class="title">Questões</h1>
       </header>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;">
-        <div class="card stat"><div class="stat-label"><i data-lucide="file-check" style="width:16px;height:16px;stroke-width:2;color:#7FAE8B;"></i> Você fez</div><div class="stat-num"><span id="qFeitos">0</span><small> simulados</small></div></div>
-        <div class="card stat"><div class="stat-label"><i data-lucide="files" style="width:16px;height:16px;stroke-width:2;color:#E8964C;"></i> Disponíveis</div><div class="stat-num">21<small> / 100</small></div></div>
-        <div class="card stat"><div class="stat-label"><i data-lucide="layers" style="width:16px;height:16px;stroke-width:2;color:#8AA0C4;"></i> Bancos por módulo</div><div class="stat-num">9</div></div>
+        <div class="card stat"><div class="stat-label"><i data-lucide="file-check" style="width:16px;height:16px;stroke-width:2;color:var(--green);"></i> Você fez</div><div class="stat-num"><span id="qFeitos">0</span><small> simulados</small></div></div>
+        <div class="card stat"><div class="stat-label"><i data-lucide="files" style="width:16px;height:16px;stroke-width:2;color:var(--orange);"></i> Disponíveis</div><div class="stat-num">21<small> / 100</small></div></div>
+        <div class="card stat"><div class="stat-label"><i data-lucide="layers" style="width:16px;height:16px;stroke-width:2;color:var(--blue);"></i> Bancos por módulo</div><div class="stat-num">9</div></div>
       </div>
       <section class="card" style="padding:24px 28px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-          <h2 style="margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em;">Simulados</h2>
-          <a class="bare" target="_blank" rel="noopener" href="Simulados/Índice-de-Simulados.html" style="font-size:13px;color:#C8721F;font-weight:600;">ver índice →</a>
+          <h2 class="h2">Simulados</h2>
+          <a class="bare" target="_blank" rel="noopener" href="Simulados/Índice-de-Simulados.html" style="font-size:13px;color:var(--terra);font-weight:600;">ver índice →</a>
         </div>
         <div id="simlist" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;"></div>
       </section>
@@ -243,12 +264,12 @@
         <h1 class="title">Seu desempenho</h1>
       </header>
       <div class="statgrid">
-        <div class="card stat"><div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Simulados feitos</div><div class="stat-num" id="dSim">0</div></div>
-        <div class="card stat"><div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Curso concluído</div><div class="stat-num"><span id="dPct">0</span><small>%</small></div></div>
-        <div class="card stat"><div style="color:#A89E91;font-size:13px;font-weight:500;margin-bottom:12px;">Sequência de estudo</div><div class="stat-num"><span id="dStreak">0</span><small> dias</small></div></div>
+        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Simulados feitos</div><div class="stat-num" id="dSim">0</div></div>
+        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Curso concluído</div><div class="stat-num"><span id="dPct">0</span><small>%</small></div></div>
+        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Sequência de estudo</div><div class="stat-num"><span id="dStreak">0</span><small> dias</small></div></div>
       </div>
       <section class="card" style="padding:28px;">
-        <h2 style="margin:0 0 22px;font-size:18px;font-weight:700;letter-spacing:-.01em;">Progresso por módulo</h2>
+        <h2 class="h2" style="margin-bottom:22px;">Progresso por módulo</h2>
         <div id="modbars" style="display:flex;flex-direction:column;gap:18px;"></div>
       </section>
     </section>
@@ -261,24 +282,23 @@
       </header>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;">
         <section class="card" style="padding:28px;">
-          <h2 style="margin:0 0 18px;font-size:18px;font-weight:700;letter-spacing:-.01em;">Para hoje</h2>
+          <h2 class="h2" style="margin-bottom:18px;">Para hoje</h2>
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <div class="task" style="background:#F4F6FA;border:1px solid #E9EDF4;"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#8AA0C4;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;">Negação de proposições</div><div style="font-size:12px;color:#8B91A0;margin-top:2px;">Lógica · De Morgan</div></div></div>
-            <div class="task" style="background:#FBF6EF;border:1px solid #F1E7D8;"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:#E8964C;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;">∪</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;">Operações com conjuntos</div><div style="font-size:12px;color:#A89E91;margin-top:2px;">Conjuntos · união e interseção</div></div></div>
+            <div class="task" style="background:var(--review);border-color:var(--reviewB);"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;">¬</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Negação de proposições</div><div style="font-size:12px;color:var(--reviewT);margin-top:2px;">Lógica · De Morgan</div></div></div>
+            <div class="task" style="background:var(--surface2);border-color:var(--border);"><div style="width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;">∪</div><div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Operações com conjuntos</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">Conjuntos · união e interseção</div></div></div>
           </div>
         </section>
-        <section style="background:#FBF1E6;border:1px solid #F2E2CD;border-radius:24px;padding:28px;">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;"><i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:#C8721F;"></i><h2 style="margin:0;font-size:16px;font-weight:700;color:#7A4A14;">Como funciona</h2></div>
-          <div style="font-size:15px;color:#8A5A22;line-height:1.55;">A repetição espaçada reapresenta cada conceito pouco antes de você esquecê-lo. Revise os temas do dia logo após estudá-los.</div>
+        <section class="softpanel" style="padding:28px;">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px;"><i data-lucide="sparkles" style="width:17px;height:17px;stroke-width:2;color:var(--terra);"></i><h2 class="h2" style="font-size:16px;color:var(--panelH);">Como funciona</h2></div>
+          <div style="font-size:15px;color:var(--panelT);line-height:1.55;">A repetição espaçada reapresenta cada conceito pouco antes de você esquecê-lo. Revise os temas do dia logo após estudá-los.</div>
         </section>
       </div>
     </section>
 
-  </main>
+  </div></main>
 </div>
 
 <script>
-  // ===== dados dos módulos =====
   var MOD = [
     {n:'0', nome:'Introdução', desc:'Lógica × matemática, abstração', cor:'#8AA0C4', ico:'compass', href:'Módulo-0---Introdução/Apostila-de-Introdução-ao-Raciocínio-Lógico.html'},
     {n:'1', nome:'Lógica Proposicional', desc:'Proposições, conectivos, argumentos', cor:'#E8964C', ico:'binary', href:'Módulo-1---Lógica-Proposicional/Apostila-de-Lógica-Proposicional.html'},
@@ -290,7 +310,6 @@
   ];
   var SIM_TOTAL = 21;
 
-  // ===== armazenamento (localStorage) =====
   var PK='rl_profiles', CK='rl_current';
   function load(k,d){ try{ return JSON.parse(localStorage.getItem(k)) || d; }catch(e){ return d; } }
   function save(k,v){ localStorage.setItem(k, JSON.stringify(v)); }
@@ -299,15 +318,14 @@
   function cur(){ var p=profiles(); var k=curKey(); return (k && p[k]) ? p[k] : null; }
   function saveCur(prof){ var p=profiles(); p[prof.key]=prof; save(PK,p); }
   function digits(s){ return (s||'').replace(/\D/g,''); }
-  function initials(nome){ var w=(nome||'').trim().split(/\s+/); return ((w[0]||'')[0]||'').toUpperCase() + ((w.length>1?w[w.length-1][0]:'')||'').toUpperCase() || '·'; }
-
+  function initials(nome){ var w=(nome||'').trim().split(/\s+/); return (((w[0]||'')[0]||'')+((w.length>1?w[w.length-1][0]:'')||'')).toUpperCase() || '·'; }
+  function hoje(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
   function newProfile(nome, zap){
     var key = digits(zap) || nome.trim().toLowerCase();
     var p = profiles();
     if(p[key]){ p[key].nome = nome.trim(); save(PK,p); return p[key]; }
     return { key:key, nome:nome.trim(), zap:zap.trim(), criadoEm:hoje(), acessos:[], modulos:{}, simulados:{} };
   }
-  function hoje(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
   function recordAccess(prof){ if(prof.acessos.indexOf(hoje())<0){ prof.acessos.push(hoje()); prof.acessos.sort(); } }
   function streak(prof){
     var s=prof.acessos||[]; if(!s.length) return 0;
@@ -320,21 +338,29 @@
   function modCount(prof){ var c=0; MOD.forEach(function(m){ if(prof.modulos[m.n]) c++; }); return c; }
   function simCount(prof){ return Object.keys(prof.simulados||{}).filter(function(k){return prof.simulados[k];}).length; }
 
-  // ===== render =====
   function icons(){ var run=function(){ if(window.lucide&&window.lucide.createIcons) lucide.createIcons(); else setTimeout(run,100); }; run(); }
+
+  // ===== tema (sincroniza com a chave 'theme' do Quartz) =====
+  function applyTheme(t){
+    document.documentElement.setAttribute('data-theme', t);
+    var ic=document.getElementById('themeIcon'), lb=document.getElementById('themeLabel');
+    if(ic){ ic.setAttribute('data-lucide', t==='dark'?'sun':'moon'); }
+    if(lb){ lb.textContent = t==='dark'?'Modo claro':'Modo escuro'; }
+    icons();
+  }
+  function currentTheme(){ return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); }
+  function toggleTheme(){ var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'; localStorage.setItem('theme',t); applyTheme(t); }
+  applyTheme(currentTheme()); // antes de tudo, evita flash
 
   function renderAll(){
     var p=cur(); if(!p) return;
-    // sidebar
     document.getElementById('userName').textContent = p.nome;
     document.getElementById('userAv').textContent = initials(p.nome);
-    // datas/saudação
     var dias=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
     var meses=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
     var d=new Date(); var h=d.getHours();
     document.getElementById('todayDate').textContent = dias[d.getDay()]+', '+d.getDate()+' de '+meses[d.getMonth()];
     document.getElementById('greeting').textContent = (h<12?'Bom dia':(h<18?'Boa tarde':'Boa noite'))+', '+p.nome.split(/\s+/)[0];
-    // números
     var st=streak(p), mc=modCount(p), sc=simCount(p), pct=Math.round(mc/MOD.length*100);
     document.getElementById('pillStreak').textContent = st+(st===1?' dia':' dias');
     document.getElementById('stStreak').textContent = st;
@@ -344,60 +370,53 @@
     document.getElementById('dSim').textContent = sc;
     document.getElementById('dPct').textContent = pct;
     document.getElementById('dStreak').textContent = st;
-    // anel
     var C=295.3; document.getElementById('ring').setAttribute('stroke-dashoffset', C*(1-mc/MOD.length));
     document.getElementById('ringPct').textContent = pct+'%';
     document.getElementById('planoLabel').textContent = mc+' de '+MOD.length+' concluídos';
     document.getElementById('planoMsg').innerHTML = mc===MOD.length
       ? 'Você concluiu <strong>todos os módulos</strong>. Hora de focar nos simulados!'
       : 'Continue de onde parou. A cada módulo concluído, sua barra avança.';
-    // plano: próximos não concluídos (até 3)
     var pend = MOD.filter(function(m){ return !p.modulos[m.n]; }).slice(0,3);
     document.getElementById('planoLista').innerHTML = (pend.length?pend:MOD.slice(-1)).map(function(m){
-      var done=p.modulos[m.n];
-      return '<div class="task" style="background:#fff;border:1px solid #EFE9DF;">'+
-        '<div style="width:30px;height:30px;flex:0 0 auto;border-radius:9px;background:'+m.cor+'1f;color:'+m.cor+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+m.n+'</div>'+
-        '<div style="flex:1;"><div style="font-weight:600;font-size:15px;">'+m.nome+'</div></div>'+
+      return '<div class="task">'+
+        '<div style="width:30px;height:30px;flex:0 0 auto;border-radius:9px;background:'+m.cor+'2b;color:'+m.cor+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+m.n+'</div>'+
+        '<div style="flex:1;"><div style="font-weight:600;font-size:15px;color:var(--text);">'+m.nome+'</div></div>'+
         '<a class="open-link" target="_blank" rel="noopener" href="'+encodeURI(m.href)+'">Abrir <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
       '</div>';
     }).join('');
-    // estudar
     document.getElementById('modgrid').innerHTML = MOD.map(function(m){
       var done=!!p.modulos[m.n]; var prog=done?100:0;
       return '<div class="card modcard">'+
         '<div style="display:flex;align-items:center;justify-content:space-between;">'+
           '<div class="mod-ico" style="background:'+m.cor+';"><i data-lucide="'+m.ico+'" class="lc" style="stroke:#fff;"></i></div>'+
-          '<span style="font-size:12px;color:#C4BBAD;font-weight:700;">MÓD '+m.n+'</span></div>'+
-        '<div><div style="font-weight:700;font-size:16px;letter-spacing:-.01em;">'+m.nome+'</div>'+
-        '<div style="font-size:13px;color:#A89E91;margin-top:3px;line-height:1.4;">'+m.desc+'</div></div>'+
-        '<div><div style="display:flex;justify-content:space-between;font-size:12px;color:#A89E91;margin-bottom:6px;"><span>progresso</span><span style="font-weight:600;color:#6B6258;">'+prog+'%</span></div>'+
+          '<span style="font-size:12px;color:var(--muted2);font-weight:700;">MÓD '+m.n+'</span></div>'+
+        '<div><div style="font-weight:700;font-size:16px;letter-spacing:-.01em;color:var(--text);">'+m.nome+'</div>'+
+        '<div style="font-size:13px;color:var(--muted);margin-top:3px;line-height:1.4;">'+m.desc+'</div></div>'+
+        '<div><div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px;"><span>progresso</span><span style="font-weight:600;color:var(--text2);">'+prog+'%</span></div>'+
         '<div class="bar-track"><div class="bar-fill" style="width:'+prog+'%;background:'+m.cor+';"></div></div></div>'+
         '<div style="display:flex;align-items:center;gap:10px;margin-top:2px;">'+
           '<a class="open-link" target="_blank" rel="noopener" href="'+encodeURI(m.href)+'">Abrir apostila <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>'+
           '<button class="chip '+(done?'done':'')+'" data-action="toggle-mod" data-mod="'+m.n+'" style="margin-left:auto;">'+(done?'<i data-lucide="check" style="width:14px;height:14px;"></i> Concluído':'Marcar concluído')+'</button>'+
         '</div></div>';
     }).join('');
-    // questões
     var sh='';
     for(var i=1;i<=SIM_TOTAL;i++){ var id=String(i).padStart(3,'0'); var feito=!!p.simulados[id];
       sh += '<a class="bare" target="_blank" rel="noopener" data-sim="'+id+'" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
-        '<div style="display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;border:1px solid '+(feito?'#D6E7DA':'#EFE9DF')+';background:'+(feito?'#F3F8F4':'#fff')+';">'+
-          '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:'+(feito?'#7FAE8B':'#FBEFE1')+';color:'+(feito?'#fff':'#C8721F')+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+(feito?'<i data-lucide="check" style="width:16px;height:16px;stroke-width:3;"></i>':id)+'</div>'+
-          '<div style="flex:1;"><div style="font-weight:600;font-size:14px;">Simulado '+id+'</div><div style="font-size:12px;color:#A89E91;">'+(feito?'feito':'5 questões · misto')+'</div></div>'+
-          '<i data-lucide="external-link" style="width:16px;height:16px;color:#CFC6B8;"></i></div></a>';
+        '<div style="display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;border:1px solid '+(feito?'var(--okB)':'var(--border)')+';background:'+(feito?'var(--okBg)':'var(--surface)')+';">'+
+          '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:'+(feito?'var(--green)':'var(--activeBg)')+';color:'+(feito?'#fff':'var(--terra)')+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+(feito?'<i data-lucide="check" style="width:16px;height:16px;stroke-width:3;"></i>':id)+'</div>'+
+          '<div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Simulado '+id+'</div><div style="font-size:12px;color:var(--muted);">'+(feito?'feito':'5 questões · misto')+'</div></div>'+
+          '<i data-lucide="external-link" style="width:16px;height:16px;color:var(--muted2);"></i></div></a>';
     }
-    sh += '<div style="display:flex;align-items:center;justify-content:center;padding:13px;border-radius:13px;border:1px dashed #DDD5C8;color:#A89E91;font-size:13px;">+79 em construção</div>';
+    sh += '<div style="display:flex;align-items:center;justify-content:center;padding:13px;border-radius:13px;border:1px dashed var(--border);color:var(--muted);font-size:13px;">+79 em construção</div>';
     document.getElementById('simlist').innerHTML = sh;
-    // desempenho bars
     document.getElementById('modbars').innerHTML = MOD.map(function(m){
       var done=!!p.modulos[m.n]; var prog=done?100:0;
-      return '<div><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;">'+m.nome+'</span><span style="color:#6B6258;font-weight:600;">'+prog+'%</span></div>'+
-        '<div class="bar-track"><div class="bar-fill" style="width:'+prog+'%;background:'+(done?'#7FAE8B':'#E8C9A8')+';"></div></div></div>';
+      return '<div><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;color:var(--text);">'+m.nome+'</span><span style="color:var(--text2);font-weight:600;">'+prog+'%</span></div>'+
+        '<div class="bar-track"><div class="bar-fill" style="width:'+prog+'%;background:'+(done?'var(--green)':'var(--muted2)')+';"></div></div></div>';
     }).join('');
     icons();
   }
 
-  // ===== ações =====
   function startApp(){
     document.getElementById('login').style.display='none';
     document.getElementById('app').style.display='flex';
@@ -415,12 +434,10 @@
     saveCur(prof); localStorage.setItem(CK, prof.key);
     startApp();
   }
-
   document.getElementById('btn-entrar').addEventListener('click', doLogin);
   document.getElementById('in-zap').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
   document.getElementById('in-nome').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('in-zap').focus(); });
 
-  // delegação: nav, ações, toggles, simulados — robusto a re-render e bfcache
   document.addEventListener('click', function(e){
     var nav=e.target.closest('.nav-item[data-screen]');
     if(nav){ setScreen(nav.dataset.screen); return; }
@@ -428,12 +445,13 @@
     if(act){
       var a=act.dataset.action;
       if(a==='toggle-sidebar'){ var app=document.getElementById('app'); app.classList.toggle('collapsed'); document.getElementById('collapseIcon').setAttribute('data-lucide', app.classList.contains('collapsed')?'chevrons-right':'chevrons-left'); icons(); }
+      else if(a==='theme'){ toggleTheme(); }
       else if(a==='logout'){ localStorage.removeItem(CK); document.getElementById('app').style.display='none'; document.getElementById('login').style.display='flex'; document.getElementById('in-nome').value=''; document.getElementById('in-zap').value=''; }
       else if(a==='toggle-mod'){ var p=cur(); var n=act.dataset.mod; p.modulos[n]=!p.modulos[n]; saveCur(p); renderAll(); }
       return;
     }
     var sim=e.target.closest('[data-sim]');
-    if(sim){ var p2=cur(); p2.simulados[sim.dataset.sim]=true; saveCur(p2); setTimeout(renderAll,50); /* não previne o link (abre em nova aba) */ }
+    if(sim){ var p2=cur(); p2.simulados[sim.dataset.sim]=true; saveCur(p2); setTimeout(renderAll,50); }
   });
 
   function setScreen(s){
@@ -442,10 +460,9 @@
     document.querySelector('.main').scrollTop=0;
   }
 
-  // re-render ao voltar via bfcache
-  window.addEventListener('pageshow', function(){ if(cur()){ if(document.getElementById('login').style.display!=='none'){ startApp(); } else { renderAll(); } } });
+  window.addEventListener('pageshow', function(){ applyTheme(currentTheme()); if(cur()){ if(document.getElementById('login').style.display!=='none') startApp(); else renderAll(); } });
+  window.addEventListener('storage', function(e){ if(e.key==='theme') applyTheme(currentTheme()); });
 
-  // ===== boot =====
   if(cur()){ startApp(); } else { document.getElementById('app').style.display='none'; document.getElementById('login').style.display='flex'; }
   icons();
 </script>
