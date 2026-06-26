@@ -68,10 +68,11 @@ article {
 @media (min-width: 800px) and (max-width: 1200px) {
   #quartz-body { grid-template-columns: 250px minmax(0, 1fr) !important; column-gap: 40px !important; }
 }
-// breadcrumb + título + corpo no mesmo eixo esquerdo, coluna de leitura ~760
-.center { max-width: 760px !important; margin: 0 !important; justify-self: start !important; min-width: 0 !important; }
+// breadcrumb + título + corpo no mesmo eixo esquerdo; usa a largura da tela
+.center { max-width: 1180px !important; margin: 0 !important; justify-self: start !important; min-width: 0 !important; }
 .center > article { max-width: none !important; margin: 0 !important; }
-.article-title { font-size: 1.8rem; }
+.article-title { font-size: 1.9rem; }
+article { font-size: 17px; }   // leitura um pouco maior
 
 // ── Tabelas (tabelas-verdade): alinhadas, mono, limpas ─────
 article table {
@@ -129,8 +130,12 @@ li > input[type="checkbox"] { accent-color: var(--secondary); }
 .app-uname { font-weight: 600; font-size: 13px; color: var(--dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; }
 .app-usub { font-size: 12px; color: var(--gray); }
 
-// colapsado
+// colapsado — esconde rótulos e CENTRALIZA os ícones (sem cortar)
 html.app-collapsed .sidebar.left .lbl { display: none !important; }
+html.app-collapsed .sidebar.left { padding-left: 12px; padding-right: 12px; }
+html.app-collapsed .app-nav,
+html.app-collapsed .app-brand,
+html.app-collapsed .app-user { padding-left: 0; padding-right: 0; justify-content: center; gap: 0; }
 @media (min-width: 1200px) { html.app-collapsed #quartz-body { grid-template-columns: 78px minmax(0, 1fr) 0 !important; } }
 @media (min-width: 800px) and (max-width: 1200px) { html.app-collapsed #quartz-body { grid-template-columns: 78px minmax(0, 1fr) !important; } }
 

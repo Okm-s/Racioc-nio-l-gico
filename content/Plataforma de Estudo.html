@@ -45,6 +45,8 @@
   .sidebar{width:250px;flex:0 0 auto;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:22px 16px;transition:width .22s cubic-bezier(.4,0,.2,1);}
   .app.collapsed .sidebar{width:78px;}
   .app.collapsed .hidecol{display:none !important;}
+  .app.collapsed .sidebar{padding-left:12px;padding-right:12px;}
+  .app.collapsed .nav-item,.app.collapsed .brand,.app.collapsed .user{padding-left:0;padding-right:0;justify-content:center;gap:0;}
   .brand{display:flex;align-items:center;gap:12px;padding:4px 6px 22px 6px;}
   .brand-box{width:38px;height:38px;flex:0 0 auto;border-radius:11px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;}
   .brand-name{font-weight:700;font-size:18px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;color:var(--text);}
@@ -264,12 +266,13 @@
         <h1 class="title">Seu desempenho</h1>
       </header>
       <div class="statgrid">
+        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Questões respondidas</div><div class="stat-num" id="dResp">0</div></div>
+        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Taxa de acerto</div><div class="stat-num"><span id="dTaxa">0</span><small>%</small></div></div>
         <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Simulados feitos</div><div class="stat-num" id="dSim">0</div></div>
-        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Curso concluído</div><div class="stat-num"><span id="dPct">0</span><small>%</small></div></div>
-        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Sequência de estudo</div><div class="stat-num"><span id="dStreak">0</span><small> dias</small></div></div>
       </div>
       <section class="card" style="padding:28px;">
-        <h2 class="h2" style="margin-bottom:22px;">Progresso por módulo</h2>
+        <h2 class="h2" style="margin-bottom:6px;">Acerto por módulo</h2>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:20px;">Dos bancos de questões de cada módulo (após enviar as respostas).</div>
         <div id="modbars" style="display:flex;flex-direction:column;gap:18px;"></div>
       </section>
     </section>
@@ -368,8 +371,12 @@
     document.getElementById('stSim').textContent = sc;
     document.getElementById('qFeitos').textContent = sc;
     document.getElementById('dSim').textContent = sc;
-    document.getElementById('dPct').textContent = pct;
-    document.getElementById('dStreak').textContent = st;
+    var bancos = p.bancos || {};
+    var totResp = 0, totCertas = 0;
+    Object.keys(p.simulados||{}).forEach(function(k){ var s=p.simulados[k]; if(s&&s.total){ totResp+=s.total; totCertas+=(s.certas||0); } });
+    Object.keys(bancos).forEach(function(k){ var b=bancos[k]; if(b&&b.total){ totResp+=b.total; totCertas+=(b.certas||0); } });
+    document.getElementById('dResp').textContent = totResp;
+    document.getElementById('dTaxa').textContent = totResp ? Math.round(totCertas/totResp*100) : 0;
     var C=295.3; document.getElementById('ring').setAttribute('stroke-dashoffset', C*(1-mc/MOD.length));
     document.getElementById('ringPct').textContent = pct+'%';
     document.getElementById('planoLabel').textContent = mc+' de '+MOD.length+' concluídos';
@@ -400,19 +407,21 @@
         '</div></div>';
     }).join('');
     var sh='';
-    for(var i=1;i<=SIM_TOTAL;i++){ var id=String(i).padStart(3,'0'); var feito=!!p.simulados[id];
-      sh += '<a class="bare" data-sim="'+id+'" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
+    for(var i=1;i<=SIM_TOTAL;i++){ var id=String(i).padStart(3,'0'); var s=p.simulados[id]; var feito=!!s;
+      sh += '<a class="bare" href="'+encodeURI('Simulados/Simulado-'+id+'.html')+'">'+
         '<div style="display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;border:1px solid '+(feito?'var(--okB)':'var(--border)')+';background:'+(feito?'var(--okBg)':'var(--surface)')+';">'+
           '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:'+(feito?'var(--green)':'var(--activeBg)')+';color:'+(feito?'#fff':'var(--terra)')+';display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">'+(feito?'<i data-lucide="check" style="width:16px;height:16px;stroke-width:3;"></i>':id)+'</div>'+
-          '<div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Simulado '+id+'</div><div style="font-size:12px;color:var(--muted);">'+(feito?'feito':'5 questões · misto')+'</div></div>'+
+          '<div style="flex:1;"><div style="font-weight:600;font-size:14px;color:var(--text);">Simulado '+id+'</div><div style="font-size:12px;color:var(--muted);">'+(feito?('feito · '+s.certas+'/'+s.total):'5 questões · misto')+'</div></div>'+
           '<i data-lucide="external-link" style="width:16px;height:16px;color:var(--muted2);"></i></div></a>';
     }
     sh += '<div style="display:flex;align-items:center;justify-content:center;padding:13px;border-radius:13px;border:1px dashed var(--border);color:var(--muted);font-size:13px;">+79 em construção</div>';
     document.getElementById('simlist').innerHTML = sh;
     document.getElementById('modbars').innerHTML = MOD.map(function(m){
-      var done=!!p.modulos[m.n]; var prog=done?100:0;
-      return '<div><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;color:var(--text);">'+m.nome+'</span><span style="color:var(--text2);font-weight:600;">'+prog+'%</span></div>'+
-        '<div class="bar-track"><div class="bar-fill" style="width:'+prog+'%;background:'+(done?'var(--green)':'var(--muted2)')+';"></div></div></div>';
+      var c=0,t=0; Object.keys(bancos).forEach(function(k){ if(bancos[k].mod===m.n){ c+=(bancos[k].certas||0); t+=(bancos[k].total||0); } });
+      var pctm = t ? Math.round(c/t*100) : 0; var has = t>0;
+      var cor = !has ? 'var(--track)' : (pctm>=70?'var(--green)':(pctm>=50?'var(--orange)':'var(--terra2)'));
+      return '<div><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;color:var(--text);">'+m.nome+'</span><span style="color:var(--text2);font-weight:600;">'+(has?(c+'/'+t+' · '+pctm+'%'):'—')+'</span></div>'+
+        '<div class="bar-track"><div class="bar-fill" style="width:'+(has?pctm:0)+'%;background:'+cor+';"></div></div></div>';
     }).join('');
     icons();
   }
@@ -453,8 +462,6 @@
       else if(a==='toggle-mod'){ var p=cur(); var n=act.dataset.mod; p.modulos[n]=!p.modulos[n]; saveCur(p); renderAll(); }
       return;
     }
-    var sim=e.target.closest('[data-sim]');
-    if(sim){ var p2=cur(); p2.simulados[sim.dataset.sim]=true; saveCur(p2); setTimeout(renderAll,50); }
   });
 
   function setScreen(s){

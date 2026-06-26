@@ -1,12 +1,16 @@
 import { QuartzComponent, QuartzComponentConstructor } from "./types"
 
-// Transforma páginas de Simulado em quiz interativo:
-// marca alternativa -> envia -> mostra pontuação, corretas e gabarito.
+// Quiz interativo para Simulados E bancos de questões dos módulos:
+// marca alternativa -> envia -> pontuação + corretas + gabarito.
+// No envio grava o resultado no perfil (localStorage) para a aba Desempenho.
 const Quiz: QuartzComponent = () => null
 
 Quiz.afterDOMLoaded = `
 (function(){
-  if (!location.pathname.includes('Simulados')) return;
+  var path = location.pathname;
+  var isSim = path.indexOf('Simulados') >= 0;
+  var isBank = path.indexOf('Banco') >= 0;
+  if (!isSim && !isBank) return;
   var callouts = Array.prototype.slice.call(document.querySelectorAll('blockquote.callout[data-callout="success"]'));
   if (!callouts.length) return;
   var article = callouts[0].closest('article') || document.querySelector('.center') || document.body;
@@ -74,6 +78,23 @@ Quiz.afterDOMLoaded = `
   bar.appendChild(btn); bar.appendChild(score);
   article.appendChild(bar);
 
+  function saveResult(right, total){
+    try {
+      var key = localStorage.getItem('rl_current'); if (!key) return;
+      var ps = JSON.parse(localStorage.getItem('rl_profiles') || '{}');
+      var p = ps[key]; if (!p) return;
+      var dp = decodeURIComponent(location.pathname);
+      var hoje = new Date(); var data = hoje.getFullYear()+'-'+String(hoje.getMonth()+1).padStart(2,'0')+'-'+String(hoje.getDate()).padStart(2,'0');
+      var sim = dp.match(/Simulado-(\\d+)/);
+      if (sim) { p.simulados = p.simulados || {}; p.simulados[sim[1]] = { certas: right, total: total, data: data }; }
+      else if (dp.indexOf('Banco') >= 0) {
+        var mm = dp.match(/dulo-(\\d)/); var mod = mm ? mm[1] : '?';
+        p.bancos = p.bancos || {}; p.bancos[location.pathname] = { mod: mod, certas: right, total: total, data: data };
+      }
+      ps[key] = p; localStorage.setItem('rl_profiles', JSON.stringify(ps));
+    } catch(e){}
+  }
+
   var sent = false;
   btn.addEventListener('click', function(){
     if (!sent) {
@@ -92,9 +113,10 @@ Quiz.afterDOMLoaded = `
       });
       var pct = Math.round(right / questions.length * 100);
       score.textContent = 'Você acertou ' + right + ' de ' + questions.length + ' (' + pct + '%).';
-      score.style.color = right === questions.length ? '#5E8E6B' : (right === 0 ? '#C0563B' : '#2C2722');
+      score.style.color = right === questions.length ? '#5E8E6B' : (right === 0 ? '#C0563B' : 'var(--dark)');
       btn.textContent = 'Refazer';
       sent = true;
+      saveResult(right, questions.length);
       bar.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
       questions.forEach(function(q){
