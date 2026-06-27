@@ -5,6 +5,11 @@
 // Foco: alinhamento, aproveitamento de tela, limpeza visual.
 // ════════════════════════════════════════════════════════════
 
+// O base do Quartz usa `html{width:100vw}` — 100vw inclui a barra de rolagem
+// vertical, deixando o conteúdo 15px mais largo que a área visível (overflow
+// cortado pelo overflow-x:hidden). 100% usa a largura real, sem corte/scroll.
+html { width: 100% !important; }
+
 // Título duplicado: o ArticleTitle já exibe o título da nota;
 // escondemos o H1 do corpo (primeira linha "# ...") para não repetir.
 article > h1:first-child {
@@ -69,7 +74,9 @@ article {
   #quartz-body { grid-template-columns: 250px minmax(0, 1fr) !important; column-gap: 40px !important; }
 }
 // breadcrumb + título + corpo centralizados no espaço entre a sidebar e a borda direita
-.center { max-width: 1180px !important; margin: 0 auto !important; justify-self: center !important; min-width: 0 !important; }
+// preenche a faixa entre a sidebar e a borda (width:100%) e centraliza só quando
+// passa do teto. `justify-self:center` encolhia ao conteúdo → vão gigante em telas largas.
+.center { width: 100% !important; max-width: 1440px !important; margin: 0 auto !important; justify-self: stretch !important; min-width: 0 !important; }
 .center > article { max-width: none !important; margin: 0 !important; }
 .article-title { font-size: 2rem; }
 article { font-size: 18px; }   // leitura um pouco maior
@@ -148,6 +155,7 @@ html.app-collapsed .app-user { padding-left: 0; padding-right: 0; justify-conten
 @media (min-width: 800px) and (max-width: 1200px) { html.app-collapsed #quartz-body { grid-template-columns: 78px minmax(0, 1fr) !important; } }
 
 // ── mobile: topbar organizada, sem rolagem horizontal ──────────────
+// casa com o $mobile do Quartz (max-width:800px) p/ trocar junto com o base
 @media (max-width: 800px) {
   // barra horizontal de largura total, presa no topo
   .sidebar.left {
