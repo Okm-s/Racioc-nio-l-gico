@@ -35,7 +35,7 @@ AppSidebar.afterDOMLoaded = `
 
   function nav(scr, href, ic, lbl){ return '<a class="app-nav'+(scr===active?' active':'')+'" href="'+href+'"><i data-lucide="'+ic+'"></i><span class="lbl">'+lbl+'</span></a>'; }
   host.innerHTML =
-      '<a class="app-brand" href="'+HOME+'"><span class="app-logo"><img src="'+HOME+'static/logo.png" alt="iLogico"></span><span class="lbl app-bname"><b>i</b>Logico</span></a>'
+      '<a class="app-brand" href="'+HOME+'"><span class="app-logo"><img src="'+HOME+'static/logo.png" alt="iLógico"></span><span class="lbl app-bname"><b>i</b>Lógico</span></a>'
     + '<nav class="app-navs">'
     +   nav('inicio', HOME, 'house', 'Início')
     +   nav('estudar', HOME+'#estudar', 'book-open', 'Estudar')
