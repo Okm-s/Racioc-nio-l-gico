@@ -115,7 +115,8 @@ li > input[type="checkbox"] { accent-color: var(--secondary); }
   display: flex; flex-direction: column; gap: 4px; padding: 22px 16px; overflow: hidden;
 }
 .app-brand { display: flex; align-items: center; gap: 12px; padding: 4px 6px 18px; text-decoration: none; color: var(--dark); }
-.app-logo { width: 38px; height: 38px; flex: 0 0 auto; border-radius: 11px; background: var(--tertiary); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 18px; font-family: var(--bodyFont); }
+.app-logo { width: 38px; height: 38px; flex: 0 0 auto; border-radius: 11px; background: var(--tertiary); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 18px; font-family: var(--bodyFont); overflow: hidden; }
+.app-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .app-bname { font-weight: 700; font-size: 18px; letter-spacing: -.01em; white-space: nowrap; }
 .app-bname b { color: var(--tertiary); font-weight: 700; }
 .app-navs { display: flex; flex-direction: column; gap: 4px; }
@@ -146,8 +147,46 @@ html.app-collapsed .app-user { padding-left: 0; padding-right: 0; justify-conten
 @media (min-width: 1200px) { html.app-collapsed #quartz-body { grid-template-columns: 78px minmax(0, 1fr) 0 !important; } }
 @media (min-width: 800px) and (max-width: 1200px) { html.app-collapsed #quartz-body { grid-template-columns: 78px minmax(0, 1fr) !important; } }
 
-// mobile: barra no topo, sem 100vh
+// ── mobile: topbar organizada, sem rolagem horizontal ──────────────
 @media (max-width: 800px) {
-  .sidebar.left { position: static; height: auto; }
-  html.app-collapsed .sidebar.left .lbl { display: inline !important; }
+  // barra horizontal de largura total, presa no topo
+  .sidebar.left {
+    position: sticky; top: 0; z-index: 20;
+    width: 100%; box-sizing: border-box;
+    height: auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center !important;
+    gap: 8px 4px !important;
+    padding: 10px 12px !important;
+    border-right: none;
+    border-bottom: 1px solid var(--lightgray);
+    background: var(--app-surface);
+    overflow-x: hidden;
+  }
+  // 1ª linha: marca à esquerda
+  .app-brand { order: 1; padding: 0 !important; margin-right: auto; }
+  // 1ª linha à direita: tema, sair e avatar (só ícones); "recolher" some no mobile
+  .app-bottom { order: 2; flex-direction: row; align-items: center; gap: 2px; margin: 0; }
+  #app-collapse { display: none !important; }
+  .app-user { border-top: none; margin: 0; padding: 0 0 0 4px; }
+  // 2ª linha: navegação ocupa a largura toda, 4 itens lado a lado (ícone + rótulo)
+  .app-navs {
+    order: 3; flex: 0 0 100%;
+    flex-direction: row !important; justify-content: space-between; gap: 4px;
+  }
+  .app-navs .app-nav {
+    flex: 1 1 0; min-width: 0;
+    flex-direction: column; gap: 4px;
+    align-items: center; justify-content: center;
+    padding: 8px 4px;
+  }
+  // rótulos: mostra marca + navegação; esconde os do rodapé (tema/sair/usuário)
+  html.app-collapsed .sidebar.left .app-brand .lbl,
+  html.app-collapsed .sidebar.left .app-navs .lbl,
+  .sidebar.left .app-brand .lbl,
+  .sidebar.left .app-navs .lbl { display: block !important; }
+  .app-navs .app-nav .lbl { font-size: 11px; line-height: 1; text-align: center; white-space: nowrap; }
+  .sidebar.left .app-bottom .lbl,
+  html.app-collapsed .sidebar.left .app-bottom .lbl { display: none !important; }
 }
