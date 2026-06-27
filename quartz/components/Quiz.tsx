@@ -43,7 +43,7 @@ Quiz.afterDOMLoaded = `
       alt = alt.previousElementSibling;
     }
     if (!alt) return;
-    var m = (cal.textContent || '').match(/Letra\\s+([a-eA-E])/);
+    var m = (cal.textContent || '').match(/(?:Letra|Resposta:?)\\s*([a-eA-E])\\b/i);
     if (!m) return;
     var correct = m[1].toLowerCase();
     var parts = alt.innerHTML.split(/<br\\s*\\/?>/i);

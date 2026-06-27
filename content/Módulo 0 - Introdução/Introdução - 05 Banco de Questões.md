@@ -9,7 +9,7 @@ d) medidas
 e) probabilidade
 
 > [!success]- Gabarito  
-> **Resposta:** b) validade da forma
+> **Letra b.** validade da forma
 
 ---
 ### Questão 2
@@ -23,7 +23,7 @@ d) qual operação aparece?
 e) qual número falta?
 
 > [!success]- Gabarito  
-> **Resposta:** c) a conclusão decorre?
+> **Letra c.** a conclusão decorre?
 
 ---
 ### Questão 3
@@ -37,7 +37,7 @@ d) o argumento é válido?
 e) a premissa convence?
 
 > [!success]- Gabarito  
-> **Resposta:** b) qual valor, regra ou propriedade devo aplicar?
+> **Letra b.** qual valor, regra ou propriedade devo aplicar?
 
 ---
 ### Questão 4
@@ -51,7 +51,7 @@ d) apenas filosofia
 e) apenas interpretação de texto
 
 > [!success]- Gabarito  
-> **Resposta:** c) lógica e conteúdos matemáticos
+> **Letra c.** lógica e conteúdos matemáticos
 
 ---
 ### Questão 5
@@ -65,7 +65,7 @@ d) Gödel
 e) Brouwer
 
 > [!success]- Gabarito  
-> **Resposta:** b) Aristóteles
+> **Letra b.** Aristóteles
 
 ---
 ### Questão 6
@@ -79,7 +79,7 @@ d) qual é a unidade?
 e) qual é a fórmula?
 
 > [!success]- Gabarito  
-> **Resposta:** c) a conclusão decorre das premissas?
+> **Letra c.** a conclusão decorre das premissas?
 
 ---
 ### Questão 7
@@ -93,7 +93,7 @@ d) validade verbal
 e) interpretação social
 
 > [!success]- Gabarito  
-> **Resposta:** b) axiomas, demonstrações, relações e propriedades
+> **Letra b.** axiomas, demonstrações, relações e propriedades
 
 ---
 ### Questão 8
@@ -107,7 +107,7 @@ d) no século XVI
 e) apenas nos concursos atuais
 
 > [!success]- Gabarito  
-> **Resposta:** c) no fim do século XIX e início do XX
+> **Letra c.** no fim do século XIX e início do XX
 
 ---
 ### Questão 9
@@ -121,7 +121,7 @@ d) interpretação emocional
 e) linguagem cotidiana
 
 > [!success]- Gabarito  
-> **Resposta:** b) manipulação de símbolos por regras
+> **Letra b.** manipulação de símbolos por regras
 
 ---
 ### Questão 10
@@ -135,7 +135,7 @@ d) escolha obrigatória
 e) oposição entre frases
 
 > [!success]- Gabarito  
-> **Resposta:** b) uma, outra ou ambas
+> **Letra b.** uma, outra ou ambas
 
 ---
 ### Questão 11
@@ -149,7 +149,7 @@ d) contradição
 e) validade formal
 
 > [!success]- Gabarito  
-> **Resposta:** b) escolha entre opções
+> **Letra b.** escolha entre opções
 
 ---
 ### Questão 12
@@ -163,7 +163,7 @@ d) conselho
 e) causa real
 
 > [!success]- Gabarito  
-> **Resposta:** c) condicional
+> **Letra c.** condicional
 
 ---
 ### Questão 13
@@ -177,7 +177,7 @@ d) contradição
 e) equivalência
 
 > [!success]- Gabarito  
-> **Resposta:** a) sequência
+> **Letra a.** sequência
 
 ---
 ### Questão 14
@@ -191,7 +191,7 @@ d) exclui alternativas
 e) muda o sentido social
 
 > [!success]- Gabarito  
-> **Resposta:** b) junta proposições
+> **Letra b.** junta proposições
 
 ---
 ### Questão 15
@@ -205,7 +205,7 @@ d) frase bonita
 e) cálculo com letras
 
 > [!success]- Gabarito  
-> **Resposta:** c) conjunto de premissas levando a uma conclusão
+> **Letra c.** conjunto de premissas levando a uma conclusão
 
 ---
 ### Questão 16
@@ -219,7 +219,7 @@ d) a premissa agrada
 e) a frase parece correta
 
 > [!success]- Gabarito  
-> **Resposta:** b) a conclusão decorre da forma
+> **Letra b.** a conclusão decorre da forma
 
 ---
 ### Questão 17
@@ -233,7 +233,7 @@ d) uma contradição obrigatória
 e) uma conta incompleta
 
 > [!success]- Gabarito  
-> **Resposta:** c) uma proposição simples, como $P$
+> **Letra c.** uma proposição simples, como $P$
 
 ---
 ### Questão 18
@@ -247,7 +247,7 @@ d) corrigir o enunciado
 e) escolher a resposta mais provável
 
 > [!success]- Gabarito  
-> **Resposta:** b) apagar o conteúdo e guardar a estrutura
+> **Letra b.** apagar o conteúdo e guardar a estrutura
 
 ---
 ### Questão 19
@@ -261,7 +261,7 @@ d) $P \leftrightarrow Q$
 e) $\neg P$
 
 > [!success]- Gabarito  
-> **Resposta:** c) $P \to Q$
+> **Letra c.** $P \to Q$
 
 ---
 ### Questão 20
@@ -275,4 +275,4 @@ d) se a frase existe no mundo real
 e) se as palavras são conhecidas
 
 > [!success]- Gabarito  
-> **Resposta:** c) a relação entre os termos
+> **Letra c.** a relação entre os termos
