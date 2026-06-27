@@ -132,7 +132,9 @@ li > input[type="checkbox"] { accent-color: var(--secondary); }
 
 // colapsado — esconde rótulos e CENTRALIZA os ícones (sem cortar)
 html.app-collapsed .sidebar.left .lbl { display: none !important; }
-html.app-collapsed .sidebar.left { padding-left: 12px; padding-right: 12px; }
+// base do Quartz aplica `#quartz-body .sidebar { padding: ... 2rem }` (especificidade com id),
+// que sobrepõe o padding daqui e, na largura colapsada (78px), corta os ícones. !important vence.
+html.app-collapsed .sidebar.left { padding-left: 12px !important; padding-right: 12px !important; }
 html.app-collapsed .app-nav,
 html.app-collapsed .app-brand,
 html.app-collapsed .app-user { padding-left: 0; padding-right: 0; justify-content: center; gap: 0; }
