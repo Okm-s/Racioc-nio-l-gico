@@ -59,7 +59,7 @@ article {
 
 .page-title { font-family: var(--headerFont); }
 
-// ── Layout das apostilas: conteúdo à esquerda, eixo único, leitura ~760 ──
+// ── Layout das apostilas: conteúdo centralizado entre a sidebar e a borda direita ──
 .sidebar.right { display: none !important; }
 .page { max-width: none !important; margin: 0 !important; }       // full-width: sidebar encosta na borda (igual à home)
 @media (min-width: 1200px) {
@@ -68,13 +68,13 @@ article {
 @media (min-width: 800px) and (max-width: 1200px) {
   #quartz-body { grid-template-columns: 250px minmax(0, 1fr) !important; column-gap: 40px !important; }
 }
-// breadcrumb + título + corpo no mesmo eixo esquerdo; usa a largura da tela
-.center { max-width: 1180px !important; margin: 0 !important; justify-self: start !important; min-width: 0 !important; }
+// breadcrumb + título + corpo centralizados no espaço entre a sidebar e a borda direita
+.center { max-width: 1180px !important; margin: 0 auto !important; justify-self: center !important; min-width: 0 !important; }
 .center > article { max-width: none !important; margin: 0 !important; }
-.article-title { font-size: 1.9rem; }
-article { font-size: 17px; }   // leitura um pouco maior
+.article-title { font-size: 2rem; }
+article { font-size: 18px; }   // leitura um pouco maior
 
-// ── Tabelas (tabelas-verdade): alinhadas, mono, limpas ─────
+// ── Tabelas (tabelas-verdade): centralizadas, mono, limpas ─────
 article table {
   font-family: var(--codeFont);
   font-size: 0.85rem;
@@ -83,6 +83,11 @@ article th,
 article td { text-align: center; }
 article td:first-child,
 article th:first-child { text-align: left; }
+// tabela centraliza no eixo do texto (encolhe ao conteúdo)
+article .table-container > table { margin-left: auto; margin-right: auto; }
+
+// ── Caixas de dica (callouts): centralizadas, sem encostar nas bordas ─────
+article .callout { margin-left: auto; margin-right: auto; }
 
 // ── Imagens com respiro ────────────────────────────────────
 article img { border-radius: 10px; margin: 0.4rem 0; }
