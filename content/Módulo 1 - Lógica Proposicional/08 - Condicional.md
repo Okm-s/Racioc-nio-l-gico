@@ -45,4 +45,19 @@ A negação de $P \to Q$ é $P \land \neg Q$ — "P acontece, mas Q não acontec
 
 ---
 
+## Pratique
+
+**Questão.** João disse: "Se eu ganhar na loteria, te dou um carro." João não ganhou na loteria e não deu o carro. Logicamente, João:
+
+a) mentiu, pois não cumpriu a promessa  
+b) não mentiu, pois a condição (P) não ocorreu  
+c) mentiu, pois Q é falso  
+d) só mentiria se P e Q fossem ambos verdadeiros  
+e) é impossível avaliar sem saber se ele queria dar o carro
+
+> [!success]- Gabarito  
+> **Letra b.** O condicional só é falso na linha V → F. Aqui P (ganhar na loteria) é falso, então $P \to Q$ é verdadeiro, não importa o valor de Q.
+
+---
+
 Quando a relação vale **nos dois sentidos**, temos o [[09 - Bicondicional]].

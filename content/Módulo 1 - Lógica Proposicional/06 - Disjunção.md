@@ -38,4 +38,19 @@ A disjunção de uma proposição com a sua própria negação, $P \lor \neg P$,
 
 ---
 
+## Pratique
+
+**Questão.** A negação de "P ou Q" (disjunção inclusiva, $P \lor Q$) equivale a:
+
+a) $\neg P \land \neg Q$  
+b) $\neg P \lor \neg Q$  
+c) $P \land Q$  
+d) $\neg P \land Q$  
+e) $P \land \neg Q$
+
+> [!success]- Gabarito  
+> **Letra a.** A negação de $P \lor Q$ é $\neg P \land \neg Q$: para a disjunção falhar, as duas partes precisam ser falsas.
+
+---
+
 Próximo conectivo: [[07 - Disjunção Exclusiva]].

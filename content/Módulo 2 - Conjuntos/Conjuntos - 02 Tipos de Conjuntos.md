@@ -27,3 +27,18 @@ O **universo** $U$ delimita o "mundo" do problema. Ele é essencial para definir
 ---
 
 Sabendo os tipos, vamos comparar conjuntos: [[Conjuntos - 03 Inclusão, Igualdade e Partes]].
+
+---
+
+## Pratique
+
+**Questão.** Qual das afirmações está correta?
+
+a) $\varnothing = \{\varnothing\}$  
+b) $\{0\}$ é o conjunto vazio  
+c) $\varnothing$ é subconjunto de qualquer conjunto  
+d) $\{\varnothing\}$ não tem elementos  
+e) Um conjunto unitário tem zero elementos
+
+> [!success]- Gabarito  
+> **Letra c.** O conjunto vazio é subconjunto de qualquer conjunto. Já $\{\varnothing\}$ é unitário (tem um elemento, o vazio) e $\{0\}$ tem o elemento $0$ — nenhum dos dois é o vazio.

@@ -33,3 +33,18 @@ O símbolo $\mid$ (ou $:$) lê-se "**tal que**".
 ---
 
 Quantos elementos um conjunto pode ter? Isso leva aos [[Conjuntos - 02 Tipos de Conjuntos]].
+
+---
+
+## Pratique
+
+**Questão.** Se $A = \{1, 2, 3\}$, qual das alternativas é verdadeira?
+
+a) $4 \in A$  
+b) $2 \notin A$  
+c) $2 \in A$  
+d) $\{1,2,3\} \neq \{3,2,1\}$  
+e) $1 \notin A$
+
+> [!success]- Gabarito  
+> **Letra c.** $2$ é elemento de $A$, logo $2 \in A$. A ordem não importa em conjuntos, então a alternativa d também está errada: $\{1,2,3\} = \{3,2,1\}$.

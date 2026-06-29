@@ -35,3 +35,18 @@ $34{,}029 \times 1{,}2$:
 ---
 
 E quando o número é negativo, qual o seu "tamanho"? [[Aritmética - 06 Valor Absoluto]].
+
+---
+
+## Pratique
+
+**Questão.** Qual é o resultado de $2{,}5 \times 1{,}4$?
+
+a) $3{,}5$  
+b) $35$  
+c) $0{,}35$  
+d) $3{,}05$  
+e) $30{,}5$
+
+> [!success]- Gabarito  
+> **Letra a.** Ignorando vírgulas: $25 \times 14 = 350$. Casas decimais: $1+1=2$ → $3{,}50 = 3{,}5$.

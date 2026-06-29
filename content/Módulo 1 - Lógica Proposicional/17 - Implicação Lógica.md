@@ -48,4 +48,19 @@ Se a implicação vale **só num sentido**, é implicação simples; se vale **n
 
 ---
 
+## Pratique
+
+**Questão.** Diz-se que P implica logicamente Q ($P \Rightarrow Q$) quando:
+
+a) P e Q são sempre verdadeiras juntas  
+b) o condicional $P \to Q$ é uma tautologia  
+c) P e Q têm tabelas-verdade diferentes  
+d) Q implica P também  
+e) $P \to Q$ é falso em pelo menos uma linha
+
+> [!success]- Gabarito  
+> **Letra b.** A implicação lógica existe quando $P \to Q$ é tautologia — coluna toda V, ou seja, nunca ocorre P verdadeiro com Q falso.
+
+---
+
 A implicação lógica é a base para julgar se um raciocínio está correto: veja [[18 - Argumentos Válidos]].

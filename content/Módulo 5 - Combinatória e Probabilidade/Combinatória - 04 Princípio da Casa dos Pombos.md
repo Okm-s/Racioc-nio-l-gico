@@ -27,3 +27,18 @@ Aparece quando a questão pergunta "**no mínimo** quantos…", "**garantir** qu
 ---
 
 Pratique no [[Combinatória - 05 Banco de Questões]].
+
+---
+
+## Pratique
+
+**Questão.** Numa gaveta há meias de 3 cores diferentes. Qual é o número mínimo de meias que devem ser retiradas, sem olhar, para garantir um par da mesma cor?
+
+a) 2  
+b) 3  
+c) 4  
+d) 5  
+e) 6
+
+> [!success]- Gabarito  
+> **Letra c.** 3 cores = 3 "casas". Com 3 meias, no pior caso, cada cor recebe exatamente 1 — sem par. A 4ª meia força a repetição de alguma cor.

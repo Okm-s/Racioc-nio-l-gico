@@ -35,3 +35,18 @@ Dados naturais $a$ e $b$ ($b \neq 0$): se a divisão $a \div b$ é **exata** (re
 ---
 
 Comparando divisores e múltiplos de dois números, chegamos ao [[Aritmética - 09 MDC e MMC]].
+
+---
+
+## Pratique
+
+**Questão.** Qual dos números abaixo é divisível por 9?
+
+a) 123  
+b) 144  
+c) 200  
+d) 256  
+e) 310
+
+> [!success]- Gabarito  
+> **Letra b.** A soma dos algarismos de $144$ é $1+4+4=9$, divisível por 9. Nenhuma das outras somas é divisível por 9.

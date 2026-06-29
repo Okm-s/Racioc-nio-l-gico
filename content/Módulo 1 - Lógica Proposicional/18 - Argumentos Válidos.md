@@ -72,4 +72,19 @@ Quando o argumento usa [[10 - Quantificadores|quantificadores]] ("todo A é B", 
 
 ---
 
+## Pratique
+
+**Questão.** Premissas: "Se chove, a rua fica molhada" e "A rua não está molhada." Qual conclusão torna o argumento válido (Modus Tollens)?
+
+a) Está chovendo.  
+b) Não está chovendo.  
+c) A rua está molhada.  
+d) Não se pode concluir nada.  
+e) Talvez esteja chovendo.
+
+> [!success]- Gabarito  
+> **Letra b.** Modus Tollens: de $P \to Q$ e $\neg Q$, conclui-se $\neg P$. Como a rua não está molhada (¬Q), conclui-se que não está chovendo (¬P).
+
+---
+
 Fim dos tópicos do edital. Volte ao índice: [[Apostila de Lógica Proposicional]].

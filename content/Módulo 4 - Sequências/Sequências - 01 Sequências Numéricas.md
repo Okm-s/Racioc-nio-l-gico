@@ -42,3 +42,18 @@ Escreva as diferenças entre termos consecutivos. Se elas formarem um padrão, v
 ---
 
 Quando o padrão é visual ou alfabético: [[Sequências - 02 Sequências com Figuras e Palavras]].
+
+---
+
+## Pratique
+
+**Questão.** Na sequência de Fibonacci 1, 1, 2, 3, 5, 8, ..., qual é o próximo termo?
+
+a) 10  
+b) 11  
+c) 12  
+d) 13  
+e) 16
+
+> [!success]- Gabarito  
+> **Letra d.** Na sequência de Fibonacci, cada termo é a soma dos dois anteriores: $5 + 8 = 13$.

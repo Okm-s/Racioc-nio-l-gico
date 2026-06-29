@@ -55,3 +55,18 @@ Essa forma é sempre falsa.
 Duas condições. Uma falha derruba tudo.
 
 Próximo: [[06 - Disjunção]]
+
+---
+
+## Pratique
+
+**Questão.** A frase "Estou aprovado e tomei posse" só é verdadeira quando:
+
+a) pelo menos uma das partes é verdadeira  
+b) as duas partes são verdadeiras  
+c) nenhuma das partes é verdadeira  
+d) exatamente uma é verdadeira  
+e) é impossível determinar
+
+> [!success]- Gabarito  
+> **Letra b.** A conjunção só é verdadeira na linha V-V. Basta uma parte falsa para o resultado ser falso.

@@ -39,3 +39,18 @@ Subtrai-se $n(A \cap B)$ porque quem está nos dois foi **contado duas vezes**. 
 ---
 
 Hora de aplicar em contagem: [[Conjuntos - 05 Problemas com Diagramas de Venn]].
+
+---
+
+## Pratique
+
+**Questão.** Se $A = \{1,2,3,4\}$ e $B = \{3,4,5\}$, qual é $A \cap B$?
+
+a) $\{1,2\}$  
+b) $\{3,4\}$  
+c) $\{1,2,3,4,5\}$  
+d) $\{5\}$  
+e) $\varnothing$
+
+> [!success]- Gabarito  
+> **Letra b.** A interseção é só o que está nos dois conjuntos ao mesmo tempo: $3$ e $4$ aparecem em $A$ e em $B$.

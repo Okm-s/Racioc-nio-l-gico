@@ -27,3 +27,18 @@ O mesmo vale para multiplicação ou para operações ou valores alternados.
 ---
 
 > As técnicas (PA, PG, método das diferenças, figuras e palavras) estão organizadas em [[Sequências - 01 Sequências Numéricas]] e [[Sequências - 02 Sequências com Figuras e Palavras]].
+
+---
+
+## Pratique
+
+**Questão.** Na sequência 3, 6, 9, 12, ..., qual é o próximo termo?
+
+a) 13  
+b) 14  
+c) 15  
+d) 16  
+e) 18
+
+> [!success]- Gabarito  
+> **Letra c.** É um crescimento constante: cada termo soma 3 ao anterior. $12 + 3 = 15$.

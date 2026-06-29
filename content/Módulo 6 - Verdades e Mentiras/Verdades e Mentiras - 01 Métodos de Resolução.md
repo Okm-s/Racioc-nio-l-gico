@@ -33,3 +33,18 @@ Quando há poucas pessoas, monte uma tabela com V/F para cada uma e teste as com
 ---
 
 Pratique no [[Verdades e Mentiras - 02 Banco de Questões]].
+
+---
+
+## Pratique
+
+**Questão.** A diz: "B mente." B diz: "A mente." O que se pode concluir?
+
+a) As duas falam a verdade.  
+b) As duas mentem.  
+c) Necessariamente uma fala a verdade e a outra mente.  
+d) É impossível determinar.  
+e) A mente e B fala a verdade, sempre.
+
+> [!success]- Gabarito  
+> **Letra c.** As afirmações são opostas: se A fala a verdade, B mente (confirma o que A disse); se A mente, B fala a verdade. Não há cenário em que ambas sejam V ou ambas F.

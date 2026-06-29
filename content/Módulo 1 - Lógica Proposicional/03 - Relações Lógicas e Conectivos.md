@@ -46,3 +46,18 @@ $\neg P$ = Deus não existe.
 > A tabela-verdade mostra essa regra.
 
 A seguir: [[04 - Negação]]
+
+---
+
+## Pratique
+
+**Questão.** Qual conectivo corresponde ao símbolo $P \oplus Q$?
+
+a) Negação  
+b) Conjunção  
+c) Disjunção inclusiva  
+d) Disjunção exclusiva  
+e) Bicondicional
+
+> [!success]- Gabarito  
+> **Letra d.** $\oplus$ é o símbolo da disjunção exclusiva ("ou P ou Q", nunca os dois ao mesmo tempo).

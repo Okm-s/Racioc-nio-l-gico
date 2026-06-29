@@ -32,4 +32,19 @@ A negação de $P \leftrightarrow Q$ é a [[07 - Disjunção Exclusiva]] $P \opl
 
 ---
 
+## Pratique
+
+**Questão.** A frase "Você é aprovado se, e somente se, obtém nota mínima" é falsa exatamente quando:
+
+a) você é aprovado e obtém a nota mínima  
+b) você não é aprovado e não obtém a nota mínima  
+c) você é aprovado mas não obtém a nota mínima, ou o contrário  
+d) você obtém a nota mínima, independente de ser aprovado  
+e) nunca é falsa
+
+> [!success]- Gabarito  
+> **Letra c.** O bicondicional é falso quando P e Q têm valores diferentes (V-F ou F-V) — ser aprovado sem nota mínima, ou ter nota mínima sem ser aprovado.
+
+---
+
 Encerrados os conectivos, seguimos para os [[10 - Quantificadores]].

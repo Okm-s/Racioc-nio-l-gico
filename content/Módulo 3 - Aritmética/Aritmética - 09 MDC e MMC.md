@@ -48,3 +48,18 @@ $$a \times b = \text{mdc}(a,b) \times \text{mmc}(a,b)$$
 ---
 
 Pratique no [[Aritmética - 10 Banco de Questões]].
+
+---
+
+## Pratique
+
+**Questão.** O mdc(12,18) e o mmc(12,18) valem, respectivamente:
+
+a) 6 e 36  
+b) 36 e 6  
+c) 2 e 108  
+d) 1 e 216  
+e) 6 e 18
+
+> [!success]- Gabarito  
+> **Letra a.** $D(12)\cap D(18) = \{1,2,3,6\}$ → mdc $=6$. Pela relação $a\times b = \text{mdc}\times\text{mmc}$: $12\times18=216=6\times\text{mmc}$ → mmc $=36$.

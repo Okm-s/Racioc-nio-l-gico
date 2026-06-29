@@ -31,3 +31,18 @@ São os de contagem. Propriedades importantes:
 ---
 
 Com os naturais definidos, vamos operar com eles: [[Aritmética - 02 Adição e Subtração]].
+
+---
+
+## Pratique
+
+**Questão.** $\sqrt{2}$ pertence a qual conjunto numérico?
+
+a) Naturais  
+b) Inteiros  
+c) Racionais  
+d) Irracionais  
+e) Nenhum conjunto numérico
+
+> [!success]- Gabarito  
+> **Letra d.** $\sqrt{2}$ não pode ser escrito como fração — é um número irracional ($\mathbb{I}$).

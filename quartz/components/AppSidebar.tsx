@@ -41,6 +41,7 @@ AppSidebar.afterDOMLoaded = `
     +   nav('estudar', HOME+'#estudar', 'book-open', 'Estudar')
     +   nav('questoes', HOME+'#questoes', 'list-todo', 'Questões')
     +   nav('desempenho', HOME+'#desempenho', 'chart-column', 'Desempenho')
+    +   nav('revisoes', HOME+'#revisoes', 'rotate-ccw', 'Revisões')
     + '</nav>'
     + '<div class="app-bottom">'
     +   '<button class="app-nav" id="app-theme" type="button"><i data-lucide="moon" id="app-theme-ic"></i><span class="lbl" id="app-theme-lbl">Modo escuro</span></button>'

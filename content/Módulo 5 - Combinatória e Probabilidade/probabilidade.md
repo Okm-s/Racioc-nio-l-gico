@@ -35,3 +35,18 @@ Moeda lançada 3 vezes; chance de **cara no 1º e no 3º** lançamento.
 ---
 
 Um princípio de contagem que garante repetição: [[Combinatória - 04 Princípio da Casa dos Pombos]].
+
+---
+
+## Pratique
+
+**Questão.** Um dado comum é lançado uma vez. Qual a probabilidade de sair um número par?
+
+a) $\frac{1}{6}$  
+b) $\frac{1}{3}$  
+c) $\frac{1}{2}$  
+d) $\frac{2}{3}$  
+e) $\frac{5}{6}$
+
+> [!success]- Gabarito  
+> **Letra c.** Favoráveis $\{2,4,6\} = 3$; possíveis $= 6$. $P = \frac{3}{6} = \frac{1}{2}$.

@@ -21,3 +21,18 @@ $$|x| = \begin{cases} x, & \text{se } x \ge 0 \\ -x, & \text{se } x < 0 \end{cas
 ---
 
 Voltando aos naturais, quem são os "tijolos" de todo número? [[Aritmética - 07 Números Primos e Fatoração]].
+
+---
+
+## Pratique
+
+**Questão.** Se $x = -8$, qual é o valor de $|x|$?
+
+a) $-8$  
+b) $8$  
+c) $0$  
+d) $\frac{1}{8}$  
+e) Não existe
+
+> [!success]- Gabarito  
+> **Letra b.** O módulo é a distância até o zero, sempre $\ge 0$: $|-8| = 8$.

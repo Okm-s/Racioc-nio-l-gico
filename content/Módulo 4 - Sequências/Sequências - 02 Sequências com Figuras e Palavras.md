@@ -28,3 +28,18 @@ O que costuma mudar de uma figura para a próxima:
 ---
 
 Pratique no [[Sequências - 03 Banco de Questões]].
+
+---
+
+## Pratique
+
+**Questão.** Na sequência de letras A, C, E, G, ..., qual é a próxima letra?
+
+a) H  
+b) I  
+c) J  
+d) K  
+e) F
+
+> [!success]- Gabarito  
+> **Letra b.** Trocando cada letra pela posição no alfabeto: A=1, C=3, E=5, G=7 (pula de 2 em 2). Próximo: $9 = I$.

@@ -32,4 +32,19 @@ A negação de $P \oplus Q$ é o [[09 - Bicondicional]] $P \leftrightarrow Q$ �
 
 ---
 
+## Pratique
+
+**Questão.** Se P e Q têm o mesmo valor lógico (ambas V ou ambas F), o valor de $P \oplus Q$ é sempre:
+
+a) Verdadeiro  
+b) Falso  
+c) Indeterminado  
+d) Igual ao de $P \to Q$  
+e) Igual ao de $P \leftrightarrow Q$
+
+> [!success]- Gabarito  
+> **Letra b.** A disjunção exclusiva exige valores diferentes entre P e Q. Se os valores são iguais, o resultado é falso.
+
+---
+
 Próximo conectivo: [[08 - Condicional]].

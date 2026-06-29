@@ -28,3 +28,18 @@ $$\underbrace{12}_{\text{minuendo}} - \underbrace{5}_{\text{subtraendo}} = \unde
 ---
 
 Próximas operações: [[Aritmética - 03 Multiplicação e Divisão]].
+
+---
+
+## Pratique
+
+**Questão.** Qual é o resultado de $(-3) + 7$?
+
+a) $-10$  
+b) $-4$  
+c) $4$  
+d) $10$  
+e) $0$
+
+> [!success]- Gabarito  
+> **Letra c.** Sinais diferentes: subtrai os valores ($7-3=4$) e fica com o sinal do maior (positivo). Resultado: $4$.

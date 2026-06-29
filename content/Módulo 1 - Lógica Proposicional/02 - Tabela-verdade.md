@@ -75,3 +75,18 @@ Com três proposições:
 > Cada linha representa um cenário possível.
 
 A partir dessa base, analisamos as relações lógicas com [[03 - Relações Lógicas e Conectivos]].
+
+---
+
+## Pratique
+
+**Questão.** Quantas linhas tem a tabela-verdade de uma proposição composta com 5 proposições simples?
+
+a) 10  
+b) 16  
+c) 25  
+d) 32  
+e) 64
+
+> [!success]- Gabarito  
+> **Letra d.** Com $n$ proposições, a tabela tem $2^n$ linhas. Com $n=5$: $2^5 = 32$.

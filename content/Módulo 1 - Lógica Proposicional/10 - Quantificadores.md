@@ -38,3 +38,18 @@ Negar um quantificador **inverte o "quanto"** e nega a propriedade:
 ---
 
 Esses padrões de negação fazem parte da [[12 - Negação de Proposições Compostas|tabela mestra de negações]]. Seguimos para os casos extremos: [[11 - Tautologia e Contradição]].
+
+---
+
+## Pratique
+
+**Questão.** A negação de "Todo aluno passou" é:
+
+a) Nenhum aluno passou.  
+b) Algum aluno não passou.  
+c) Algum aluno passou.  
+d) Todo aluno não passou.  
+e) Não existe aluno.
+
+> [!success]- Gabarito  
+> **Letra b.** Negar "todo" inverte o quanto e nega a propriedade: $\forall x,P(x)$ vira $\exists x,\neg P(x)$. Basta um contraexemplo para derrubar a afirmação universal.

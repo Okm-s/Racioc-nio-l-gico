@@ -58,3 +58,18 @@ Exemplos de inconsistência que esbarram nesse princípio:
 ---
 
 Para fechar a apostila, veja como negar qualquer proposição composta: [[12 - Negação de Proposições Compostas]].
+
+---
+
+## Pratique
+
+**Questão.** A proposição $P \land \neg P$ é:
+
+a) tautologia, pois é sempre verdadeira  
+b) contradição, pois é sempre falsa  
+c) equivalente a $P \lor \neg P$  
+d) verdadeira apenas quando P é verdadeiro  
+e) impossível de avaliar
+
+> [!success]- Gabarito  
+> **Letra b.** $P \land \neg P$ nunca pode ser verdadeira: nada pode ser e não ser ao mesmo tempo. É o exemplo clássico de contradição ($\bot$).

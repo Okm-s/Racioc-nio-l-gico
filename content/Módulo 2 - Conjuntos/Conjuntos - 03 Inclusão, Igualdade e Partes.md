@@ -39,3 +39,18 @@ $$n(P(A)) = 2^n$$
 ---
 
 Com conjuntos comparados, vamos combiná-los: [[Conjuntos - 04 Operações com Conjuntos]].
+
+---
+
+## Pratique
+
+**Questão.** Se $A$ tem 4 elementos, quantos subconjuntos tem $P(A)$?
+
+a) 4  
+b) 8  
+c) 12  
+d) 16  
+e) 32
+
+> [!success]- Gabarito  
+> **Letra d.** $n(P(A)) = 2^n$. Com $n=4$: $2^4 = 16$ subconjuntos.

@@ -70,6 +70,11 @@
   h1.title{margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;color:var(--text);}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);}
   .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;}
+  .statgrid-4{grid-template-columns:repeat(4,1fr);}
+  .seg{display:flex;gap:4px;background:var(--surface2);border:1px solid var(--border);border-radius:999px;padding:4px;flex:0 0 auto;}
+  .seg-btn{border:none;background:transparent;font-family:inherit;font-size:13px;font-weight:600;color:var(--muted);padding:8px 16px;border-radius:999px;cursor:pointer;transition:.15s;white-space:nowrap;}
+  .seg-btn.active{background:var(--surface);color:var(--terra);box-shadow:var(--shadow);}
+  .weak-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--terra2);background:var(--panel);border:1px solid var(--panelB);border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle;}
   .stat{padding:22px 24px;}
   .stat-label{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:13px;font-weight:500;margin-bottom:14px;}
   .stat-num{font-size:34px;font-weight:700;letter-spacing:-.02em;color:var(--text);}
@@ -107,7 +112,7 @@
   /* ===== RESPONSIVO ===== */
   @media (max-width:1000px){
     .grid-inicio{grid-template-columns:1fr;}
-    .statgrid,#modgrid{grid-template-columns:repeat(2,1fr);}
+    .statgrid,.statgrid-4,#modgrid{grid-template-columns:repeat(2,1fr);}
   }
   /* mobile: topbar organizada, sem rolagem horizontal */
   @media (max-width:900px){
@@ -131,7 +136,7 @@
     .main{padding:20px 16px 28px;}
   }
   @media (max-width:720px){
-    .grid-inicio,.statgrid,#modgrid,#simlist{grid-template-columns:1fr;}
+    .grid-inicio,.statgrid,.statgrid-4,#modgrid,#simlist{grid-template-columns:1fr;}
     .main{padding:18px 14px 26px;}
     h1.title{font-size:24px;}
   }
@@ -173,6 +178,7 @@
       <div class="nav-item" data-screen="estudar"><i data-lucide="book-open" class="lc"></i><span class="hidecol">Estudar</span></div>
       <div class="nav-item" data-screen="questoes"><i data-lucide="list-todo" class="lc"></i><span class="hidecol">Questões</span></div>
       <div class="nav-item" data-screen="desempenho"><i data-lucide="chart-column" class="lc"></i><span class="hidecol">Desempenho</span></div>
+      <div class="nav-item" data-screen="revisoes"><i data-lucide="rotate-ccw" class="lc"></i><span class="hidecol">Revisões</span></div>
     </nav>
     <div class="sb-bottom">
       <div class="nav-item" data-action="theme"><i data-lucide="moon" class="lc" id="themeIcon"></i><span class="hidecol" id="themeLabel">Modo escuro</span></div>
@@ -274,19 +280,60 @@
 
     <!-- DESEMPENHO -->
     <section class="screen" id="screen-desempenho">
-      <header style="margin-bottom:26px;">
-        <div class="eyebrow">Seu progresso real (salvo neste aparelho)</div>
-        <h1 class="title">Seu desempenho</h1>
+      <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px;">
+        <div>
+          <div class="eyebrow">Seu progresso real (salvo neste aparelho)</div>
+          <h1 class="title">Seu desempenho</h1>
+        </div>
+        <div class="seg">
+          <button class="seg-btn active" type="button" data-dview="geral">Visão geral</button>
+          <button class="seg-btn" type="button" data-dview="erros">Meus erros</button>
+        </div>
       </header>
-      <div class="statgrid">
-        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Questões respondidas</div><div class="stat-num" id="dResp">0</div></div>
-        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Taxa de acerto</div><div class="stat-num"><span id="dTaxa">0</span><small>%</small></div></div>
-        <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Simulados feitos</div><div class="stat-num" id="dSim">0</div></div>
+
+      <div id="desemp-geral">
+        <div class="statgrid statgrid-4">
+          <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Questões respondidas</div><div class="stat-num" id="dResp">0</div></div>
+          <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Taxa de acerto</div><div class="stat-num"><span id="dTaxa">0</span><small>%</small></div></div>
+          <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Simulados feitos</div><div class="stat-num" id="dSim">0</div></div>
+          <div class="card stat"><div style="color:var(--muted);font-size:13px;font-weight:500;margin-bottom:12px;">Estudando há</div><div class="stat-num"><span id="dDias">0</span><small> dias</small></div></div>
+        </div>
+        <section class="card" style="padding:28px;margin-bottom:18px;">
+          <h2 class="h2" style="margin-bottom:6px;">Acerto por módulo</h2>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:20px;">Bancos de questões e exercícios dos tópicos, depois de enviar as respostas.</div>
+          <div id="modbars" style="display:flex;flex-direction:column;gap:18px;"></div>
+        </section>
+        <section class="card" style="padding:28px;">
+          <h2 class="h2" style="margin-bottom:14px;">Atividade recente</h2>
+          <div id="atividade" style="display:flex;flex-direction:column;gap:10px;"></div>
+        </section>
       </div>
-      <section class="card" style="padding:28px;">
-        <h2 class="h2" style="margin-bottom:6px;">Acerto por módulo</h2>
-        <div style="font-size:13px;color:var(--muted);margin-bottom:20px;">Dos bancos de questões de cada módulo (após enviar as respostas).</div>
-        <div id="modbars" style="display:flex;flex-direction:column;gap:18px;"></div>
+
+      <div id="desemp-erros" style="display:none;">
+        <section class="card" style="padding:28px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
+            <h2 class="h2">Questões que você errou</h2>
+            <button class="chip" type="button" data-action="limpar-erros"><i data-lucide="trash-2" style="width:14px;height:14px;"></i> Limpar registro</button>
+          </div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:20px;">Toda vez que você erra uma questão num tópico, banco ou simulado, ela aparece aqui — mais recente primeiro.</div>
+          <div id="errosLista" style="display:flex;flex-direction:column;gap:10px;"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- REVISÕES -->
+    <section class="screen" id="screen-revisoes">
+      <header style="margin-bottom:26px;">
+        <div class="eyebrow">Guiada pelo que você errou, não por calendário</div>
+        <h1 class="title">Revisões</h1>
+      </header>
+      <div id="revisoesConteudo"></div>
+      <section class="softpanel" style="margin-top:18px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i data-lucide="lightbulb" style="width:18px;height:18px;color:var(--panelH);"></i>
+          <strong style="font-size:15px;color:var(--panelH);">Como funciona</strong>
+        </div>
+        <div style="font-size:14px;color:var(--panelT);line-height:1.6;">A revisão aqui não segue um calendário fixo — ela aponta os módulos onde sua taxa de acerto está mais baixa e lista as questões que você errou recentemente, pra você focar no que realmente precisa de atenção.</div>
       </section>
     </section>
 
@@ -295,13 +342,13 @@
 
 <script>
   var MOD = [
-    {n:'0', nome:'Introdução', desc:'Lógica × matemática, abstração', cor:'#8AA0C4', ico:'compass', href:'Módulo-0---Introdução/Apostila-de-Introdução-ao-Raciocínio-Lógico.html'},
-    {n:'1', nome:'Lógica Proposicional', desc:'Proposições, conectivos, argumentos', cor:'#E8964C', ico:'binary', href:'Módulo-1---Lógica-Proposicional/Apostila-de-Lógica-Proposicional.html'},
-    {n:'2', nome:'Conjuntos', desc:'Operações e diagramas de Venn', cor:'#7FAE8B', ico:'circle-dot', href:'Módulo-2---Conjuntos/Apostila-de-Conjuntos.html'},
-    {n:'3', nome:'Aritmética', desc:'Operações, primos, mdc/mmc', cor:'#D98C6A', ico:'calculator', href:'Módulo-3---Aritmética/Apostila-de-Aritmética.html'},
-    {n:'4', nome:'Sequências', desc:'Padrões com números e figuras', cor:'#8AA0C4', ico:'trending-up', href:'Módulo-4---Sequências/Apostila-de-Sequências.html'},
-    {n:'5', nome:'Combinatória e Probabilidade', desc:'Contagem, arranjos, chance', cor:'#E8964C', ico:'dice-5', href:'Módulo-5---Combinatória-e-Probabilidade/Apostila-de-Análise-Combinatória-e-Probabilidade.html'},
-    {n:'6', nome:'Verdades e Mentiras', desc:'Quem fala a verdade, quem mente', cor:'#7FAE8B', ico:'venetian-mask', href:'Módulo-6---Verdades-e-Mentiras/Apostila-de-Verdades-e-Mentiras.html'}
+    {n:'0', nome:'Introdução', desc:'Lógica × matemática, abstração', cor:'#8AA0C4', ico:'compass', href:'Módulo-0---Introdução/Apostila-de-Introdução-ao-Raciocínio-Lógico.html', banco:'Módulo-0---Introdução/Introdução---05-Banco-de-Questões.html'},
+    {n:'1', nome:'Lógica Proposicional', desc:'Proposições, conectivos, argumentos', cor:'#E8964C', ico:'binary', href:'Módulo-1---Lógica-Proposicional/Apostila-de-Lógica-Proposicional.html', banco:'Módulo-1---Lógica-Proposicional/13---Banco-de-Questões-—-Nível-1-(Fundamentos).html'},
+    {n:'2', nome:'Conjuntos', desc:'Operações e diagramas de Venn', cor:'#7FAE8B', ico:'circle-dot', href:'Módulo-2---Conjuntos/Apostila-de-Conjuntos.html', banco:'Módulo-2---Conjuntos/Conjuntos---06-Banco-de-Questões.html'},
+    {n:'3', nome:'Aritmética', desc:'Operações, primos, mdc/mmc', cor:'#D98C6A', ico:'calculator', href:'Módulo-3---Aritmética/Apostila-de-Aritmética.html', banco:'Módulo-3---Aritmética/Aritmética---10-Banco-de-Questões.html'},
+    {n:'4', nome:'Sequências', desc:'Padrões com números e figuras', cor:'#8AA0C4', ico:'trending-up', href:'Módulo-4---Sequências/Apostila-de-Sequências.html', banco:'Módulo-4---Sequências/Sequências---03-Banco-de-Questões.html'},
+    {n:'5', nome:'Combinatória e Probabilidade', desc:'Contagem, arranjos, chance', cor:'#E8964C', ico:'dice-5', href:'Módulo-5---Combinatória-e-Probabilidade/Apostila-de-Análise-Combinatória-e-Probabilidade.html', banco:'Módulo-5---Combinatória-e-Probabilidade/Combinatória---05-Banco-de-Questões.html'},
+    {n:'6', nome:'Verdades e Mentiras', desc:'Quem fala a verdade, quem mente', cor:'#7FAE8B', ico:'venetian-mask', href:'Módulo-6---Verdades-e-Mentiras/Apostila-de-Verdades-e-Mentiras.html', banco:'Módulo-6---Verdades-e-Mentiras/Verdades-e-Mentiras---02-Banco-de-Questões.html'}
   ];
   var SIM_TOTAL = 21;
   var SIM_GOAL = 100;
@@ -333,6 +380,63 @@
   }
   function modCount(prof){ var c=0; MOD.forEach(function(m){ if(prof.modulos[m.n]) c++; }); return c; }
   function simCount(prof){ return Object.keys(prof.simulados||{}).filter(function(k){return prof.simulados[k];}).length; }
+  function diasDesde(dataStr){ if(!dataStr) return 0; var d0=new Date(dataStr+'T00:00:00'), d1=new Date(hoje()+'T00:00:00'); return Math.max(0, Math.round((d1-d0)/86400000)); }
+  function modAccuracy(p){
+    var acc={}; MOD.forEach(function(m){ acc[m.n]={certas:0,total:0}; });
+    function add(obj){ Object.keys(obj||{}).forEach(function(k){ var r=obj[k]; if(r&&r.total&&acc[r.mod]){ acc[r.mod].certas+=(r.certas||0); acc[r.mod].total+=(r.total||0); } }); }
+    add(p.bancos); add(p.topicos);
+    return acc;
+  }
+  function errRow(w){
+    var m=MOD.filter(function(x){return x.n===w.mod;})[0]; var cor=m?m.cor:'var(--muted2)';
+    return '<a class="bare" href="'+w.url+'"><div class="task" style="align-items:flex-start;">'+
+      '<div style="width:10px;height:10px;border-radius:50%;background:'+cor+';flex:0 0 auto;margin-top:6px;"></div>'+
+      '<div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:14px;color:var(--text);">'+(w.titulo||'Questão')+'</div>'+
+      '<div style="font-size:12px;color:var(--muted);margin-top:3px;">Você marcou <strong>'+(w.escolhida||'—').toUpperCase()+'</strong> — certa: <strong>'+(w.correta||'').toUpperCase()+'</strong> · '+(w.data||'')+'</div></div>'+
+      '<span class="open-link" style="flex:0 0 auto;">Revisar <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>'+
+    '</div></a>';
+  }
+  function renderErros(p){
+    var el=document.getElementById('errosLista'); if(!el) return;
+    var erros=(p.erros||[]).slice().reverse();
+    el.innerHTML = erros.length ? erros.map(errRow).join('') :
+      '<div style="font-size:14px;color:var(--muted);text-align:center;padding:24px 0;">Você ainda não errou nenhuma questão registrada — ótimo, ou ainda não fez nenhuma 👀</div>';
+  }
+  function renderRevisoes(p){
+    var el=document.getElementById('revisoesConteudo'); if(!el) return;
+    var acc=modAccuracy(p);
+    var fracos=MOD.filter(function(m){ return acc[m.n].total>0; })
+      .map(function(m){ return {m:m, pct:Math.round(acc[m.n].certas/acc[m.n].total*100)}; })
+      .sort(function(a,b){ return a.pct-b.pct; }).slice(0,2);
+    var erros=(p.erros||[]).slice().reverse().slice(0,5);
+    if(!fracos.length && !erros.length){
+      el.innerHTML = '<div class="card" style="padding:32px;text-align:center;">'+
+        '<div style="font-weight:700;font-size:16px;color:var(--text);margin-bottom:6px;">Ainda não há dados suficientes</div>'+
+        '<div style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Responda pelo menos um banco de questões ou simulado pra começarmos a apontar onde focar sua revisão.</div>'+
+        '<a class="btn-primary" style="width:auto;display:inline-flex;padding:13px 22px;" href="#questoes">Ver questões</a>'+
+      '</div>';
+      return;
+    }
+    var html='';
+    if(fracos.length){
+      html += '<div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px;">' + fracos.map(function(f){
+        return '<div class="card" style="padding:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;">'+
+          '<div class="mod-ico" style="background:'+f.m.cor+';"><i data-lucide="'+f.m.ico+'" class="lc" style="stroke:#fff;"></i></div>'+
+          '<div style="flex:1;min-width:160px;"><div style="font-weight:700;font-size:16px;color:var(--text);">'+f.m.nome+'</div>'+
+          '<div style="font-size:13px;color:var(--muted);">'+f.pct+'% de acerto até aqui</div></div>'+
+          '<div style="display:flex;gap:8px;flex-wrap:wrap;">'+
+            '<a class="chip" href="'+encodeURI(f.m.href)+'">Revisar teoria</a>'+
+            '<a class="chip" href="'+encodeURI(f.m.banco)+'">Praticar</a>'+
+          '</div></div>';
+      }).join('') + '</div>';
+    }
+    html += '<section class="card" style="padding:28px;">'+
+      '<h2 class="h2" style="margin-bottom:14px;">Questões para revisar</h2>'+
+      (erros.length ? '<div style="display:flex;flex-direction:column;gap:10px;">'+erros.map(errRow).join('')+'</div>'
+        : '<div style="font-size:14px;color:var(--muted);text-align:center;padding:20px 0;">Nenhum erro registrado — continue assim!</div>')+
+    '</section>';
+    el.innerHTML = html;
+  }
 
   function icons(){ var run=function(){ if(window.lucide&&window.lucide.createIcons) lucide.createIcons(); else setTimeout(run,100); }; run(); }
 
@@ -366,12 +470,14 @@
     document.getElementById('qDisp').textContent = SIM_TOTAL;
     document.getElementById('qGoal').textContent = SIM_GOAL;
     document.getElementById('dSim').textContent = sc;
-    var bancos = p.bancos || {};
+    var bancos = p.bancos || {}, topicos = p.topicos || {};
     var totResp = 0, totCertas = 0;
     Object.keys(p.simulados||{}).forEach(function(k){ var s=p.simulados[k]; if(s&&s.total){ totResp+=s.total; totCertas+=(s.certas||0); } });
     Object.keys(bancos).forEach(function(k){ var b=bancos[k]; if(b&&b.total){ totResp+=b.total; totCertas+=(b.certas||0); } });
+    Object.keys(topicos).forEach(function(k){ var t=topicos[k]; if(t&&t.total){ totResp+=t.total; totCertas+=(t.certas||0); } });
     document.getElementById('dResp').textContent = totResp;
     document.getElementById('dTaxa').textContent = totResp ? Math.round(totCertas/totResp*100) : 0;
+    document.getElementById('dDias').textContent = diasDesde(p.criadoEm);
     var C=295.3; document.getElementById('ring').setAttribute('stroke-dashoffset', C*(1-mc/MOD.length));
     document.getElementById('ringPct').textContent = pct+'%';
     document.getElementById('planoLabel').textContent = mc+' de '+MOD.length+' concluídos';
@@ -411,13 +517,34 @@
     }
     if(SIM_GOAL>SIM_TOTAL){ sh += '<div style="display:flex;align-items:center;justify-content:center;padding:13px;border-radius:13px;border:1px dashed var(--border);color:var(--muted);font-size:13px;">+'+(SIM_GOAL-SIM_TOTAL)+' em construção</div>'; }
     document.getElementById('simlist').innerHTML = sh;
+    var acc = modAccuracy(p);
+    var weakMod=null, weakPct=101;
+    MOD.forEach(function(m){ var a=acc[m.n]; if(a.total>0){ var pm=Math.round(a.certas/a.total*100); if(pm<weakPct){ weakPct=pm; weakMod=m.n; } } });
     document.getElementById('modbars').innerHTML = MOD.map(function(m){
-      var c=0,t=0; Object.keys(bancos).forEach(function(k){ if(bancos[k].mod===m.n){ c+=(bancos[k].certas||0); t+=(bancos[k].total||0); } });
-      var pctm = t ? Math.round(c/t*100) : 0; var has = t>0;
+      var a=acc[m.n]; var has=a.total>0; var pctm = has?Math.round(a.certas/a.total*100):0;
       var cor = !has ? 'var(--track)' : (pctm>=70?'var(--green)':(pctm>=50?'var(--orange)':'var(--terra2)'));
-      return '<div><div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;color:var(--text);">'+m.nome+'</span><span style="color:var(--text2);font-weight:600;">'+(has?(c+'/'+t+' · '+pctm+'%'):'—')+'</span></div>'+
+      var badge = (has && m.n===weakMod) ? '<span class="weak-badge"><i data-lucide="target" style="width:11px;height:11px;"></i> ponto fraco</span>' : '';
+      return '<div><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:14px;margin-bottom:7px;"><span style="font-weight:600;color:var(--text);">'+m.nome+badge+'</span><span style="color:var(--text2);font-weight:600;">'+(has?(a.certas+'/'+a.total+' · '+pctm+'%'):'—')+'</span></div>'+
         '<div class="bar-track"><div class="bar-fill" style="width:'+(has?pctm:0)+'%;background:'+cor+';"></div></div></div>';
     }).join('');
+
+    var atividades = [];
+    Object.keys(p.simulados||{}).forEach(function(k){ var s=p.simulados[k]; if(s&&s.total) atividades.push({tipo:'Simulado '+k, certas:s.certas, total:s.total, data:s.data, ico:'file-check', cor:'var(--blue)', href:'Simulados/Simulado-'+k+'.html'}); });
+    Object.keys(bancos).forEach(function(k){ var b=bancos[k]; if(b&&b.total) atividades.push({tipo:'Banco · Mód '+b.mod, certas:b.certas, total:b.total, data:b.data, ico:'layers', cor:'var(--orange)', href:k}); });
+    Object.keys(topicos).forEach(function(k){ var t=topicos[k]; if(t&&t.total) atividades.push({tipo:'Tópico · Mód '+t.mod, certas:t.certas, total:t.total, data:t.data, ico:'book-open', cor:'var(--green)', href:k}); });
+    atividades.sort(function(a,b){ return (b.data||'').localeCompare(a.data||''); });
+    atividades = atividades.slice(0,5);
+    document.getElementById('atividade').innerHTML = atividades.length ? atividades.map(function(a){
+      var pct = a.total ? Math.round(a.certas/a.total*100) : 0;
+      return '<a class="bare" href="'+encodeURI(a.href)+'"><div class="task">'+
+        '<div style="width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:'+a.cor+';color:#fff;display:flex;align-items:center;justify-content:center;"><i data-lucide="'+a.ico+'" style="width:16px;height:16px;"></i></div>'+
+        '<div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:14px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+a.tipo+'</div><div style="font-size:12px;color:var(--muted);">'+(a.data||'')+'</div></div>'+
+        '<div style="font-weight:700;font-size:13px;color:var(--text2);white-space:nowrap;">'+a.certas+'/'+a.total+' · '+pct+'%</div>'+
+      '</div></a>';
+    }).join('') : '<div style="font-size:14px;color:var(--muted);text-align:center;padding:20px 0;">Nenhuma atividade ainda. Responda um banco, tópico ou simulado pra ver seu histórico aqui.</div>';
+
+    renderErros(p);
+    renderRevisoes(p);
     icons();
   }
 
@@ -448,6 +575,14 @@
   document.addEventListener('click', function(e){
     var nav=e.target.closest('.nav-item[data-screen]');
     if(nav){ setScreen(nav.dataset.screen); return; }
+    var seg=e.target.closest('.seg-btn[data-dview]');
+    if(seg){
+      document.querySelectorAll('.seg-btn[data-dview]').forEach(function(b){ b.classList.toggle('active', b===seg); });
+      var v=seg.dataset.dview;
+      document.getElementById('desemp-geral').style.display = v==='geral' ? '' : 'none';
+      document.getElementById('desemp-erros').style.display = v==='erros' ? '' : 'none';
+      return;
+    }
     var act=e.target.closest('[data-action]');
     if(act){
       var a=act.dataset.action;
@@ -455,6 +590,7 @@
       else if(a==='theme'){ toggleTheme(); }
       else if(a==='logout'){ localStorage.removeItem(CK); document.getElementById('app').style.display='none'; document.getElementById('login').style.display='flex'; document.getElementById('in-nome').value=''; document.getElementById('in-zap').value=''; }
       else if(a==='toggle-mod'){ var p=cur(); var n=act.dataset.mod; p.modulos[n]=!p.modulos[n]; saveCur(p); renderAll(); }
+      else if(a==='limpar-erros'){ if(confirm('Limpar todo o registro de erros?')){ var p2=cur(); p2.erros=[]; saveCur(p2); renderAll(); } }
       return;
     }
   });

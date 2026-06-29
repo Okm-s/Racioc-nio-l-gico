@@ -31,3 +31,18 @@ Por isso a lógica troca palavras por símbolos: $P$, $Q$, $\land$, $\lor$, $\to
 O símbolo não admite subentendido.
 
 Próximo: [[Introdução - 04 Semântica x Abstração]]
+
+---
+
+## Pratique
+
+**Questão.** No diálogo "— Você vai à festa? / — Tenho prova amanhã.", do ponto de vista estritamente lógico, qual é a única informação fornecida pela resposta?
+
+a) A pessoa não vai à festa.  
+b) A pessoa tem prova amanhã.  
+c) A pessoa não gosta de festas.  
+d) A pessoa vai à festa depois da prova.  
+e) A pessoa está sem tempo para nada.
+
+> [!success]- Gabarito  
+> **Letra b.** Logicamente só há uma informação na fala: *tenho prova amanhã*. A ideia de que ela não vai à festa é subentendido social, não está na proposição.

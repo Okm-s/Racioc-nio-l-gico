@@ -30,3 +30,18 @@ $\neg(\neg P) = P$
 As compostas se negam em [[12 - Negação de Proposições Compostas]].
 
 Próximo: [[05 - Conjunção]]
+
+---
+
+## Pratique
+
+**Questão.** A frase "Não é verdade que o réu não é inocente" equivale logicamente a:
+
+a) O réu é inocente.  
+b) O réu é culpado.  
+c) O réu não é inocente.  
+d) Não se pode afirmar nada sobre o réu.  
+e) A frase é uma contradição.
+
+> [!success]- Gabarito  
+> **Letra a.** Negação dupla: $\neg(\neg P) = P$. Negar duas vezes "o réu é inocente" volta ao original.

@@ -23,3 +23,18 @@ O concurso herdou esse encontro e reúne lógica, aritmética, conjuntos, sequê
 Lógica e matemática compartilham um galho — o **pensamento abstrato** —, mas não são a mesma coisa. Não leve para a lógica o medo que você sente da matemática.
 
 Próximo: [[Introdução - 03 Quando a Linguagem Natural Atrapalha]]
+
+---
+
+## Pratique
+
+**Questão.** Segundo o texto, qual é a diferença central entre a abordagem da lógica e da matemática?
+
+a) A lógica trabalha com números; a matemática, com palavras.  
+b) A lógica examina a validade da forma; a matemática trabalha sobre axiomas e demonstrações.  
+c) A lógica nasceu da contagem; a matemática, da filosofia.  
+d) As duas tratam exclusivamente do mesmo objeto de estudo.  
+e) A lógica surgiu no século XX; a matemática, na Grécia antiga.
+
+> [!success]- Gabarito  
+> **Letra b.** A lógica examina a validade da forma do raciocínio; a matemática trabalha com quantidade, relação e propriedade, sobre axiomas e demonstrações.

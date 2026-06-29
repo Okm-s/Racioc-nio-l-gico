@@ -31,3 +31,18 @@ $$n(A \cup B \cup C) = n(A)+n(B)+n(C) - n(A\cap B) - n(A\cap C) - n(B\cap C) + n
 ---
 
 Pratique no [[Conjuntos - 06 Banco de Questões]].
+
+---
+
+## Pratique
+
+**Questão.** Numa turma de 40 alunos, 25 gostam de matemática, 20 gostam de português e 10 gostam das duas. Quantos não gostam de nenhuma das duas?
+
+a) 5  
+b) 10  
+c) 15  
+d) 25  
+e) 35
+
+> [!success]- Gabarito  
+> **Letra a.** $n(M \cup P) = 25 + 20 - 10 = 35$. Não gostam de nenhuma: $40 - 35 = 5$.

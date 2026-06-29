@@ -34,3 +34,18 @@ A [[probabilidade]] é uma razão entre $0$ e $1$ — e **vira porcentagem multi
 ---
 
 Volte ao [[Apostila de Aritmética|índice]] ou veja a base em [[Aritmética - 05 Números Decimais]].
+
+---
+
+## Pratique
+
+**Questão.** Qual é 20% de 80?
+
+a) 8  
+b) 16  
+c) 20  
+d) 40  
+e) 100
+
+> [!success]- Gabarito  
+> **Letra b.** $20\%$ de $80 = 0{,}20 \times 80 = 16$.

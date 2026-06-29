@@ -28,3 +28,18 @@ O concurso cobra os dois sob um nome só. Por isso, antes de resolver, reconheç
 > Matemática: **o que devo calcular?**
 
 Próximo: [[Introdução - 02 Lógica, Filosofia e o Formalismo]]
+
+---
+
+## Pratique
+
+**Questão.** Maria diz: "Para resolver essa questão, preciso saber se a conclusão decorre das premissas — não fazer nenhuma conta." A questão de Maria pertence a qual área?
+
+a) Lógica pura  
+b) Aritmética  
+c) Conjuntos  
+d) Combinatória  
+e) Sequências
+
+> [!success]- Gabarito  
+> **Letra a.** A pergunta central de Maria é "a conclusão decorre?" — exatamente o critério que separa lógica pura das demais áreas do Raciocínio Lógico-Matemático.

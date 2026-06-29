@@ -31,4 +31,21 @@ Esta nota reúne, num único lugar, **como negar cada forma lógica**. É a cons
 
 ---
 
+---
+
+## Pratique
+
+**Questão.** A negação de "Se estudo, passo" ($P \to Q$) é:
+
+a) Não estudo e não passo.  
+b) Estudo e não passo.  
+c) Não estudo ou passo.  
+d) Se não estudo, não passo.  
+e) Estudo ou não passo.
+
+> [!success]- Gabarito  
+> **Letra b.** A negação de $P \to Q$ é $P \land \neg Q$: a condição ocorre, mas o resultado não — exatamente o único caso falso do condicional.
+
+---
+
 Fim da apostila. Voltar ao [[Apostila de Lógica Proposicional|índice]].

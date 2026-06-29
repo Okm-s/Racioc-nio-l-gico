@@ -71,3 +71,18 @@ $$\frac{5 \times 4 \times 3}{3 \times 2 \times 1} = 10$$
 ---
 
 As **fórmulas** são esse raciocínio já empacotado — úteis para ganhar tempo na prova. Veja a versão pronta em [[Combinatória - 02 Permutação, Arranjo e Combinação]].
+
+---
+
+## Pratique
+
+**Questão.** Um restaurante oferece 4 entradas e 3 pratos principais. De quantos modos um cliente pode escolher uma entrada e um prato principal?
+
+a) 7  
+b) 9  
+c) 10  
+d) 12  
+e) 16
+
+> [!success]- Gabarito  
+> **Letra d.** Etapas independentes: multiplica as opções. $4 \times 3 = 12$.

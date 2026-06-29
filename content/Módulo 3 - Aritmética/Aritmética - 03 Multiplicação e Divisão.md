@@ -40,3 +40,18 @@ Se o **resto é zero**, a divisão é exata e o dividendo é [[Aritmética - 08 
 ---
 
 Multiplicar um número por ele mesmo várias vezes leva à [[Aritmética - 04 Potenciação e Radiciação]].
+
+---
+
+## Pratique
+
+**Questão.** Na divisão de 23 por 4, qual é o quociente e o resto?
+
+a) quociente 5, resto 3  
+b) quociente 6, resto −1  
+c) quociente 4, resto 7  
+d) quociente 5, resto 4  
+e) quociente 23, resto 4
+
+> [!success]- Gabarito  
+> **Letra a.** $23 = 4 \times 5 + 3$, com $0 \le 3 < 4$. Quociente $5$, resto $3$.

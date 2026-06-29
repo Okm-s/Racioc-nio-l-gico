@@ -38,3 +38,18 @@ A forma fatorada é a chave para:
 ---
 
 Seguindo: quem divide quem? [[Aritmética - 08 Múltiplos, Divisores e Divisibilidade]].
+
+---
+
+## Pratique
+
+**Questão.** Qual das alternativas é um número primo?
+
+a) 1  
+b) 4  
+c) 9  
+d) 17  
+e) 21
+
+> [!success]- Gabarito  
+> **Letra d.** $17$ só tem dois divisores: $1$ e ele mesmo. O $1$ não é primo (tem só um divisor); $4$, $9$ e $21$ são compostos.

@@ -38,3 +38,18 @@ $$n! = n \times (n-1) \times (n-2) \times \cdots \times 1$$
 ---
 
 Sabendo contar os casos, calculamos chances: [[probabilidade]].
+
+---
+
+## Pratique
+
+**Questão.** Uma comissão de 2 pessoas será escolhida entre 4 candidatos, sem importar a ordem. De quantos modos isso pode ser feito?
+
+a) 4  
+b) 6  
+c) 8  
+d) 12  
+e) 24
+
+> [!success]- Gabarito  
+> **Letra b.** Ordem não importa → combinação: $C_{4,2} = \dfrac{4!}{2!\,2!} = \dfrac{24}{2\times2} = 6$.

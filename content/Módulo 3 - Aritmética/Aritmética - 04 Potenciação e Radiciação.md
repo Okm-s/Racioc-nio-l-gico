@@ -40,3 +40,18 @@ No símbolo $\sqrt[n]{a}$: **n** é o índice, **a** é o radicando. Sem índice
 ---
 
 Operações com vírgula: [[Aritmética - 05 Números Decimais]].
+
+---
+
+## Pratique
+
+**Questão.** Qual o valor de $(-2)^3$?
+
+a) $8$  
+b) $-8$  
+c) $6$  
+d) $-6$  
+e) $1$
+
+> [!success]- Gabarito  
+> **Letra b.** Expoente ímpar com base negativa dá resultado negativo: $(-2)^3 = -2 \times -2 \times -2 = -8$.

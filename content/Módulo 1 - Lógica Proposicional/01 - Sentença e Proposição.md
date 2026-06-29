@@ -36,3 +36,18 @@ Se for verdadeira, é falsa; se for falsa, é verdadeira. Nunca estabiliza — �
 Virou proposição? Então dá para montar sua [[02 - Tabela-verdade]].
 
 Próximo: [[02 - Tabela-verdade]]
+
+---
+
+## Pratique
+
+**Questão.** Qual das frases abaixo é uma proposição lógica?
+
+a) Feche a janela.  
+b) Você estudou ontem?  
+c) Tomara que chova.  
+d) O Brasil é um país da América do Sul.  
+e) x é maior que 10.
+
+> [!success]- Gabarito  
+> **Letra d.** É a única frase que pode ser dita V ou F sem depender de critério externo (como "João é feio") ou de variável (como "x é maior que 10"). As outras são ordem, pergunta e desejo — não afirmam nada.

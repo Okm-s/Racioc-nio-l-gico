@@ -54,4 +54,19 @@ Cuidado: a **negação** de uma proposição **inverte** a coluna; a **equivalen
 
 ---
 
+## Pratique
+
+**Questão.** Pela equivalência condicional, $P \to Q$ é logicamente equivalente a:
+
+a) $P \land Q$  
+b) $\neg P \lor Q$  
+c) $\neg P \land Q$  
+d) $P \lor \neg Q$  
+e) $Q \to P$
+
+> [!success]- Gabarito  
+> **Letra b.** A equivalência condicional diz que $P \to Q \equiv \neg P \lor Q$ — as duas têm a mesma coluna na tabela-verdade (VFVV).
+
+---
+
 A equivalência é uma "ida e volta". Quando vale só **um** sentido, temos a [[17 - Implicação Lógica]].
